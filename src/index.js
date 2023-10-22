@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import SBC from "./components/sbc/SBC";
 import HomePage from "./components/home/HomePage";
 import AboutPage from "./components/about/AboutPage";
+import OurMaster from "./components/ourMaster/OurMaster";
 import LivePage from "./components/live/LivePage";
 import SermonsPage from "./components/sermons/SermonsPage";
 import SermonSeriesPage from "./components/sermons/SermonSeriesPage";
@@ -23,6 +24,7 @@ const Index = () => (
     <SBC>
       <Route exact path="/" component={HomePage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/ourMaster" component={OurMaster} />
       <Route path="/live" component={LivePage} />
       <Route path="/sermons" exact component={SermonsPage} />
       <Route path="/sermons/series/:title" component={SermonSeriesPage} />
