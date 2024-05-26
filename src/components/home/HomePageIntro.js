@@ -3,18 +3,24 @@ import "./HomePageIntro.css";
 
 const HomePageIntro = (props) => {
   return (
-    <div className="home-page-intro">
-      {/* <h2>TWO COMMANDS</h2>
-      <p>
-        We actively adhere to the two commands AMMA tells her disciples to
-        follow:
-      </p> */}
-      <p>
-        "The first step towards spiritual journey starts when we turn our inner
-        thoughts inwards and become introspective"
-      </p>
-      <h2>- SADGURU SRI SRI VANI MATHA</h2>
-    </div>
+    <header>
+      <picture>
+        <source
+          media="(min-width:960px)"
+          srcset="../img/home-bg-2160.jpg"
+        ></source>
+        <source
+          media="(min-width:480px)"
+          srcset="../img/home-bg-480.jpg"
+        ></source>
+
+        <img
+          className="card-img img-fluid img-positon"
+          src="../img/home-bg-480.jpg"
+          alt="Card image"
+        ></img>
+      </picture>
+    </header>
   );
 };
 

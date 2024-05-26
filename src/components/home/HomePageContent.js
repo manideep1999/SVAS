@@ -5,7 +5,7 @@ const HomePageContent = (props) => {
   return (
     <div className="container">
       <img src="img/slides/romance.jpg" alt="Your Image" className="image" />
-      <br></br>
+      <br></br>  
       <div>
         <h3 className="header">OUR MASTER</h3>
         <hr className="divider" />

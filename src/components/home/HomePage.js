@@ -4,20 +4,17 @@ import HomePageIntro from "./HomePageIntro";
 import HomePageText from "./HomePageText";
 import HomePageContent from "./HomePageContent";
 import HomePageMeetingTimes from "./HomePageMeetingTimes";
-import Map from "../map/Map";
 import "./HomePage.css";
 
-const HomePage = (props) => {
+function HomePage(props) {
   return (
     <div className="home-page">
-      <HomePageSlider />
       <HomePageIntro />
       <HomePageText />
       <HomePageContent />
+      <HomePageSlider />
       <HomePageMeetingTimes />
-      <Map />
     </div>
   );
-};
-
+}
 export default HomePage;

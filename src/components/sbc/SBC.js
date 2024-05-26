@@ -6,7 +6,7 @@ import './SBC.css';
 
 const SBC = (props) => {
     return (
-      <div>
+      <div >
           <Header/>
           {props.children}
           <Footer/>

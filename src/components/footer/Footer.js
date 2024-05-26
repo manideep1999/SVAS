@@ -17,7 +17,7 @@ const Footer = (props) => {
       <div className="row">
         <div className="col-sm">
           <p>
-            SVAS for Spiritual Society
+            SVAS
             <br />
             Hyderabad
             <br />
@@ -27,10 +27,10 @@ const Footer = (props) => {
         <div className="col-sm">
           <p className="footer-social-title">STAY CONNECTED</p>
           <div className="footer-social-links">
-            <a href="https://www.facebook.com/Saintfield-Baptist-Church-105178506183089/">
+            <a href="https://www.facebook.com/">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com/SaintfieldBC">
+            <a href="https://twitter.com/">
               <i className="fab fa-twitter"></i>
             </a>
           </div>

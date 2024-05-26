@@ -90,6 +90,26 @@ class Header extends React.Component {
             </li>
             <li className="nav-item">
               <NavLink
+                to="/ashram"
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.navLinkClick}
+              >
+                Ashram
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/programs"
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.navLinkClick}
+              >
+                Programs
+              </NavLink>
+            </li>
+            {/*<li className="nav-item">
+              <NavLink
                 to="/Sermons"
                 className="nav-link"
                 activeClassName="active"
@@ -97,7 +117,7 @@ class Header extends React.Component {
               >
                 Teachings
               </NavLink>
-            </li>
+    </li> */}
             <li className="nav-item">
               <NavLink
                 to="/live"

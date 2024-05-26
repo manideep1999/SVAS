@@ -1,0 +1,32 @@
+/*heading text*/
+.heading-text {
+    font-size: 5.5rem;
+    letter-spacing: .08em;
+    line-height: 1.306;
+    text-align: center;
+    font-family: ivyora-display, Didot, "Times New Roman", serif;
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .heading-text {
+        margin:0;
+        font-size:3.5rem;
+        letter-spacing: .08em;
+        line-height: 1.306
+    }
+}
+    .data-heading {
+        width: 48.1481%;
+        width: auto;
+        margin: 0 0 4rem;
+        padding-top: .24em
+      }
+      @media screen and (max-width: 959px) {
+        .data-heading {
+            width:100%;
+        }
+      }
+      .sub-heading {
+        border-bottom: 1px solid black;
+      }
