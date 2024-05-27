@@ -1,7 +1,7 @@
 import React from "react";
-import FlipCard from "../common/flipElement/FlipCard";
+import FlipCircle from "../common/flipElement/FlipCircle";
 
 function Ashram() {
-  return <FlipCard></FlipCard>;
+  return <FlipCircle></FlipCircle>;
 }
 export default Ashram;
