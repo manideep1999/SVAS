@@ -5,7 +5,7 @@ function FlipCircle() {
   return (
     <div className="container-fluid">
       <div class="row no-gutters">
-        <div class="col-12 col-md-6 col-lg-3 px-5">
+        <div class="col-12 col-md-6 col-lg-3 ">
           <div className="col circle">
             <div className="square-content align-self-center ">
               <h2 className="square-content-header">Spirituality</h2>
@@ -15,7 +15,7 @@ function FlipCircle() {
                   src="./img/flipcard/lotus.jpg"
                   alt="flower"
                 />
-                <p className="square-content-text overlay">
+                <p className="square-content-text overlay centered">
                   Spirituality is brilliance. Spirituality is jnana.
                   Spirituality is a path of light that guides you. It is an
                   illusion that you and spirituality are both separate. When you
@@ -41,7 +41,7 @@ function FlipCircle() {
                   src="./img/flipcard/lotus.jpg"
                   alt="flower"
                 />
-                <p className="square-content-text overlay">
+                <p className="square-content-text overlay centered">
                   Meditation gives you peace. It gives you tranquility, gives
                   you energy, gives you happiness, enhances your thinking, gives
                   clarity to your thoughts. Brings integrity into your life
@@ -61,7 +61,7 @@ function FlipCircle() {
                   alt="flower"
                 />
 
-                <p className="square-content-text overlay">
+                <p className="square-content-text overlay centered">
                   Life is wholeness, integrity . Life is  supreme. Life is a
                   great opportunity that God has bestowed you with.Strangely
                   enough, you are looking at the life happening outside while
@@ -81,7 +81,7 @@ function FlipCircle() {
                   src="./img/flipcard/lotus.jpg"
                   alt="flower"
                 />
-                <p className="square-content-text overlay">
+                <p className="square-content-text overlay centerd">
                   To attain the ultimate state in the journey of spiritual life
                   one must do Sadhana. Sadhana means to conquer your mind and
                   win over yourself. The first Sadhana you need to do is to

@@ -1,15 +1,16 @@
 .circle {
     position: relative;
-    background: white;
+    background: mistyrose;
     border: 1px solid black;
-    border-radius: 50%;
+   
     width:100%;
     overflow: hidden;
     padding-top:100%;
     -webkit-margin-top-collapse:10%;
-    transition: all .8s ease-in-out;
+    transition: all .3s ease-in-out;
     margin-top:2.5rem;
     margin-bottom:2.5rem;
+    
   }
    img {
     object-fit: cover;
@@ -44,7 +45,7 @@
     transition: all .3s ease-in-out;
     transition: opacity .3s ease-in-out;
     transition: transform 1s ease-in-out;
-    transform: translateY(20%);
+
   }
   .square-content-header{
     position:relative;
@@ -65,40 +66,75 @@
   .square-content-text{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5vh;
-    opacity:0;
+ 
     transition: opacity 1s ease-in-out
   }
   .square-content-img{
-    opacity:1;
+    opacity:0.3;
     
   }
-  .circle:hover {
-    border-radius:0;  
-    cursor: pointer;
-  }
-  .circle:hover .square-content{
-    transform: translateY(0);
-  }
-  .circle:hover .square-content-img{
-    transform: translateY(0);
-    opacity:0.15;
-    
-  }
-  .circle:hover .square-content .square-content-text{
-    padding-top: 40px;
-    opacity: 1;
-   
-  }
-  .circle:hover .square-content .square-content-text{
-    opacity:1;
+  /* hover functionlaity */ 
   
+  @media (hover:hover){
+    .circle{
+      border-radius: 50%;
+    }
+   
+    .square-content{
+      transform: translateY(20%);
+
+    }
+    .square-content-img{
+      opacity:1;
+      
+    }
+    .square-content-text{
+      opacity: 0;
+    }
+    .circle:hover {
+      border-radius:0;  
+      cursor: pointer;
+    }
+    
+    .circle:hover .square-content{
+      transform: translateY(0);
+    }
+    .circle:hover .square-content-img{
+      transform: translateY(0);
+      opacity:0.15;
+      
+    }
+    .circle:hover .square-content .square-content-text{
+      padding-top: 40px;
+      opacity: 1;
+     
+    }
+    .circle:hover .square-content .square-content-text{
+      opacity:1;
+    
+    }
+    .circle:hover  .square-content-header::after{
+      transform:scaleX(1);
+    }
+
   }
-  .circle:hover  .square-content-header::after{
-    transform:scaleX(1);
+  /* animation for scrolling 
+  @media (pointer: coarse) and (hover: none) {
+  @keyframes fade-in{
+    from{opacity:0.5; }
+    to{ opacity:1; border-radius: 0;}
   }
-  .text{
-    text-align: center;
-    justify-content: center;
-    color: black;
-    display: grid;
-  }
+    .circle{
+      animation:fade-in linear;
+     animation-timeline: view();
+     animation-duration: 5ms;
+
+
+    }
+
+  
+}*/
+
+  
+  
+  

@@ -5,13 +5,13 @@ import HomePageText from "./HomePageText";
 import HomePageContent from "./HomePageContent";
 import HomePageMeetingTimes from "./HomePageMeetingTimes";
 import "./HomePage.css";
-import FlipCircle from "../common/flipElement/FlipCircle";
+import HomePagePrimer from "./HomePagePrimer";
 
 function HomePage(props) {
   return (
     <div className="home-page">
       <HomePageIntro />
-      <FlipCircle />
+      <HomePagePrimer />
       <HomePageContent />
       <HomePageSlider />
       <HomePageMeetingTimes />
