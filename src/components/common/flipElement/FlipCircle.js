@@ -3,16 +3,16 @@ import "./FlipCircle.css";
 
 function FlipCircle() {
   return (
-    <div className="container-fluid">
+    <section className="container-fluid flipContainer">
       <div class="row no-gutters">
-        <div class="col-12 col-md-6 col-lg-3 ">
+        <div class="col-12 col-md-6 col-lg-3 px-5 ">
           <div className="col circle">
             <div className="square-content align-self-center ">
               <h2 className="square-content-header">Spirituality</h2>
               <div className="image-box">
                 <img
                   className="square-content-img"
-                  src="./img/flipcard/lotus.jpg"
+                  src="./img/flipcard/lotus2.jpg"
                   alt="flower"
                 />
                 <p className="square-content-text overlay centered">
@@ -38,7 +38,7 @@ function FlipCircle() {
               <div className="image-box">
                 <img
                   className="square-content-img"
-                  src="./img/flipcard/lotus.jpg"
+                  src="./img/flipcard/sunrise.jpg"
                   alt="flower"
                 />
                 <p className="square-content-text overlay centered">
@@ -57,7 +57,7 @@ function FlipCircle() {
               <div className="image-box">
                 <img
                   className="square-content-img"
-                  src="./img/flipcard/lotus.jpg"
+                  src="./img/flipcard/mountain.jpg"
                   alt="flower"
                 />
 
@@ -73,15 +73,15 @@ function FlipCircle() {
         </div>
         <div class="col-12 col-md-6 col-lg-3 px-5">
           <div className="col circle">
-            <div className="square-content align-self-center ">
+            <div className="square-content align-self-center">
               <h2 className="square-content-header">Sadana</h2>
               <div className="image-box">
                 <img
                   className="square-content-img"
-                  src="./img/flipcard/lotus.jpg"
+                  src="./img/flipcard/tree.jpg"
                   alt="flower"
                 />
-                <p className="square-content-text overlay centerd">
+                <p className="square-content-text overlay centered">
                   To attain the ultimate state in the journey of spiritual life
                   one must do Sadhana. Sadhana means to conquer your mind and
                   win over yourself. The first Sadhana you need to do is to
@@ -98,7 +98,7 @@ function FlipCircle() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default FlipCircle;
