@@ -3,8 +3,11 @@ import "./HomePageContent.css";
 import Button from "../common/button/Button";
 
 const HomePageContent = (props) => {
-  const buttonClicked = (buttonClicked) => {
+  const goToMasterPage = (goToMasterPage) => {
     window.location.href = "/ourMaster";
+  };
+  const goToMeditationPage = (goToMeditationPage) => {
+    window.location.href = "/meditation";
   };
 
   return (
@@ -35,11 +38,11 @@ const HomePageContent = (props) => {
             <div className="inline flex-cc">
               <Button
                 btnName="Know More"
-                buttonclicked={buttonClicked}
+                buttonclicked={goToMasterPage}
               ></Button>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 wrapper">
+          <div className="col-12 col-md-6 col-lg-4">
             <img
               src="img/masterpics/master1.jpg"
               alt="Your Image"
@@ -49,31 +52,39 @@ const HomePageContent = (props) => {
         </div>
       </article>
       {/*Meditation section */}
-      <article className="row meditation-section">
+      <article className="container row my-3 meditation-section">
         <div className="col-12 col-md-6">
-          <h3 className="header">Dyaanam (Meditation)- Be with yourself</h3>
+          <h3 className="header textcolor text-center">Meditation</h3>
           <hr className="divider" />
 
-          <p className="text ">
-            Amma Says: - “It is meditation that opens your inner doors and
-            introduces you to your true self within. “ In today's world Stress,
-            disappointment , and despair has taken over human life. Noone is
-            thinking of the consequences until they face them . People who
-            really want to come out of these try to find a solution and the only
-            solution they find is to search for oneself in true sense. Then the
-            quest for finding “Myself” starts. And the key to this quest is
-            dyaanam-meditation. Yes, Meditation is the only means to connect us
-            with ourselves. But then the question “ Where do I start?” arises.
+          <p className="text textcolor">
+            <b>
+              <i>
+                “It is meditation that opens your inner doors and introduces you
+                to your true self within. “ ~Amma
+              </i>
+            </b>
+            <br></br> In today's world Stress, disappointment , and despair has
+            taken over human life. Noone is thinking of the consequences until
+            they face them . People who really want to come out of these try to
+            find a solution and the only solution they find is to search for
+            oneself in true sense. Then the quest for finding “Myself” starts.
+            And the key to this quest is dyaanam-meditation. Yes, Meditation is
+            the only means to connect us with ourselves. But then the question “
+            Where do I start?” arises.
           </p>
           <div className="inline flex-cc">
-            <Button btnName="Know More" buttonclicked={buttonClicked}></Button>
+            <Button
+              btnName="Know More"
+              buttonclicked={goToMeditationPage}
+            ></Button>
           </div>
         </div>
         <div className="col-12 col-md-6">
           <img
-            src="img/masterpics/master1.jpg"
+            src="img/meditation/whitelotus.png"
             alt="Your Image"
-            className="image"
+            className="imageresize"
           />
         </div>
       </article>

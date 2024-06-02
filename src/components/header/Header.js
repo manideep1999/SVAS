@@ -60,12 +60,12 @@ class Header extends React.Component {
           <ul className="navbar-nav sbc-navbar-content">
             <li className="nav-item">
               <NavLink
-                to="/about"
+                to="/"
                 className="nav-link"
                 activeClassName="active"
                 onClick={this.navLinkClick}
               >
-                About
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
@@ -149,6 +149,16 @@ class Header extends React.Component {
                 Word for the way
               </NavLink>
             </li> */}
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.navLinkClick}
+              >
+                About
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink
                 to="/contact"

@@ -46,6 +46,7 @@ function VirtualProgramsList() {
         "'<b> To participate : </b>'",
       btnText: " Register",
     },
+   
   ];
 
   const sections = articles.map((article) => {
