@@ -9,12 +9,15 @@ const HomePageContent = (props) => {
   const goToMeditationPage = (goToMeditationPage) => {
     window.location.href = "/meditation";
   };
+  const goToAshramPage = (goToAshramPage) => {
+    window.location.href = "/ashram";
+  };
 
   return (
     <>
-      <article className="container-fluid master-content master-section">
+      <article className="container-fluid master-content p-0 master-section">
         <div className="row">
-          <div className="col-12 col-md-12 col-lg-4">
+          <div className="col-12 col-md-12 col-lg-4 p-0">
             <img
               src="img/masterpics/lighthouse.jpg"
               alt="Your Image"
@@ -35,14 +38,14 @@ const HomePageContent = (props) => {
               this highest path of truth and that marvel is Sadguru Sri Sri Sri
               Vani Matha whom we dearly call as Amma - The Divine Mother.
             </p>
-            <div className="inline flex-cc">
+            <div className="col align-items-center justify-content-center  d-flex  ">
               <Button
                 btnName="Know More"
                 buttonclicked={goToMasterPage}
               ></Button>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4 p-0">
             <img
               src="img/masterpics/master1.jpg"
               alt="Your Image"
@@ -52,7 +55,7 @@ const HomePageContent = (props) => {
         </div>
       </article>
       {/*Meditation section */}
-      <article className="container row my-3 meditation-section">
+      <article className="container row px-0 my-6 meditation-section">
         <div className="col-12 col-md-6">
           <h3 className="header textcolor text-center">Meditation</h3>
           <hr className="divider" />
@@ -73,19 +76,41 @@ const HomePageContent = (props) => {
             the only means to connect us with ourselves. But then the question “
             Where do I start?” arises.
           </p>
-          <div className="inline flex-cc">
+          <div className="col align-items-center justify-content-center  d-flex  ">
             <Button
               btnName="Know More"
               buttonclicked={goToMeditationPage}
             ></Button>
           </div>
         </div>
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6 p-0">
           <img
             src="img/meditation/whitelotus.png"
             alt="Your Image"
             className="imageresize"
           />
+        </div>
+      </article>
+      <article>
+        <div className="row ashram-content">
+          <div className="col-12 col-lg-6 px-0">
+            <img src="img/meditationhall3.jpg" />
+          </div>
+          <div className="col-12 col-lg-6">
+            <h3 className="header  text-center">Ashram</h3>
+            <hr className="divider" />
+            <p className="text  mini-text">
+              Our Ashram is located in India - hyderabad. The Ashram is a
+              sanctum sacnctuary for the sadaks. This is a very powerful energy
+              space where the mind becomes still once we step into the Ashram…
+            </p>
+            <div className="col align-items-center justify-content-center  d-flex  ">
+              <Button
+                btnName="Know More"
+                buttonclicked={goToAshramPage}
+              ></Button>
+            </div>
+          </div>
         </div>
       </article>
     </>

@@ -10,6 +10,7 @@ import HomePagePrimer from "./HomePagePrimer";
 function HomePage(props) {
   return (
     <div className="home-page">
+      
       <HomePageIntro />
       <HomePagePrimer />
       <HomePageContent />

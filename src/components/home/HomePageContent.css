@@ -5,7 +5,7 @@
   text-align: center;
   padding: 50px 10px;
   background-color: #007978;
-  border: 1px solid black;
+
 }
   .header {
     color:white;
@@ -21,8 +21,10 @@
     /* font-size: 16px;
     margin-top: 10px; */
     font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    padding: 6%;
     text-align: left;
+    justify-content: center;
     letter-spacing: .03em;
     font-feature-settings: "palt" on;
     line-height: 1.8;
@@ -60,11 +62,10 @@
     
   }
 
-  
-
   .text {
     font-family: "Crimson Text", serif;
-    font-size: 18px;
+    position:relative;
+
     text-align: center;
     /* font-size: 16px; Reset font size for larger screens */
     margin-left: 20px;
@@ -86,7 +87,7 @@
   margin-left: auto !important;
   margin-right: auto !important;
   align-self: center;
-  border: 1px solid black;
+
 }
 .textcolor{
   color:black;
@@ -95,6 +96,16 @@
     object-fit: cover;
      object-position: center;
    
+}
+.mini-text{
+  text-align: center;
+  white-space: pre-wrap;
+}
+.ashram-content{
+  background-color: rgb(6, 48, 6);
+}
+.position-center{
+  position: absolute;
 }
 
   
