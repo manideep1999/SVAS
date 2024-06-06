@@ -11,7 +11,7 @@ function FlipCircle() {
               <h2 className="square-content-header">Spirituality</h2>
               <div className="image-box">
                 <img
-                  className="square-content-img"
+                  className="square-content-img img-fit"
                   src="./img/flipcard/lotus2.jpg"
                   alt="flower"
                 />
@@ -37,7 +37,7 @@ function FlipCircle() {
               <h2 className="square-content-header">Meditation</h2>
               <div className="image-box">
                 <img
-                  className="square-content-img"
+                  className="square-content-img img-fit"
                   src="./img/flipcard/sunrise.jpg"
                   alt="flower"
                 />
@@ -56,7 +56,7 @@ function FlipCircle() {
               <h2 className="square-content-header">Life</h2>
               <div className="image-box">
                 <img
-                  className="square-content-img"
+                  className="square-content-img img-fit"
                   src="./img/flipcard/mountain.jpg"
                   alt="flower"
                 />
@@ -77,7 +77,7 @@ function FlipCircle() {
               <h2 className="square-content-header">Sadana</h2>
               <div className="image-box">
                 <img
-                  className="square-content-img"
+                  className="square-content-img img-fit"
                   src="./img/flipcard/tree.jpg"
                   alt="flower"
                 />

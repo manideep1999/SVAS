@@ -21,7 +21,7 @@ const HomePageContent = (props) => {
             <img
               src="img/masterpics/lighthouse.jpg"
               alt="Your Image"
-              className="image"
+              className="image img-fit"
             />
           </div>
           <div className="col-12 col-md-6 col-lg-4">
@@ -49,7 +49,7 @@ const HomePageContent = (props) => {
             <img
               src="img/masterpics/master1.jpg"
               alt="Your Image"
-              className="image"
+              className="image img-fit"
             />
           </div>
         </div>
@@ -94,7 +94,7 @@ const HomePageContent = (props) => {
       <article>
         <div className="row ashram-content">
           <div className="col-12 col-lg-6 px-0">
-            <img src="img/meditationhall3.jpg" />
+            <img src="img/meditationhall3.jpg" className="img-fit" />
           </div>
           <div className="col-12 col-lg-6">
             <h3 className="header  text-center">Ashram</h3>

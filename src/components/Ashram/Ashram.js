@@ -1,7 +1,13 @@
 import React from "react";
-import FlipElement from "../common/flipElement/FlipElement";
+import AshramIntro from "./AshramIntro";
+import AshramContent from "./AshramContent";
 
 function Ashram() {
-  return <FlipElement></FlipElement>;
+  return (
+    <>
+      <AshramIntro></AshramIntro>
+      <AshramContent></AshramContent>
+    </>
+  );
 }
 export default Ashram;

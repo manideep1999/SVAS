@@ -2,13 +2,12 @@ import React from "react";
 import "./Section.css";
 
 function Section(props) {
-  const parser = new DOMParser();
   return (
     <section className="row section-row">
       <div className="col-md-6">
         <div className="div-block">
           <span className="content-block">
-            <img src={props.imageUrl} className="img-fluid "></img>
+            <img src={props.imageUrl} className="img-fluid img-fit"></img>
           </span>
         </div>
       </div>
