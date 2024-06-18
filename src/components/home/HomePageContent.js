@@ -87,7 +87,7 @@ const HomePageContent = (props) => {
           <img
             src="img/meditation/whitelotus.png"
             alt="Your Image"
-            className="imageresize"
+            className="img-fit"
           />
         </div>
       </article>

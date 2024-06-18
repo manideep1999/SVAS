@@ -78,3 +78,23 @@ html {
   object-fit: contain;
   object-position:  center;
 }
+.color-white{
+  background-color: white;
+
+}
+.color-lavendar{
+  background-color: #E6E6FA;
+
+}
+.highlight-first-letter::first-letter {
+  font-size: 3em;
+  font-weight: bold;
+  color: black;
+  vertical-align: -0.2em;
+  margin-right: 5px;
+  float:left;
+  line-height: 1;
+
+}
+
+

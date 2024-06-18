@@ -65,8 +65,6 @@
   .text {
     font-family: "Crimson Text", serif;
     position:relative;
-
-    text-align: center;
     /* font-size: 16px; Reset font size for larger screens */
     margin-left: 20px;
     padding:auto;
