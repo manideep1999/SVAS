@@ -58,7 +58,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    position:relative;
+
   }
   
   .carousel-indicators button {
@@ -81,11 +81,13 @@
   }
   
   .carousel-controls {
+ 
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 300px;
     margin: 20px auto; /* Center align the controls */
+   
   }
   
   .carousel-control-prev,
@@ -94,15 +96,17 @@
     border: none;
     padding: 15px;
     cursor: pointer;
-    color: white;
+    color: rgb(14, 2, 2)!important;
     font-size: 1.5rem;
     border-radius: 50%;
     transition: background-color 0.3s;
+    position:initial !important;
   }
   
   .carousel-control-prev:hover,
   .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1) !important;
+    color:white !important;
   }
   
   /* Responsive adjustments */

@@ -51,6 +51,7 @@ function FlipElement() {
 
   const handleNext = () => {
     setIsTransitioning(true);
+   
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
       setIsTransitioning(false);
@@ -76,6 +77,7 @@ function FlipElement() {
               index === currentIndex ? "active" : ""
             }`}
             style={{
+              backgroundImage: `url(${slide.image})`,
               transform: `rotateY(${index * 90}deg)  translateZ(400px)`,
             }}
           >
@@ -89,6 +91,7 @@ function FlipElement() {
           </div>
         ))}
       </div>
+
       <div className="carousel-indicators">
         {slides.map((_, index) => (
           <button
