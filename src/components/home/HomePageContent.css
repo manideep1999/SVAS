@@ -105,6 +105,11 @@
 .position-center{
   position: absolute;
 }
+.oval-seperation{
+  border-right: 1px solid blue;
+  border-radius:50px;
+}
+
 
   
   

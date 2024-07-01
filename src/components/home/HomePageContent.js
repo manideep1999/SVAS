@@ -91,11 +91,12 @@ const HomePageContent = (props) => {
           />
         </div>
       </article>
-      <article>
-        <div className="row ashram-content">
-          <div className="col-12 col-lg-6 px-0">
+      <article className="content-wrapper">
+        <div className="row ashram-content py-0">
+          <div className="col-12 col-lg-6 px-0 oval-seperation">
             <img src="img/meditationhall3.jpg" className="img-fit" />
           </div>
+
           <div className="col-12 col-lg-6">
             <h3 className="header  text-center">Ashram</h3>
             <hr className="divider" />

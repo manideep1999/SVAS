@@ -1,9 +1,10 @@
 import React from "react";
 import "./HomePageIntro.css";
+import Waves from "../common/dividers/curve/Waves";
 
 const HomePageIntro = (props) => {
   return (
-    <header>
+    <header className="header-container">
       <picture>
         <source
           media="(min-width:960px)"
@@ -20,6 +21,7 @@ const HomePageIntro = (props) => {
           alt="Card image"
         ></img>
       </picture>
+      <Waves></Waves>
     </header>
   );
 };

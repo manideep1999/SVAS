@@ -14,7 +14,7 @@ function MasterIntro() {
           <u> Sadhguru Sri Sri Sri Vani Matha </u>
         </h3>
       </div>
-      <article className="container border-black ">
+      <article className="container border-black master-intro">
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
             <h2 align="center" className="mt-5 mb-4 header textcolor">
