@@ -1,7 +1,12 @@
 
 .circle {
     position: relative;
-    background: mistyrose;
+   /* background: mistyrose;*/
+    /*background: radial-gradient(circle, #ff9a9e, #fad0c4);*/
+   background: radial-gradient(circle, #ffccbc, #ffab91);
+   /*background: radial-gradient(circle, #ffd194, #d1913c); */
+ 
+           
     border: 1px solid black;
     width:100%;
     overflow: hidden;
@@ -10,6 +15,7 @@
     transition: border-radius 2s ease-in-out;
     transition-delay: 2s; 
     border-radius:50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     
   }
    

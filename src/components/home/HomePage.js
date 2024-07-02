@@ -14,8 +14,7 @@ function HomePage(props) {
   return (
     <div className="home-page">
       <HomePageIntro />
-      <HomePagePrimer />
-      <FlipElement></FlipElement>
+      <FlipElement />
       <HomePageContent />
       <HomePageSlider />
       <HomePageMeetingTimes />

@@ -46,12 +46,12 @@ function FlipElement() {
         (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
       );
       setIsTransitioning(false);
-    }, 1000); // Match the CSS transition duration
+    }, 100); // Match the CSS transition duration
   };
 
   const handleNext = () => {
     setIsTransitioning(true);
-   
+
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
       setIsTransitioning(false);
@@ -63,59 +63,64 @@ function FlipElement() {
   };
 
   return (
-    <div className="carousel-container">
-      <div
-        className="carousel"
-        style={{
-          transform: `rotateY(-${currentIndex * 90}deg) `,
-        }}
-      >
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`carousel-slide ${
-              index === currentIndex ? "active" : ""
-            }`}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              transform: `rotateY(${index * 90}deg)  translateZ(400px)`,
-            }}
-          >
-            <FlipCircle
+    <div className="gallery-container">
+      <div className="carousel-container">
+        <div
+          className="carousel"
+          style={{
+            transform: `rotateY(-${currentIndex * 90}deg) `,
+          }}
+        >
+          {slides.map((slide, index) => (
+            <div
               key={index}
-              imageUrl={slide.image}
-              desc={slide.text}
-              heading={slide.heading}
-              active={index === currentIndex ? "active" : ""}
-            ></FlipCircle>
-          </div>
-        ))}
-      </div>
-
-      <div className="carousel-indicators">
-        {slides.map((_, index) => (
+              className={`carousel-slide ${
+                index === currentIndex ? "active" : ""
+              }`}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                transform: `rotateY(${index * 90}deg)  translateZ(550px)`,
+              }}
+            >
+              <FlipCircle
+                key={index}
+                imageUrl={slide.image}
+                desc={slide.text}
+                heading={slide.heading}
+                active={index === currentIndex ? "active" : ""}
+              ></FlipCircle>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-control-buttons">
           <button
-            key={index}
-            className={index === currentIndex ? "active" : ""}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
-      <div className="carousel-controls">
-        <button
-          className="carousel-control-prev"
-          onClick={handlePrev}
-          disabled={isTransitioning}
-        >
-          <FaChevronLeft />
-        </button>
-        <button
-          className="carousel-control-next"
-          onClick={handleNext}
-          disabled={isTransitioning}
-        >
-          <FaChevronRight />
-        </button>
+            className="carousel-control-pre"
+            onClick={handlePrev}
+            disabled={isTransitioning}
+          >
+            <FaChevronLeft />
+          </button>
+
+          <div className="carousel-indicators">
+            {slides.map((slide, index) => (
+              <button
+                key={index}
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                }}
+                className={index === currentIndex ? "active" : ""}
+                onClick={() => goToSlide(index)}
+              />
+            ))}
+          </div>
+          <button
+            className="carousel-control-nxt"
+            onClick={handleNext}
+            disabled={isTransitioning}
+          >
+            <FaChevronRight />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SVASSlider.css";
+
 const images = [
   "./img/flipcard/lotus2.jpg",
   "./img/flipcard/sunrise.jpg",

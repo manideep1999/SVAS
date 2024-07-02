@@ -1,10 +1,17 @@
-/* App.css */
+.gallery-container{
+    width:100vw;
+
+    margin:0;
+    padding:0;
+    background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Light blue gradient */
+}
 .carousel-container {
     perspective: 5000px;
     width: 100%;
     transform-style: preserve-3d;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0 auto;
+    
     position: relative; /* Add position relative for control buttons */
   }
   
@@ -14,7 +21,6 @@
     padding-bottom: 100%; /* 1:1 Aspect Ratio for circular cards */
     position: relative;
     transform-style: preserve-3d;
-
     transition: transform 2s; /* Increase the duration to 2 seconds for a slower transition */
   }
   
@@ -57,60 +63,72 @@
   .carousel-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px; 
+    margin:10px;
+    position: inherit !important;
 
   }
   
   .carousel-indicators button {
-    width: 10px;
-    height: 10px;
+    width: 60px;
+    height: 60px;
     margin: 0 5px;
-    background-color: #000;
-    border: none;
     border-radius: 50%;
-    opacity: 0.5;
-    transition: opacity 0.3s;
+    opacity: 0.75;
+    transition: opacity 0.1s;
+    background-position: center;
+    background-size: cover;
+    border: 4px solid transparent;
+    box-shadow: none !important;
   }
   
   .carousel-indicators button.active {
     opacity: 1;
+    scale:1.3;
+    border-color: #ffffff;
   }
   
   .carousel-indicators button:focus {
-    outline: none;
+    
+    border-color: #ffffff;
   }
   
-  .carousel-controls {
- 
+  .carousel-control-buttons {
+    
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 300px;
-    margin: 20px auto; /* Center align the controls */
+    margin: 10px auto; /* Center align the controls */
+    position: inherit !important;
    
+
   }
   
-  .carousel-control-prev,
-  .carousel-control-next {
+  .carousel-control-pre,
+  .carousel-control-nxt {
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
+    border-radius: 50%;;
     padding: 15px;
     cursor: pointer;
     color: rgb(14, 2, 2)!important;
     font-size: 1.5rem;
     border-radius: 50%;
     transition: background-color 0.3s;
-    position:initial !important;
+
+   
   }
   
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
+  .carousel-control-pre:hover,
+  .carousel-control-nxt:hover {
     background-color: rgba(0, 0, 0, 1) !important;
     color:white !important;
   }
   
   /* Responsive adjustments */
-  @media (max-width: 767.98px) {
+  @media (max-width: 900px) {
     .carousel-container {
       margin: 20px auto;
     }
@@ -119,13 +137,19 @@
       padding-bottom: 100%; /* Maintain 1:1 Aspect Ratio for circular cards */
     }
   
-    .carousel-controls {
+    .carousel-control-buttons {
       width: 100%;
-      max-width: 200px;
+      max-width: 250px;
+    
+    
+    }
+    .carousel-indicators button{
+    width: 50px;
+    height: 50px;
     }
   
-    .carousel-control-prev,
-    .carousel-control-next {
+    .carousel-control-pre,
+    .carousel-control-nxt {
       padding: 10px;
       font-size: 1.2rem;
     }
