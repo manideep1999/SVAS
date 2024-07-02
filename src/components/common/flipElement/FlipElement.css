@@ -96,12 +96,12 @@
   .carousel-control-buttons {
     
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 300px;
     margin: 10px auto; /* Center align the controls */
-    position: inherit !important;
+    
    
 
   }
