@@ -9,12 +9,15 @@ import HomePagePrimer from "./HomePagePrimer";
 import Waves from "../common/dividers/curve/Waves";
 import FlipCircle from "../common/flipElement/FlipCircle";
 import FlipElement from "../common/flipElement/FlipElement";
+import CarouselWithImage from "../common/carousel-slider/carousel-with-image/CarouselWithImage";
+import SVASPrayer from "./SVASPrayer";
 
 function HomePage(props) {
   return (
     <div className="home-page">
       <HomePageIntro />
       <FlipElement />
+    <SVASPrayer/>
       <HomePageContent />
       <HomePageSlider />
       <HomePageMeetingTimes />

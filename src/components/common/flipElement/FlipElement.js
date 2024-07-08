@@ -79,7 +79,7 @@ function FlipElement() {
               }`}
               style={{
                 backgroundImage: `url(${slide.image})`,
-                transform: `rotateY(${index * 90}deg)  translateZ(550px)`,
+                transform: `rotateY(${index * 90}deg) translateZ(400px)`,
               }}
             >
               <FlipCircle
