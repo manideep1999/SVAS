@@ -4,11 +4,14 @@
   align-items: center;
   text-align: center;
   padding: 50px 10px;
-  background-color: #007978;
+  perspective: 1000px;
+  /*background-color: #007978;*/
+
+  
 
 }
   .header {
-    color:white;
+    color:black;
     font-family: ivyora-display, Didot, "Times New Roman", serif;
     font-weight: 300;
     font-size: 5rem;
@@ -68,7 +71,7 @@
     /* font-size: 16px; Reset font size for larger screens */
     margin-left: 20px;
     padding:auto;
-    color:white; /* Create space between image and text */
+    color:black; /* Create space between image and text */
   }
 
   .divider {

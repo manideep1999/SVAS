@@ -7,51 +7,29 @@ function SVASPrayer() {
     "chakṣurunmīlitaṁ yena",
     "tasmai śrī-gurave namaḥ||",
   ];
-  console.log("function called");
-  const colors = ["color-1", "color-2", "color-3", "color-4"];
-  const [currentLine, setCurrentLine] = useState(0);
-  const [isActive, setIsActive] = useState(true);
 
-  const handleVisibilityChange = () => {
-    if (document.hidden) {
-      setIsActive(false);
-    } else {
-      setIsActive(true);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isActive && currentLine < lines.length) {
-      const timer = setTimeout(() => {
-        setCurrentLine(currentLine + 1);
-      }, 4000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isActive, currentLine]);
   return (
     <div className="container-fluid px-0">
       <div className="row align-items-center glowing-container">
-        <div className="col-md-4 offset-md-1 image-column">
+        <div className="col-md-5 offset-md-1 image-column">
           <img
             src="img/home/diya-nobg.jpg"
             className="glowing-image"
             alt="Candle"
           />
         </div>
-        <div class="col-md-6 offset-md-1 px-0">
-          {lines.slice(0, currentLine + 1).map((line, index) => (
-            <div key={index} className="line">
-              <h2 className="line-font line-animate"> {line} </h2>
-            </div>
-          ))}
+        <div class="col-md-5 offset-md-1 px-0">
+          <div className="line">
+            {lines.map((line, index) => (
+              <h2
+                key={index}
+                className="line-font line-animate"
+                style={{ animationDelay: `${index * 4}s` }}
+              >
+                {line}
+              </h2>
+            ))}
+          </div>
         </div>
         <div className="glow"></div>
       </div>

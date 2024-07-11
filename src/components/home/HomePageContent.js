@@ -25,7 +25,7 @@ const HomePageContent = (props) => {
             />
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <h3 className="header">OUR MASTER</h3>
+            <h3 className="header gradient-text">OUR MASTER</h3>
             <hr className="divider" />
 
             <p className="text ">

@@ -1,20 +1,49 @@
-.button {
-    padding: 8px 35px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color:black;
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px grey;
-  }
+
+
+.button-container {
+  text-align: center;
+  margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    font-family: Arial, sans-serif;
   
-  .button:hover {background-color:wheat}
-  
-  .button:active {
-    background-color: rgb(203, 200, 200);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+}
+
+.svas-button {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.svas-button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.svas-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.svas-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 126, 95, 0.4);
+}
+
+@media (max-width: 600px) {
+  .svas-button {
+      font-size: 2em;
+      padding: 10px 20px;
   }
+}

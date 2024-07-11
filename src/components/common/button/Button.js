@@ -3,8 +3,10 @@ import "./Button.css";
 
 function Button(props) {
   return (
-    <div>
-      <button className="button" onClick={props.buttonclicked}>{props.btnName}</button>
+    <div className="button-container">
+      <button className="svas-button" onClick={props.buttonclicked}>
+        {props.btnName}
+      </button>
     </div>
   );
 }
