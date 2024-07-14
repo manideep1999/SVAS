@@ -1,14 +1,33 @@
 /* Base styles  */
-.master-content {
-  
+.master-content { 
   align-items: center;
   text-align: center;
   padding: 50px 10px;
   perspective: 1000px;
   /*background-color: #007978;*/
 
-  
+}
 
+.row-background1{
+  background-image: url("/public/img/masterpics/lighthouse-background.jpg");
+  background-size: cover;
+  padding:10px;
+  height:100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  
+ 
+/*background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%); */
+
+}
+.display-forward{
+
+  z-index:2;
+}
+
+.row-background{
+  background-color: #007978;
 }
   .header {
     color:black;

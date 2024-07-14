@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HomePageContent.css";
 import Button from "../common/button/Button";
 
@@ -16,15 +16,28 @@ const HomePageContent = (props) => {
   return (
     <>
       <article className="container-fluid master-content p-0 master-section">
-        <div className="row">
-          <div className="col-12 col-md-12 col-lg-4 p-0">
-            <img
-              src="img/masterpics/lighthouse.jpg"
-              alt="Your Image"
-              className="image img-fit"
-            />
+        <div className="row sticky-div row-background1 p-0 m-0 ">
+          <div className="col-12 col-md-8 offset-md-2">
+            <picture className="display-forward">
+              <source
+                media="(max-width: 799px)"
+                srcset="img/masterpics/lighthouse-portrait.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="img/masterpics/lighthouse-landscape.jpg"
+              />
+              <img
+                src="img/masterpics/lighthouse-landscape.jpg"
+                alt="lighthouse"
+                className="image-fluid image"
+              />
+            </picture>
           </div>
-          <div className="col-12 col-md-6 col-lg-4">
+        </div>
+
+        <div className="row  row-background">
+          <div className="col-12 col-md-6  align-items-center">
             <h3 className="header gradient-text">OUR MASTER</h3>
             <hr className="divider" />
 
@@ -38,19 +51,21 @@ const HomePageContent = (props) => {
               this highest path of truth and that marvel is Sadguru Sri Sri Sri
               Vani Matha whom we dearly call as Amma - The Divine Mother.
             </p>
-            <div className="col align-items-center justify-content-center  d-flex  ">
+            <div className="col align-items-center justify-content-center  d-flex">
               <Button
                 btnName="Know More"
                 buttonclicked={goToMasterPage}
               ></Button>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 p-0">
-            <img
-              src="img/masterpics/master1.jpg"
-              alt="Your Image"
-              className="image img-fit"
-            />
+          <div className="col-12 col-md-6  div-block col-md-6 p-0">
+            <span className="content-block">
+              <img
+                src="img/masterpics/master1.jpg"
+                alt="Guru Image"
+                className="image-fluid img-fit"
+              />
+            </span>
           </div>
         </div>
       </article>

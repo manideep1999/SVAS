@@ -108,5 +108,10 @@ html {
   line-height: 1;
 
 }
-
+.sticky-div{
+  position:sticky;
+  position: -webkit-sticky;
+  top:3rem;
+  z-index: -1;
+}
 

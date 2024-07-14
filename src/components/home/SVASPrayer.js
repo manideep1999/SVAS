@@ -10,7 +10,7 @@ function SVASPrayer() {
 
   return (
     <div className="container-fluid px-0">
-      <div className="row align-items-center glowing-container">
+      <div className="row p-0 align-items-center glowing-container">
         <div className="col-md-5 offset-md-1 image-column">
           <img
             src="img/home/diya-nobg.jpg"
