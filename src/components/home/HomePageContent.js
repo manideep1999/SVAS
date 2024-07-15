@@ -37,7 +37,7 @@ const HomePageContent = (props) => {
         </div>
 
         <div className="row  row-background">
-          <div className="col-12 col-md-6  align-items-center">
+          <div className="col-12 col-lg-6  align-items-center">
             <h3 className="header gradient-text">OUR MASTER</h3>
             <hr className="divider" />
 
@@ -58,14 +58,12 @@ const HomePageContent = (props) => {
               ></Button>
             </div>
           </div>
-          <div className="col-12 col-md-6  div-block col-md-6 p-0">
-            <span className="content-block">
-              <img
-                src="img/masterpics/master1.jpg"
-                alt="Guru Image"
-                className="image-fluid img-fit"
-              />
-            </span>
+          <div className="col-12 col-lg-6">
+            <img
+              src="img/masterpics/Master1-1360_x_1200.jpg"
+              alt="Guru Image"
+              className="image-fluid img-fit frame"
+            />
           </div>
         </div>
       </article>

@@ -1,8 +1,9 @@
 .gallery-container{
     width:100vw;
-
+    height:100vh;
+    display:flex;
+    align-items: center;
     margin:0;
-    padding:0;
    /* background-image: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Light blue gradient */
    background-image: url(/public/img/home/space.jpg);
    background-attachment: fixed;
@@ -21,6 +22,7 @@
     transform-style: preserve-3d;
     max-width: 600px;
     margin: 0 auto;
+ 
     
     position: relative; /* Add position relative for control buttons */
   }
