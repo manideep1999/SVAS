@@ -12,13 +12,19 @@ const HomePageContent = (props) => {
   const goToAshramPage = (goToAshramPage) => {
     window.location.href = "/ashram";
   };
+  const quote = [
+    "Following the Path",
+    "manifested by'GURU'",
+    "makes the Spiritual Journey",
+    "Delightful",
+  ];
 
   return (
     <>
       <article className="container-fluid master-content p-0 master-section">
         <div className="row sticky-div row-background1 p-0 m-0 ">
           <div className="col-12 col-md-8 offset-md-2">
-            <picture className="display-forward">
+            <picture>
               <source
                 media="(max-width: 799px)"
                 srcset="img/masterpics/lighthouse-portrait.jpg"
@@ -36,20 +42,37 @@ const HomePageContent = (props) => {
           </div>
         </div>
 
+        <div className="row d-flex quote-main-container text-scroll-effect">
+          <div col-12>
+            {quote.map((line) => (
+              <div className="quote-container ">
+                <h2 className="header quote-text">
+                  <span>{line}</span>
+                </h2>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="row  row-background">
-          <div className="col-12 col-lg-6  align-items-center">
-            <h3 className="header gradient-text">OUR MASTER</h3>
+          <div className="col-12 col-lg-6  align-items-center text-scroll-effect">
+            <h2 className="header gradient-text">
+              <span>OUR GURU </span>
+            </h2>
             <hr className="divider" />
 
             <p className="text ">
-              A Sadhguru is the one who has experienced and realized the
-              ultimate truth. The one who has just not experienced it but lives
-              in communion with that absolute truth- the eternal divinity, such
-              that they themselves become the truth, they become that divinity,
-              and then comes to show us the path to the truth. The real marvel
-              is when that divinity taks on the form of a mother to guide us on
-              this highest path of truth and that marvel is Sadguru Sri Sri Sri
-              Vani Matha whom we dearly call as Amma - The Divine Mother.
+              <span>
+                A Sadhguru is the one who has experienced and realized the
+                ultimate truth. The one who has just not experienced it but
+                lives in communion with that absolute truth- the eternal
+                divinity, such that they themselves become the truth, they
+                become that divinity, and then comes to show us the path to the
+                truth. The real marvel is when that divinity taks on the form of
+                a mother to guide us on this highest path of truth and that
+                marvel is Sadguru Sri Sri Sri Vani Matha whom we dearly call as
+                Amma - The Divine Mother.
+              </span>
             </p>
             <div className="col align-items-center justify-content-center  d-flex">
               <Button

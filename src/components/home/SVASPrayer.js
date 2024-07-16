@@ -26,7 +26,7 @@ function SVASPrayer() {
                 className="line-font line-animate"
                 style={{ animationDelay: `${index * 4}s` }}
               >
-                {line}
+                <span>{line}</span>
               </h2>
             ))}
           </div>

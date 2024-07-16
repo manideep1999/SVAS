@@ -114,4 +114,10 @@ html {
   top:3rem;
   z-index: -1;
 }
+.sticky-scrolling-div{
+  position:sticky;
+  position: -webkit-sticky;
+  top:0rem;
+ 
+}
 
