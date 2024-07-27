@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/SVAS/static/css/main.95064df7.css",
+    "main.js": "/SVAS/static/js/main.625c2334.js",
+    "static/media/space.jpg": "/SVAS/static/media/space.b2afd0d5716ba734ef2a.jpg",
+    "static/media/lighthouse-background.jpg": "/SVAS/static/media/lighthouse-background.0edb17d357dfba7c0c73.jpg",
+    "static/media/Amma6.jpeg": "/SVAS/static/media/Amma6.99a634039d33a28d4d9c.jpeg",
+    "static/media/quotebg3.jpg": "/SVAS/static/media/quotebg3.c9fd707371ba963de297.jpg",
+    "static/media/slick.svg": "/SVAS/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/SVAS/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/SVAS/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/SVAS/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/SVAS/index.html",
+    "main.95064df7.css.map": "/SVAS/static/css/main.95064df7.css.map",
+    "main.625c2334.js.map": "/SVAS/static/js/main.625c2334.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95064df7.css",
+    "static/js/main.625c2334.js"
+  ]
+}
