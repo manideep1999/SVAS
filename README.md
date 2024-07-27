@@ -33,6 +33,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Builds the app for production to the `build` folder and deploys it to gh-pages and makes it live on the https://manideep1999.github.io/SVAS/ 
+
+Note: If no gh-pages branch exists, create one before running this. Else, skip it.
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
