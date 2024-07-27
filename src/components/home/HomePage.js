@@ -17,7 +17,7 @@ function HomePage(props) {
     <div className="home-page">
       <HomePageIntro />
       <FlipElement />
-    <SVASPrayer/>
+      <SVASPrayer />
       <HomePageContent />
       <HomePageSlider />
       <HomePageMeetingTimes />

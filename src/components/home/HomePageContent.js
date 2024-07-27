@@ -16,7 +16,14 @@ const HomePageContent = (props) => {
     "Following the Path",
     "manifested by'GURU'",
     "makes the Spiritual Journey",
-    "Delightful",
+    "Delightful.",
+  ];
+  const meditationQuote = [
+    "Mind which attains peace",
+    "can only be happy",
+    "in true sense.",
+    "And only a happy mind",
+    "can travel towards completeness.",
   ];
 
   return (
@@ -54,7 +61,7 @@ const HomePageContent = (props) => {
           </div>
         </div>
 
-        <div className="row  row-background">
+        <div className="row row-background">
           <div className="col-12 col-lg-6  align-items-center text-scroll-effect">
             <h2 className="header gradient-text">
               <span>OUR GURU </span>
@@ -91,40 +98,77 @@ const HomePageContent = (props) => {
         </div>
       </article>
       {/*Meditation section */}
-      <article className="container row px-0 my-6 meditation-section">
-        <div className="col-12 col-md-6">
-          <h3 className="header textcolor text-center">Meditation</h3>
-          <hr className="divider" />
 
-          <p className="text textcolor">
-            <b>
-              <i>
-                “It is meditation that opens your inner doors and introduces you
-                to your true self within. “ ~Amma
-              </i>
-            </b>
-            <br></br> In today's world Stress, disappointment , and despair has
-            taken over human life. Noone is thinking of the consequences until
-            they face them . People who really want to come out of these try to
-            find a solution and the only solution they find is to search for
-            oneself in true sense. Then the quest for finding “Myself” starts.
-            And the key to this quest is dyaanam-meditation. Yes, Meditation is
-            the only means to connect us with ourselves. But then the question “
-            Where do I start?” arises.
-          </p>
-          <div className="col align-items-center justify-content-center  d-flex  ">
-            <Button
-              btnName="Know More"
-              buttonclicked={goToMeditationPage}
-            ></Button>
+      {/* Sricky div and quote ends here */}
+      <article className="container-fluid row px-0 my-6 meditation-section">
+        {/* Sricky div and quote here */}
+        <div className="row sticky-div  p-0 m-0 ">
+          <div className="col-12">
+            <div className="full-height">
+              <picture>
+                <source
+                  media="(max-width: 799px)"
+                  srcset="img/meditation/closed-eyes-360x640.jpg"
+                />
+                <source
+                  media="(min-width: 800px)"
+                  srcset="img/meditation/closed-eyes.jpg"
+                />
+                <img
+                  src="img/meditation/meditation-eyes.jpg"
+                  alt="meditaton-eyes"
+                  className="image-fluid image"
+                />
+              </picture>
+            </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 p-0">
-          <img
-            src="img/meditation/whitelotus.png"
-            alt="Your Image"
-            className="img-fit"
-          />
+        <div className="row d-flex quote-main-container text-scroll-effect">
+          <div col-12>
+            {meditationQuote.map((line) => (
+              <div className="quote-container">
+                <h2 className="header quote-text">
+                  <span>{line}</span>
+                </h2>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="row  row-background">
+          <div className="col-12 col-md-6">
+            <h3 className="header textcolor text-center">Meditation</h3>
+            <hr className="divider" />
+
+            <p className="text textcolor">
+              <b>
+                <i>
+                  “It is meditation that opens your inner doors and introduces
+                  you to your true self within. “ ~Amma
+                </i>
+              </b>
+              <br></br> In today's world Stress, disappointment , and despair
+              has taken over human life. Noone is thinking of the consequences
+              until they face them . People who really want to come out of these
+              try to find a solution and the only solution they find is to
+              search for oneself in true sense. Then the quest for finding
+              “Myself” starts. And the key to this quest is dyaanam-meditation.
+              Yes, Meditation is the only means to connect us with ourselves.
+              But then the question “ Where do I start?” arises.
+            </p>
+            <div className="col align-items-center justify-content-center  d-flex  ">
+              <Button
+                btnName="Know More"
+                buttonclicked={goToMeditationPage}
+              ></Button>
+            </div>
+          </div>
+          <div className="col-12 col-md-6 p-0">
+            <img
+              src="img/meditation/whitelotus.png"
+              alt="Your Image"
+              className="img-fit"
+            />
+          </div>
         </div>
       </article>
       <article className="content-wrapper">

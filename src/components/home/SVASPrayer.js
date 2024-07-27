@@ -38,7 +38,7 @@ function SVASPrayer() {
         <div className="col-md-5 offset-md-1 image-column">
           <img
             src="img/home/diya-nobg.jpg"
-            className="glowing-image"
+            className={`${isVisible ? "glowing-image" : ""}`}
             alt="Candle"
           />
         </div>
@@ -55,7 +55,7 @@ function SVASPrayer() {
             ))}
           </div>
         </div>
-        <div className="glow"></div>
+        <div className={`${isVisible ? "glow" : ""}`}></div>
       </div>
     </div>
   );

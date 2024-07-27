@@ -8,7 +8,7 @@ const HomePageIntro = (props) => {
       <picture>
         <source
           media="(min-width:960px)"
-          srcset="../img/home-bg-2160.jpg"
+          srcset="../img/home-bg-480.jpg"
         ></source>
         <source
           media="(min-width:480px)"
