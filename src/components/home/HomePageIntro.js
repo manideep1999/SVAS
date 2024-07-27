@@ -8,7 +8,7 @@ const HomePageIntro = (props) => {
       <picture>
         <source
           media="(min-width:960px)"
-          srcset="../img/home-bg-480.jpg"
+          srcset="../img/home-bg-2160.jpg"
         ></source>
         <source
           media="(min-width:480px)"
@@ -17,7 +17,7 @@ const HomePageIntro = (props) => {
 
         <img
           className="card-img img-fluid img-positon"
-          src="../img/home-bg-480.jpg"
+          src="../img/home-bg-2160.jpg"
           alt="Card image"
         ></img>
       </picture>
