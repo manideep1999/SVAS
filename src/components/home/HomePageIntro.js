@@ -8,17 +8,14 @@ const HomePageIntro = (props) => {
       <picture>
         <source
           media="(min-width:960px)"
-          srcset="../img/home-bg-2160.jpg"
+          srcset="img/home-bg-2160.jpg"
         ></source>
-        <source
-          media="(min-width:480px)"
-          srcset="../img/home-bg-480.jpg"
-        ></source>
+        <source media="(min-width:480px)" srcset="img/home-bg-480.jpg"></source>
 
         <img
           className="card-img img-fluid img-positon"
-          src="../img/home-bg-2160.jpg"
-          alt="Card image"
+          src="img/home-bg-2160.jpg"
+          alt="home page intro"
         ></img>
       </picture>
       <Waves></Waves>

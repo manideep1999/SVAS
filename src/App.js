@@ -17,7 +17,8 @@ import WordForTheWeekPage from "./components/word-for-the-week/WordForTheWeekPag
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    /* <Router basename={process.env.PUBLIC_URL}> */
+    <Router>
       <SBC>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
