@@ -1,6 +1,7 @@
 import React from "react";
-import AshramIntro from "./AshramIntro";
+
 import AshramContent from "./AshramContent";
+import AshramIntro from "./AshramIntro";
 
 function Ashram() {
   return (

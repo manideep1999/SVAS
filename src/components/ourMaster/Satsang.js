@@ -4,12 +4,12 @@ function Satsang() {
   return (
     <article className="container">
       <div className="row">
-        <h2 align="center" className="header textcolor">
-          <u>Amma & The Satsang</u>
-        </h2>
-        <h2 align="center" className="header textcolor">
+        <h3 align="center" className="header paintbrush-heading">
+          Amma & The Satsang
+        </h3>
+        <h3 align="center" className="header paintbrush-heading">
           Oneness in Manyness
-        </h2>
+        </h3>
         <div className="col-md-6">
           <div className="col-12 m-5">
             <img
@@ -28,7 +28,7 @@ function Satsang() {
         </div>
 
         <div className="col-md-6 text-start">
-          <p className="text textcolor">
+          <p className="text textcolor highlight-first-letter">
             Sri Sai Vani Satsang is a spiritual seva ashram that was established
             by Amma in the year 1999 to bring the common people who are solely
             immersed in worldly life to walk on the forgotten spiritual path.

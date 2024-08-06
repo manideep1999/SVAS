@@ -5,7 +5,7 @@ import Section from "../common/section/Section";
 function VirtualProgramsList() {
   const articles = [
     {
-      imageUrl: "../img/butterfly.jpg",
+      fallbackSrc: "./img/programs/butterfly.jpg",
       sectionHeading: "Thursday Satsang",
       desc:
         "Earlier every thursday the disciples would gather at gurusthan to" +
@@ -25,7 +25,7 @@ function VirtualProgramsList() {
       btnText: " Register",
     },
     {
-      imageUrl: "../img/me-into-me.jpeg",
+      fallbackSrc: "./img/programs/me-into-me-default.jpg",
       sectionHeading: "Me into Me",
       desc:
         " Me into Me is one of the blessings from Amma- Sadguru Sri vani" +
@@ -46,7 +46,6 @@ function VirtualProgramsList() {
         "'<b> To participate : </b>'",
       btnText: " Register",
     },
-   
   ];
 
   const sections = articles.map((article) => {

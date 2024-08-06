@@ -2,8 +2,7 @@
   "name": "svas-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://manideep1999.github.io/SVAS",
-  
+  "homepage": "http://localhost:3000",
   "dependencies": {
     "auth0-js": "^9.10.1",
     "axios": "^0.18.0",
@@ -48,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

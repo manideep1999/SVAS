@@ -17,7 +17,7 @@ function MasterIntro() {
       <article className="container border-black master-intro">
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
-            <h2 align="center" className="mt-5 mb-4 header textcolor">
+            <h2 align="center" className="mt-5 mb-4  paintbrush-heading header textcolor">
               Our Divine Mother
             </h2>
             <p className="text textcolor highlight-first-letter kolam-underline">

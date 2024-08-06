@@ -1,13 +1,28 @@
 import React from "react";
 import "./AshramIntro.css";
-import SectionHeader from "../common/section/SectionHeader";
+
+import PageHeader from "../common/section/PageHeader";
+import Curve from "../common/dividers/Curve";
 
 function AshramIntro() {
   return (
-    <SectionHeader
-      imageUrl="../img/subTitleBanner.jpg "
-      headerText="Ashram"
-    ></SectionHeader>
+    <div class="banner">
+      <div class="banner-title banner-font">
+        <span>
+          <h1 className="banner-font">ASRAMAM</h1>
+        </span>
+      </div>
+      <img
+        class="banner-image"
+        src="img/ashram/ashram-meditation-hall.jpg"
+        alt="Meditation hall "
+      />
+    </div>
   );
 }
 export default AshramIntro;
+/*<PageHeader
+        imgUrl="img/ashram/ashram-meditation-hall.jpg"
+        title="Ashram"
+        titlebackground="sky-above-ashram"
+      ></PageHeader>*/

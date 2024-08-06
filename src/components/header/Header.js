@@ -40,7 +40,7 @@ class Header extends React.Component {
         <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
           <img
             className="sbc-navbar-logo"
-            src="/img/SvasLogoFinal-v2.jpeg"
+            src="./img/SvasLogoFinal-v2.jpeg"
             alt="SVAS FOR EARTH"
           />
         </Link>

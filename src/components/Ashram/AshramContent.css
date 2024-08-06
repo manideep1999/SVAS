@@ -1,0 +1,34 @@
+.asram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 50px;
+    position: relative;
+}
+
+.text-center-box {
+    text-align: center;
+    z-index: 1;
+}
+
+.corner-image {
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 60px;
+}
+
+@media (max-width: 768px) {
+    .corner-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .corner-image {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePageIntro.css";
-import Waves from "../common/dividers/curve/Waves";
+import Waves from "../common/dividers/Waves";
 
 const HomePageIntro = (props) => {
   return (
@@ -10,8 +10,7 @@ const HomePageIntro = (props) => {
           media="(min-width:960px)"
           srcset="img/home-bg-2160.jpg"
         ></source>
-        <source media="(min-width:480px)" srcset="img/home-bg-480.jpg"></source>
-
+        <source media="(min-width:300px)" srcset="img/home-bg-480.jpg"></source>
         <img
           className="card-img img-fluid img-positon"
           src="img/home-bg-2160.jpg"

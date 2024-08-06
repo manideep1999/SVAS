@@ -1,0 +1,141 @@
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.banner-title {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  background-image: linear-gradient(to right, #ddbed4 0%, #5e7bb1 100%);
+  /*background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);*/ 
+    color: white;
+    z-index: 1;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translateZ(100px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.banner-font{
+    font-size: 6vw;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.banner-image {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -10%)  translateZ(-200px);
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2em;
+        padding: 0 15px;
+    }
+
+    .banner-image {
+        width: 90%;
+        transform: translate(-50%, -50%) translateZ(-100px);
+    }
+
+ 
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 1.5em;
+        height: 40vh;
+    }
+    .banner-image {
+        width: 100%;
+        transform: translate(-50%, -60%)  translateZ(-50px);
+    }
+    
+}
+
+
+
+
+
+/*.sky-above-ashram{
+    background: linear-gradient(179.1deg, rgb(247, 238, 238) -1.9%, rgb(247, 202, 201) 44.9%, rgb(145, 168, 208) 96.1%);
+}
+
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-title {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background: linear-gradient(179.1deg, rgb(247, 238, 238) -1.9%, rgb(247, 202, 201) 44.9%, rgb(145, 168, 208) 96.1%);*/
+   /*background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 8vh;
+    z-index: -1;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.banner-image {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+ 
+}
+
+/* Responsive Styles */
+/*@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2em;
+        padding: 0 15px;
+    }
+
+    .banner-image {
+        width: 90%;
+        transform: translate(-50%, -5%);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 1.5em;
+        height: 40vh;
+    }
+
+    .banner-image {
+        width: 100%;
+        transform: translate(-50%, 0%);
+    }
+}*/

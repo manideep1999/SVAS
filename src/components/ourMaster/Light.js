@@ -4,9 +4,10 @@ function Light() {
   return (
     <article className="container ">
       <div className="row">
-        <h2 className="header textcolor">
-          <u>Amma - the light of a new beginning</u>
-        </h2>
+        <h3 className="header  paintbrush-heading">Amma</h3>
+        <h3 className="header  paintbrush-heading">
+          The Light of a New Beginning
+        </h3>
         <div className="col-md-6">
           <img
             src="img/masterpics/lightcandle.jpg"
@@ -16,7 +17,7 @@ function Light() {
         </div>
 
         <div className="col-md-6">
-          <p className="text textcolor" align="center">
+          <p className="text textcolor highlight-first-letter" align="center">
             Amma’s teachings are very distinguished owing to their simplicity,
             yet unique and very powerful. These invaluable teachings show the
             path of righteous living and lead a way to grow from the basic human

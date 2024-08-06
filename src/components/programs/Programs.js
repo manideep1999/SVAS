@@ -10,8 +10,9 @@ function Programs() {
   return (
     <div class="section">
       <SectionHeader
-        imageUrl="../img/subTitleBanner.jpg "
+        imageUrl="/img/subTitleBanner.jpg "
         headerText="Programs"
+        alt="Progarms banner"
       ></SectionHeader>
 
       <div className="container-fluid">

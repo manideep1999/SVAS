@@ -1,0 +1,4 @@
+.section-row:nth-child(even) 
+{
+  flex-direction: row-reverse !important;
+}

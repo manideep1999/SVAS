@@ -6,9 +6,19 @@ function Section(props) {
     <section className="row section-row">
       <div className="col-md-6">
         <div className="div-block">
-          <span className="content-block">
-            <img src={props.imageUrl} className="img-fluid img-fit"></img>
-          </span>
+          <picture className="content-block">
+            {props.portraitSrc && (
+              <source media="(max-width:767px)" srcset={props.portraitSrc} />
+            )}
+            {props.landscapeSrc && (
+              <source media="(min-width:768px)" srcset={props.landscapeSrc} />
+            )}
+            <img
+              src={props.fallbackSrc}
+              alt={props.alt}
+              className="img-fluid img-fit"
+            ></img>
+          </picture>
         </div>
       </div>
       <div className="col-md-6 section-data">

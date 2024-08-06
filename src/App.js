@@ -6,7 +6,7 @@ import LivePage from "./components/live/LivePage";
 import SBC from "./components/sbc/SBC";
 import OurMaster from "./components/ourMaster/OurMaster";
 import Programs from "./components/programs/Programs";
-import Ashram from "./components/Ashram/Ashram";
+import Ashram from "./components/ashram/Ashram";
 import SermonsPage from "./components/sermons/SermonsPage";
 import SermonSeriesPage from "./components/sermons/SermonSeriesPage";
 import SermonPage from "./components/sermons/SermonPage";

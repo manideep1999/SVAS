@@ -66,9 +66,8 @@ const HomePageContent = (props) => {
             <h2 className="header gradient-text">
               <span>OUR GURU </span>
             </h2>
-            <hr className="divider" />
 
-            <p className="text ">
+            <p className="text">
               <span>
                 A Sadhguru is the one who has experienced and realized the
                 ultimate truth. The one who has just not experienced it but
@@ -100,7 +99,7 @@ const HomePageContent = (props) => {
       {/*Meditation section */}
 
       {/* Sricky div and quote ends here */}
-      <article className="container-fluid row px-0 my-6 meditation-section">
+      <article className="container-fluid row px-0 my-6 master-content">
         {/* Sricky div and quote here */}
         <div className="row sticky-div  p-0 m-0 ">
           <div className="col-12">
@@ -135,25 +134,21 @@ const HomePageContent = (props) => {
           </div>
         </div>
         <div className="row  row-background">
-          <div className="col-12 col-md-6">
-            <h3 className="header textcolor text-center">Meditation</h3>
-            <hr className="divider" />
-
-            <p className="text textcolor">
-              <b>
-                <i>
-                  “It is meditation that opens your inner doors and introduces
-                  you to your true self within. “ ~Amma
-                </i>
-              </b>
-              <br></br> In today's world Stress, disappointment , and despair
-              has taken over human life. Noone is thinking of the consequences
-              until they face them . People who really want to come out of these
-              try to find a solution and the only solution they find is to
-              search for oneself in true sense. Then the quest for finding
-              “Myself” starts. And the key to this quest is dyaanam-meditation.
-              Yes, Meditation is the only means to connect us with ourselves.
-              But then the question “ Where do I start?” arises.
+          <div className="col-12 col-lg-6  align-items-center text-scroll-effect">
+            <h2 className="header gradient-text">
+              <span>Meditation</span>
+            </h2>
+            <p className="text">
+              <span>
+                In today's world Stress, disappointment , and despair has taken
+                over human life. Noone is thinking of the consequences until
+                they face them . People who really want to come out of these try
+                to find a solution and the only solution they find is to search
+                for oneself in true sense. Then the quest for finding “Myself”
+                starts. And the key to this quest is dyaanam-meditation. Yes,
+                Meditation is the only means to connect us with ourselves. But
+                then the question “ Where do I start?” arises.
+              </span>
             </p>
             <div className="col align-items-center justify-content-center  d-flex  ">
               <Button
@@ -162,6 +157,7 @@ const HomePageContent = (props) => {
               ></Button>
             </div>
           </div>
+
           <div className="col-12 col-md-6 p-0">
             <img
               src="img/meditation/whitelotus.png"
