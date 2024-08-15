@@ -1,12 +1,17 @@
-.asram-container {
+.asram-row-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f8f9fa;
     padding: 50px;
     position: relative;
+    box-shadow: 5px 5px #ddbed4;
+   
+   
 }
-
+.blue-background{
+background: radial-gradient(circle at 10% 20%, rgb(55, 209, 255) 0%, rgb(14, 31, 111) 100.2%);
+}
 .text-center-box {
     text-align: center;
     z-index: 1;
@@ -15,9 +20,10 @@
 .corner-image {
     width: 300px; /* Adjust size as needed */
     height: 300px; /* Adjust size as needed */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgb(111, 173, 194);
     border-radius: 0 60px;
 }
+
 
 @media (max-width: 768px) {
     .corner-image {
@@ -30,5 +36,16 @@
     .corner-image {
         width: 200px;
         height: 200px;
+        box-shadow: 5px 5px lightblue;
     }
+}
+.right-image {
+    height: 50%;
+}
+.image-description{ 
+        text-align: center;
+        padding: 10px;
+        color: #f8f9fa;  
+        font-weight: 700; 
+        font-size:25px;
 }
