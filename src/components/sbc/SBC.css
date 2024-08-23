@@ -7,16 +7,39 @@ a:hover {
 }
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 5rem;
 }
-
+.col .col-sm-8{
+  padding:1rem;
+}
 body {
-  padding-top: 90px;;
+  padding-top: 90px;
+  background-color: #f6f8f5;
+  
 }
 
 @media(min-width: 992px) {
   body {
     padding-top: 110px;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+@media screen and (max-width: 389px) {
+  html {
+      font-size:2.5641vw;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  html {
+      font-size:clamp(10px,.7142857vw,12px)
   }
 }

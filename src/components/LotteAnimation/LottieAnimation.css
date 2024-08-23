@@ -1,0 +1,10 @@
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content; 
+    background-color: transparent; 
+  }
+  

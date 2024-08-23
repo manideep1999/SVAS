@@ -1,0 +1,11 @@
+
+  h1{
+    font-size: 8vw;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  @media screen and (max-width: 810px) {
+     h1 {
+      font-size: 8vh;
+    }
+  }
+ 

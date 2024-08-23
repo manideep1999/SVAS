@@ -4,20 +4,24 @@ import HomePageIntro from "./HomePageIntro";
 import HomePageText from "./HomePageText";
 import HomePageContent from "./HomePageContent";
 import HomePageMeetingTimes from "./HomePageMeetingTimes";
-import Map from "../map/Map";
 import "./HomePage.css";
+import HomePagePrimer from "./HomePagePrimer";
+import Waves from "../common/dividers/curve/Waves";
+import FlipCircle from "../common/flipElement/FlipCircle";
+import FlipElement from "../common/flipElement/FlipElement";
+import CarouselWithImage from "../common/carousel-slider/carousel-with-image/CarouselWithImage";
+import SVASPrayer from "./SVASPrayer";
 
-const HomePage = (props) => {
+function HomePage(props) {
   return (
     <div className="home-page">
-      <HomePageSlider />
       <HomePageIntro />
-      <HomePageText />
+      <FlipElement />
+    <SVASPrayer/>
       <HomePageContent />
+      <HomePageSlider />
       <HomePageMeetingTimes />
-      <Map />
     </div>
   );
-};
-
+}
 export default HomePage;
