@@ -1,3 +1,4 @@
+
 /* Ensure html, body, and root div take full height */
 html, body, #root {
   height: 100%;
@@ -106,4 +107,5 @@ p {
 .decorative-elements img {
   height: 100px; /* Adjust size as needed */
 }
+
 

@@ -60,12 +60,12 @@ class Header extends React.Component {
           <ul className="navbar-nav sbc-navbar-content">
             <li className="nav-item">
               <NavLink
-                to="/"
+                to="/about"
                 className="nav-link"
                 activeClassName="active"
                 onClick={this.navLinkClick}
               >
-                Home
+                About
               </NavLink>
             </li>
             <li className="nav-item">
@@ -90,26 +90,6 @@ class Header extends React.Component {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/ashram"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Ashram
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/programs"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Programs
-              </NavLink>
-            </li>
-            {/*<li className="nav-item">
-              <NavLink
                 to="/Sermons"
                 className="nav-link"
                 activeClassName="active"
@@ -117,7 +97,7 @@ class Header extends React.Component {
               >
                 Teachings
               </NavLink>
-    </li> */}
+            </li>
             <li className="nav-item">
               <NavLink
                 to="/live"
@@ -149,16 +129,6 @@ class Header extends React.Component {
                 Word for the way
               </NavLink>
             </li> */}
-            <li className="nav-item">
-              <NavLink
-                to="/about"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                About
-              </NavLink>
-            </li>
             <li className="nav-item">
               <NavLink
                 to="/contact"
