@@ -107,13 +107,3 @@ p {
   height: 100px; /* Adjust size as needed */
 }
 
-/* src/LottieAnimation.css */
-.animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Light grey background */
-  overflow: hidden;
-}
