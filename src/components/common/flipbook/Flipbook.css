@@ -2,30 +2,76 @@
 .book-container{
     font-family: "Poppin",sans-serif;
     background-color: whitesmoke;
- 
-
+    height:100vh;
 }
-
 .book{
-   width:35vh;
-   height:45vh;
+   width:50vh;
+   height:75vh;
    position: relative;
-   transition: transform 0.3s ease; 
-   
+   transition-duration:  1s ; 
+   perspective:1500;
 }
 .cover, .back-cover{
-    background-color: #4173a5;
+   /* background-color: #4173a5;*/
+    /*background-image: linear-gradient(to right, #ddbed4 0%, #5e7bb1 100%);*/
+    background: linear-gradient(108.7deg, rgb(224, 235, 213) 8.1%, rgb(37, 148, 141) 91.2%);
     width:100%;
     height:100%;
     border-radius: 0 18px 18px 0;
-    box-shadow: 0 0 5px grey;
-   
-   
+    box-shadow: 0 0 10px grey;
+}
+.booktitle{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size:2vw;
+}
+.book-heading{
+    font-size:3rem;
+    text-align: center;
+    color: #333;
+    padding:5px;
+    font-weight: 700;
 }
 .cover{
     position:absolute;
-    z-index:2;
-
+    display: flex;
+    z-index:6;
+    transform-origin: center left;
+    transition: transform 1s; 
+    transform-style: preserve-3d;
+}
+.cover  label{
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    position: absolute; 
+}
+.cover-page{
+    display: flex;
+    flex-direction: column;  
+}
+.text-section, .image-section {
+    flex: 1; /* Equal height for both sections */
+    height:50%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+}
+.text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.image-section img {
+    max-width: 100%;
+    max-height:100%;
+    object-fit: cover;
+    border-radius: 45%;
 }
 .back-cover{
     z-index: -1;
@@ -33,31 +79,131 @@
 }
 .page{
  position:absolute;
- margin:10px 10px 0 0;
- z-index:1;
- background-color: white;
- width:33vh;
- height:43vh;
- border-radius: 0 15px 15px 0;
+ margin: 3% 0 0 0;
+ background: linear-gradient(135deg, #fefcbf, #fceabb); 
+ box-shadow: 0 0 10px grey;
+ width:96%;
+ height:96%;
+ border-radius: 0 18px 18px 0;
+ transform-origin: left ;
+ transform-style: preserve-3d;
+ transform:rotateY(0deg);
+ transition-duration: 1.5s;
 } 
+.page-text{
+    font-size:2.5rem;
+    text-align: center;
+    color: #333;
+    padding:5px;
+}
 input{
-    display:none;
+    visibility: hidden;
 }
-
- .cover  label{
+ .page img{
+   
     width:100%;
+    height:98%;
+    border:1px solid green;
+    border-radius:45%;
+    box-shadow: 0 0 10px grey;
+    padding:3px;
+ }
+ .flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .frontpage{
+    position:absolute;
+    width: 100%;
     height:100%;
-    cursor: pointer;
-
-    position: absolute;
+    backface-visibility: hidden; 
+    box-sizing: border-box;   
+    padding:1rem;
   
+ }
+ .cover-img{
+    border: 1px solid black;
+    border-radius:50%;
+
+ }
+ .page-divider{
+    box-shadow: 0 0 10px grey;
+ }
+ .backpage{
+    position:absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden; 
+    width: 100%;
+    height:100%;
     
+ }
+ .book p{
+    font-family:"Lucida Handwriting",cursive;
+ }
+ .next, .prev{
+    position:absolute;
+    bottom: 1em;
+    cursor:pointer;
+ }
+ .next{
+    right: 1em;
+ }
+ .prev{
+    left: 1em;
+ }
+#page1{
+    z-index:5
 }
-
-
+#page2{
+    z-index:4
+}
+#page3{
+    z-index:3
+}
+#page4{
+    z-index:2
+}
+#page5{
+    z-index:1
+}
 #next-page:checked ~ .book{
     transform: translateX(20vh);
 }
+#next-page:checked ~ .book .cover{
+    transition:transform 1.5s,z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index:1;
+}
+#checkbox-page1:checked ~ .book #page1 {
+    transform: rotateY(-180deg);
+    z-index:2;
+ 
+}
+#checkbox-page2:checked ~ .book #page2{
+    transform: rotateY(-180deg);
+    z-index:3;
+   
+}
+#checkbox-page3:checked ~ .book #page3{
+    transform:rotateY(-180deg);
+    z-index:4;
+ 
+}
+#checkbox-page4:checked ~ .book #page4{
+    transform: rotateY(-180deg);
+    z-index:5;
+  
+}
+/* last page click */
+#checkbox-page5:checked ~ .book  #page5  {
+    transform: rotateY(180deg);  
+    z-index:1;
+    transition: transform 0.2s; 
+   
+    
+}
+
 
 
 

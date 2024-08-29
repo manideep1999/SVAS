@@ -28,9 +28,9 @@ body {
 
 html {
   font-size: 62.5%;
-  font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+ font-family: "skolar-sans-pe","Helvetica Neue",sans-serif;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%
 }
 @media screen and (max-width: 389px) {
   html {

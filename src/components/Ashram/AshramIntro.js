@@ -21,8 +21,3 @@ function AshramIntro() {
   );
 }
 export default AshramIntro;
-/*<PageHeader
-        imgUrl="img/ashram/ashram-meditation-hall.jpg"
-        title="Ashram"
-        titlebackground="sky-above-ashram"
-      ></PageHeader>*/
