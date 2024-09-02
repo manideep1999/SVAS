@@ -4,28 +4,52 @@ import "./AshramContent.css";
 function AshramContent() {
   return (
     <>
-      <article className="container">
+      <article className="container ashram-container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
-            <p className="text textcolor highlight-first-letter ">
-              <span className="kolam-underline">
-                Our Ashram is situated near hyderabad,India,nestled away from
-                the busy urban life in the midst of serene village surrounding.
-                The Ashram is a sanctum sanctuary for the sadaks. This is a very
-                profoundly energized space imbued with divine energy . Our Sri
-                Guru Sadguru Sri Vani Matha has transformed this space into an
-                energy space conducive to those who want to step into
-                spirituality. Those already on their spiritual journey will see
-                their sadana deppening. A common experience upon entering the
-                Ahrams is a remarkable stillness of mind. All your worries and
-                mental noise just fade away, leaving you in a state of
-                tranquility.
-              </span>
+            <p className="text textcolor highlight-first-letter kolam-underline ">
+              Our Ashram is situated near hyderabad,India,nestled away from the
+              busy urban life in the midst of serene village surrounding. The
+              Ashram is a sanctum sanctuary for the sadaks. This is a very
+              profoundly energized space imbued with divine energy . Our Sri
+              Guru Sadguru Sri Vani Matha has transformed this space into an
+              energy space conducive to those who want to step into
+              spirituality. Those already on their spiritual journey will see
+              their sadana deppening. A common experience upon entering the
+              Ahrams is a remarkable stillness of mind. All your worries and
+              mental noise just fade away, leaving you in a state of
+              tranquility.
             </p>
           </div>
         </div>
       </article>
-      <article className="container-fluid h-100 blue-background">
+      <article className="container-fluid ashram-image-container">
+        <div className="row g-5">
+          <div className="col-md-4  d-flex justify-content-center align-items-start">
+            <img
+              src="./img/ashram/goshala.jpeg"
+              alt="Top Image"
+              class="img-fluid grid-img"
+            />
+          </div>
+          <div className="col-md-4  d-flex justify-content-center ">
+            <img
+              src="./img/ashram/gate.jpeg"
+              alt="Bottom Image"
+              class="img-fluid grid-img"
+            />
+          </div>
+          <div className="col-md-4  d-flex justify-content-center align-items-end">
+            <img
+              src="./img/ashram/bojansala.jpeg"
+              alt="Bottom Image"
+              class="img-fluid grid-img"
+            />
+          </div>
+        </div>
+      </article>
+
+      {/*<article className="container-fluid h-100 blue-background">
         <div className="row no-gutters">
           <div className="col-lg-6 d-flex flex-column height100">
             <img
@@ -59,7 +83,7 @@ function AshramContent() {
             </div>
           </div>
         </div>
-      </article>
+  </article>*/}
       <article className="container">
         <div className="row">
           <div className="col-lg-8  offset-lg-2 d-flex justify-content-center align-items-center text-center-box">

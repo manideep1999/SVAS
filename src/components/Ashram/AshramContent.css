@@ -1,3 +1,7 @@
+.ashram-container{
+    position:relative;
+
+}
 .asram-row-container {
     display: flex;
     justify-content: center;
@@ -49,3 +53,21 @@ background: radial-gradient(circle at 10% 20%, rgb(55, 209, 255) 0%, rgb(14, 31,
         font-weight: 700; 
         font-size:25px;
 }
+.ashram-image-container {
+    padding: 0 15px; 
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.grid-img{
+    width: 100%;
+    height:auto;
+    object-fit: cover; 
+    border:1px solid black;
+    border-radius: 10px;
+    
+   
+
+}
+
+
+
+
