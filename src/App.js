@@ -7,9 +7,7 @@ import SBC from "./components/sbc/SBC";
 import OurMaster from "./components/ourMaster/OurMaster";
 import Programs from "./components/programs/Programs";
 import Ashram from "./components/ashram/Ashram";
-import SermonsPage from "./components/sermons/SermonsPage";
-import SermonSeriesPage from "./components/sermons/SermonSeriesPage";
-import SermonPage from "./components/sermons/SermonPage";
+import Meditation from "./components/meditation/Meditation";
 import ContactPage from "./components/contact/ContactPage";
 import Section from "./components/common/section/Section";
 // import GivingPage from "./components/giving/GivingPage";
@@ -25,6 +23,7 @@ function App() {
         <Route path="/live" component={LivePage} />
         <Route path="/programs" component={Programs} />
         <Route path="/ashram" component={Ashram} />
+        <Route path="/meditation" component={Meditation} />
         {/* <Route path="/sermons" exact component={SermonsPage} /> 
       <Route path="/sermons/series/:title" component={SermonSeriesPage} />
 <Route path="/sermon/:sermonId/:title" component={SermonPage} /> */}

@@ -1,0 +1,65 @@
+.meditation-banner{
+    background-image: linear-gradient(to right, #ddbed4 0%, #5e7bb1 100%);
+   position:relative;
+}
+.header-text{
+    text-align: center;
+    font-size: 11ch;
+    font-weight: 50;
+    color: white;
+}
+@media (max-width:768px) {
+    .header-text{
+        font-size:8.5ch;
+        
+    }
+    .meditation-img-border{
+        border: 2px solid black;
+       
+    }
+    .meditation-intro-text{
+        text-align: center;
+        font-size: 6.5ch;
+        line-height: 1;
+        
+    }
+}
+@media (min-width:768px) {
+.meditation-img-border{
+    border: 3px solid white;
+
+   
+}
+}
+
+
+/* Image Column (lower) */
+.image-column {
+    height: 75%; /* Occupies the remaining half */
+    overflow: hidden;
+
+    margin:0;
+}
+
+.image-column img {
+    object-fit: cover; /* Makes the image cover the lower section properly */
+    object-position: bottom;
+    border-radius:50px 50px 50px 50px; /* Curved bottom effect */
+}
+.meditation-intro-div{
+   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top:20px;
+}
+
+.meditation-intro-text{
+    text-align: center;
+    
+}
+.float-right{
+    float:right;
+}
+

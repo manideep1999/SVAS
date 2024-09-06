@@ -10,7 +10,10 @@ function MasterIntro() {
           src="img/Amma_banner.jpeg"
           alt="Card image"
         />
-        <h3 align="center" className="header card-heading textcolor">
+        <h3
+          align="center"
+          className="header card-heading textcolor threeD-text-shadow"
+        >
           <u> Sadhguru Sri Sri Sri Vani Matha </u>
         </h3>
       </div>

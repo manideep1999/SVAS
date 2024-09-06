@@ -9,7 +9,7 @@ function AshramIntro() {
     <div class="banner">
       <div class="banner-title banner-font">
         <span>
-          <h1 className="banner-font">ASRAMAM</h1>
+          <h1 className="banner-font threeD-text-shadow">ASRAMAM</h1>
         </span>
       </div>
       <img

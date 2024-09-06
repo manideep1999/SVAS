@@ -10,7 +10,6 @@ function Ashram() {
       <AshramIntro></AshramIntro>
       <AshramContent></AshramContent>
       <AshramExperiences></AshramExperiences>
-      
     </>
   );
 }
