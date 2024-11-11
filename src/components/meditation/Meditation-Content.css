@@ -2,10 +2,7 @@
     font-weight: 400 !important;
     text-transform: uppercase;
 }
-.space-item{
-    margin:3em;
-    padding:3em;
-}
+
 .mask-painting {
     -webkit-mask-image: url("/public/img/meditation/7.svg");
     mask-image:  url("/public/img/meditation/7.svg");
@@ -21,13 +18,40 @@
     font-size:2.5rem;
     margin-bottom:1em;
   }
-  .space-text{
-    padding-right:3em;
-    
-  }
+ 
   @media (min-width:769px) {
     .move-down{
         transform: translateY(2em);
       }
+      .space-text{
+        padding-right:3em;
+        
+      }
+      .space-item{
+        margin:3em 0 3em 0;
+        padding:3em;
+    }
   }
+  @media (max-width:769px) {
+  .space-item{
+    margin:2em;
+    padding:2em;
+}
+  }
+  .image-border{
+    border:2px solid white;
+  }
+  .curved-frame{
+    border-radius:50% 50% 0 0;
+  }
+  .main-container{
+    position:relative;
+    z-index: 50;
+  }
+  .outer-div{
+    z-index:0;
+
+  }
+  
+ 
   

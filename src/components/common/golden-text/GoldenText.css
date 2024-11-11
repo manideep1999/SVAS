@@ -1,0 +1,32 @@
+.gold-text{
+font-family: 'Times New Roman',serif;
+letter-spacing: 5px;
+font-size: 10rem;
+font-weight: bold;
+text-align:center;
+background-image: linear-gradient(
+ to right,
+ #d09a23 0,
+        #cb9b51 22%, 
+ #f6e27a 45%,
+ #f6f2c0 50%,
+ #f6e27a 55%,
+ #cb9b51 78%,
+ #ea890b 100%
+ );
+ -webkit-text-stroke: 2px black;
+                   
+ color:transparent;
+ -webkit-background-clip:text;
+  background-clip:text ;
+}
+.goldTextContainer{
+    /*background-color: #033163;*/
+    background-color: ;
+  height: 50vh;
+  position:sticky;
+  z-index: -1;
+  bottom:15px;
+  overflow: hidden;
+    
+}

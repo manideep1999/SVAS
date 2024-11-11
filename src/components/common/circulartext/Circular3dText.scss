@@ -1,0 +1,33 @@
+.textContainer{
+    background-color: #000;
+    color:white;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.banner{
+    display:flex;
+}
+$width: 100px;
+.panel{
+    width:$width;
+    height:$width;
+    border:1px solid white;
+    position: relative;
+    overflow: hidden;
+   
+
+}
+.panel::before{
+    position: absolute;
+    content:"Sri MahaChaitanya Kriya";
+    font-size: 100px;
+    width:max-content;
+    left:var(--left)
+  
+}
+@for $i from 0 to 5{  
+    .panle:nth-child(#{$i+1}){
+        --left:#{$width*i * -1}
+    }
+ }

@@ -109,7 +109,7 @@ h1{
   font-feature-settings: "palt" on;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 768px) {
   .heading-text {
       margin:0;
       font-size:3.5rem;
@@ -228,3 +228,6 @@ h1{
 }
 
 
+.blue-background{
+  background: radial-gradient(circle at 10% 20%, rgb(55, 209, 255) 0%, rgb(14, 31, 111) 100.2%);
+  }

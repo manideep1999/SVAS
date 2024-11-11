@@ -2,11 +2,7 @@
 .circle {
     position: relative;
    /* background: mistyrose;*/
-
-   background: radial-gradient(circle, #ffccbc, #ffab91);
-   
- 
-           
+   background: radial-gradient(circle, #ffccbc, #ffab91);     
     border: 1px solid black;
     width:100%;
     overflow: hidden;
