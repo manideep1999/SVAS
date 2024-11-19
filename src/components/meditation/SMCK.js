@@ -2,7 +2,26 @@ import React from "react";
 import "./SMCK.css";
 import AutoPlayVideo from "../common/autoplayvideo/AutoPlayVideo";
 import GoldenText from "../common/golden-text/GoldenText";
+import BlobWithImage from "../common/blob/BlobWithImage";
 function SMCK() {
+  const medblobs = [
+    {
+      colorClass: "blob-radiantblue",
+      imageurl: "img/smck/flower-removebg-preview.png",
+      text: "A Dyaana Sadana \nTo expereince and value human life.",
+    },
+    {
+      colorClass: "blob-radiantblue",
+      imageurl: "img/smck/flower-removebg-preview.png",
+      text: "A Dyaana Sadana \nTo rise from where you stand",
+    },
+    {
+      colorClass: "blob-radiantblue",
+      imageurl: "img/smck/flower2.png",
+      text: "A Dyaana Sadana \nTo expand our horizons to the Universalness.",
+    },
+  ];
+
   return (
     <div>
       <div className="meditation-container d-flex  align-items-center justify-content-center full-height-cotainer">
@@ -34,7 +53,7 @@ function SMCK() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row ">
             <div className="col space-item">
               <p className="data-text space-text">
                 To experience that completeness and wholeness of Meditation and
@@ -50,17 +69,25 @@ function SMCK() {
         </section>
       </div>
 
-      <section className=" full-height-cotainer">
+      <section className="container">
         <h2 className="d-flex  align-items-center justify-content-center heading-text">
           Sri MahaChaitanya Kriya
         </h2>
         <div className="circular-image-container">
-          <img
-            className="circular-image"
-            src="img/smck/flower.jpeg"
-            alt="a yellow flower shining in the dark"
-          />
-          <p className="image-text"> To rise from where you stand </p>
+          <div class="row justify-content-center">
+            {medblobs.map((medblob, index) => (
+              <div
+                key={index}
+                class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
+              >
+                <BlobWithImage
+                  imageurl={medblob.imageurl}
+                  text={medblob.text}
+                  colorClass={medblob.colorClass}
+                ></BlobWithImage>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
