@@ -90,6 +90,10 @@ h1{
     font-size: 8vh;
   }
 }
+body{
+  font-family: ivyora-display, Didot, "Times New Roman", serif;
+  font-weight: 300;
+}
 .heading-text {
   font-size: 5.5rem;
   letter-spacing: .08em;

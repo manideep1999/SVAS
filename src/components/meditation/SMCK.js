@@ -7,18 +7,22 @@ function SMCK() {
   const medblobs = [
     {
       colorClass: "blob-radiantblue",
-      imageurl: "img/smck/flower-removebg-preview.png",
+      imageurl: "/img/smck/flower-removebg-preview.png",
       text: "A Dyaana Sadana \nTo expereince and value human life.",
+      topvalue: "top100",
     },
+
     {
       colorClass: "blob-radiantblue",
-      imageurl: "img/smck/flower-removebg-preview.png",
+      imageurl: "/img/smck/tree.png",
       text: "A Dyaana Sadana \nTo rise from where you stand",
+      topvalue: "top100",
     },
     {
       colorClass: "blob-radiantblue",
-      imageurl: "img/smck/flower2.png",
+      imageurl: "/img/smck/butterflies.png",
       text: "A Dyaana Sadana \nTo expand our horizons to the Universalness.",
+      topvalue: "top50",
     },
   ];
 
@@ -84,6 +88,7 @@ function SMCK() {
                   imageurl={medblob.imageurl}
                   text={medblob.text}
                   colorClass={medblob.colorClass}
+                  topvalue={medblob.topvalue}
                 ></BlobWithImage>
               </div>
             ))}

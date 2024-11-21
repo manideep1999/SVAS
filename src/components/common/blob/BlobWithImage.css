@@ -1,21 +1,26 @@
 
   
   .circular-image {
-    width: 800px; /* Set the desired width */
-    height: 800px; /* Set the desired height */
+    width: 400px; /* Set the desired width */
+    height: 400px; /* Set the desired height */
     border-radius: 50%; /* Makes the image circular */
    /* object-fit: cover; /* Ensures the image covers the area */
     /*border: 2px solid #ccc; /* Optional: adds a border */
+    position:absolute;
+    z-index:1
   }
   
   .image-text {
-    margin-top: 10px; /* Space between image and text */
+    margin-top: 10px;
+    font-family: ivyora-display, Didot, "Times New Roman", serif;
+    font-weight: 300; /* Space between image and text */
     text-align: center; /* Center the text */
     font-size:2.5rem;
     color:white;
     z-index:2;
   }
   .blob-container{
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +38,7 @@
     transition: transform 0.3s;
     position: relative;
     border-radius: 40% 60% 50% 70% / 50% 40% 60% 30%; /* Creating a blob-like shape */
-  
+   
     /* background: linear-gradient(145deg, #ff5f6d, #ffc371);*/
   }
    /* Responsive adjustments */
@@ -53,6 +58,19 @@
     }
   }
   .blob-radiantblue{
+    background-image: url("/public/img/meditation/green-background.jpg");
+    object-fit: center;
     box-shadow: 0 15px 55px 20px rgba(0, 0, 0, .1);
-    background: linear-gradient(45deg, rgba(46,244,205,0) 30%,rgba(198,171,203,0) 60%,rgba(246,148,203,1) 100%), radial-gradient(ellipse at center, rgba(76,110,207,0) 27%,rgba(76,110,207,0.33) 51%,rgba(89,88,179,0.58) 69%,rgba(89,78,183,1) 100%), linear-gradient(80deg, rgba(246,148,203,0) 0%,rgba(70,232,205,.1) 70%,rgba(46,244,205,1) 100%), linear-gradient(45deg, rgba(46,244,205,1) 0%,rgba(76,110,207,0.2) 50%,rgba(76,110,207,0) 60%);
-  }
+    background-size: cover;
+    /*background: linear-gradient(45deg, rgba(46,244,205,0) 30%,rgba(198,171,203,0) 60%,rgba(246,148,203,1) 100%), radial-gradient(ellipse at center, rgba(76,110,207,0) 27%,rgba(76,110,207,0.33) 51%,rgba(89,88,179,0.58) 69%,rgba(89,78,183,1) 100%), linear-gradient(80deg, rgba(246,148,203,0) 0%,rgba(70,232,205,.1) 70%,rgba(46,244,205,1) 100%), linear-gradient(45deg, rgba(46,244,205,1) 0%,rgba(76,110,207,0.2) 50%,rgba(76,110,207,0) 60%);
+  */
+}
+.top200{
+  top:-200px;
+}
+.top100{
+  top:-120px;
+}
+.top50{
+  top:-50px;
+}

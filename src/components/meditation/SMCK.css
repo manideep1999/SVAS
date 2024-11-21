@@ -22,7 +22,7 @@
     margin-top: 10px; /* Space between image and text */
     text-align: center; /* Center the text */
     font-size:2.5rem;
-    z-index:2;
+    z-index:3;
   }
   .blob-shape {
     width: 300px;

@@ -1,15 +1,15 @@
 import React from "react";
 import "./BlobWithImage.css";
 
-function BlobWithImage({ imageurl, text, colorClass }) {
+function BlobWithImage({ imageurl, text, colorClass, topvalue }) {
   return (
     <div className="container blob-container">
-      <div className={`blob-shape ${colorClass}`}>
-        {/*<img
-          className="circular-image"
-          src={imageurl}
-          alt="a yellow flower shining in the dark"
-  />*/}
+      <img
+        className={`circular-image ${topvalue}`}
+        src={imageurl}
+        alt="a yellow flower shining in the dark"
+      />
+      <div className={`blob-shape ${colorClass} `}>
         <span className="image-text">
           {text.split("\n").map((line, index) => (
             <React.Fragment key={index}>
