@@ -7,7 +7,7 @@ function SMCK() {
   const medblobs = [
     {
       colorClass: "blob-radiantblue",
-      imageurl: "/img/smck/flower-removebg-preview.png",
+      imageurl: "/img/smck/sunrise.png",
       text: "A Dyaana Sadana \nTo expereince and value human life.",
       topvalue: "top100",
     },
