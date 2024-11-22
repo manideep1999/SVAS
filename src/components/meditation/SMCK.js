@@ -28,15 +28,13 @@ function SMCK() {
 
   return (
     <div>
-      <div className="meditation-container d-flex  align-items-center justify-content-center full-height-cotainer">
+      <div className="container-fluid d-flex  align-items-center justify-content-center full-height-cotainer">
         <div className="row">
           <div className="col pt-10 d-flex  align-items-center justify-content-center">
-            <AutoPlayVideo videoSrc="/video/blooming-lotus.mp4" />
+            <AutoPlayVideo videoSrc="/video/lotus-bloom.mp4" />
           </div>
         </div>
       </div>
-
-      <GoldenText></GoldenText>
 
       <div className="meditation-container">
         <section className="container">

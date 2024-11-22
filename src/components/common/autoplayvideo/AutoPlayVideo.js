@@ -9,7 +9,7 @@ function AutoPlayVideo({ videoSrc }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           videoRef.current.play();
-          videoRef.current.playbackRate = 5.0;
+          videoRef.current.playbackRate = 1.2;
         } else {
           videoRef.current.pause();
         }
