@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/SVAS/static/css/main.af3ac86a.css",
-    "main.js": "/SVAS/static/js/main.73427215.js",
+    "main.css": "/SVAS/static/css/main.7178782f.css",
+    "main.js": "/SVAS/static/js/main.1dcf763e.js",
     "static/media/space.jpg": "/SVAS/static/media/space.b2afd0d5716ba734ef2a.jpg",
+    "static/media/green-background.jpg": "/SVAS/static/media/green-background.43e92e9cebc3a1739811.jpg",
+    "static/media/7.svg": "/SVAS/static/media/7.5f6c64a56a4c52c5b012.svg",
     "static/media/lighthouse-background.jpg": "/SVAS/static/media/lighthouse-background.0edb17d357dfba7c0c73.jpg",
-    "static/media/Amma6.jpeg": "/SVAS/static/media/Amma6.99a634039d33a28d4d9c.jpeg",
     "static/media/quotebg3.jpg": "/SVAS/static/media/quotebg3.c9fd707371ba963de297.jpg",
     "static/media/slick.svg": "/SVAS/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/SVAS/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/SVAS/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/SVAS/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/SVAS/index.html",
-    "main.af3ac86a.css.map": "/SVAS/static/css/main.af3ac86a.css.map",
-    "main.73427215.js.map": "/SVAS/static/js/main.73427215.js.map"
+    "main.7178782f.css.map": "/SVAS/static/css/main.7178782f.css.map",
+    "main.1dcf763e.js.map": "/SVAS/static/js/main.1dcf763e.js.map"
   },
   "entrypoints": [
-    "static/css/main.af3ac86a.css",
-    "static/js/main.73427215.js"
+    "static/css/main.7178782f.css",
+    "static/js/main.1dcf763e.js"
   ]
 }
