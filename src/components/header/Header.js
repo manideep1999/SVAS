@@ -117,7 +117,7 @@ class Header extends React.Component {
               >
                 Teachings
               </NavLink>
-    </li> */}
+    </li> 
             <li className="nav-item">
               <NavLink
                 to="/live"
@@ -127,7 +127,7 @@ class Header extends React.Component {
               >
                 Watch Live
               </NavLink>
-            </li>
+            </li>*/}
 
             {/* <li className="nav-item">
               <NavLink

@@ -9,7 +9,7 @@ function SectionHeader(props) {
         alt={props.alt}
       />
       <div className="card-img-overlay d-flex">
-        <h1 className="card-text  text-center align-self-center mx-auto text-light">
+        <h1 className="card-text  text-center align-self-center mx-auto text-light  threeD-text-shadow">
           {props.headerText}
         </h1>
       </div>
