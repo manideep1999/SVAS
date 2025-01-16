@@ -49,10 +49,10 @@ const HomePageContent = (props) => {
           </div>
         </div>
 
-        <div className="row d-flex quote-main-container text-scroll-effect">
+        <div className="row d-flex  text-scroll-effect">
           <div col-12>
             {quote.map((line) => (
-              <div className="quote-container ">
+              <div className=" quote-container ">
                 <h2 className="header quote-text">
                   <span>{line}</span>
                 </h2>

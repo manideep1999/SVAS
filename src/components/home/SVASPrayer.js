@@ -10,12 +10,22 @@ function SVASPrayer() {
   ];
 
   const [isVisible, setIsVisible] = useState(false);
-  const domRef = useRef();
+  const domRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setIsVisible(entry.isIntersecting));
-    });
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Trigger the animation
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the div is in the viewport
+      }
+    );
 
     if (domRef.current) {
       observer.observe(domRef.current);

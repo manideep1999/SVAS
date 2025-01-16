@@ -1,23 +1,23 @@
 /* Base styles  */
-.master-content { 
+.master-content {
   align-items: center;
   text-align: center;
+  width: 100%;
   padding: 50px 10px;
   perspective: 1000px;
   /*background-color: #007978;*/
-
 }
 
-.row-background1{
+.row-background1 {
   background-image: url("/public/img/masterpics/lighthouse-background.jpg");
   background-size: cover;
-  height:100vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-/*background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%); */
+  /*background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%); */
 }
-.frame{
-  border-radius:30% 0;
+.frame {
+  border-radius: 30% 0;
 }
 
 .image-container {
@@ -33,115 +33,110 @@
   max-height: 100%;
   height: auto;
 }
-.image-block{
-   display: inline-block;
-   border: 1px solid black;
-   border-radius: 50%;
+.image-block {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
-.row-background{
-  
+.row-background {
   /*background-color: #007978;*/
-  background: radial-gradient(circle at 25% 75%, rgba(255, 165, 0), rgba(255, 140, 0) 40%, rgba(255, 69, 0) 70%, rgba(0, 0, 0) 100%);
+  background: radial-gradient(
+    circle at 25% 75%,
+    rgba(255, 165, 0),
+    rgba(255, 140, 0) 40%,
+    rgba(255, 69, 0) 70%,
+    rgba(0, 0, 0) 100%
+  );
 }
-  .header {
-    color:black;
-    font-family: ivyora-display, Didot, "Times New Roman", serif;
-    font-weight: 300;
-    font-size: 5rem;
-    letter-spacing: .08em;
-    line-height: 1.306;
-    
-  }
-  
-  .text {
-    /* font-size: 16px;
+.header {
+  color: black;
+  font-family: ivyora-display, Didot, "Times New Roman", serif;
+  font-weight: 300;
+  font-size: 5rem;
+  letter-spacing: 0.08em;
+  line-height: 1.306;
+}
+
+.text {
+  /* font-size: 16px;
     margin-top: 10px; */
-    font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
-    font-size: 2rem;
-    padding: 6%;
-    text-align: left;
-    justify-content: center;
-    letter-spacing: .03em;
-    font-feature-settings: "palt" on;
-    line-height: 1.8;
-  }
+  font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  padding: 6%;
+  text-align: left;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  font-feature-settings: "palt" on;
+  line-height: 1.8;
+}
 
+.full-height {
+  height: 100vh;
+}
 
-  .full-height{
-    height:100vh;
-  }
+.image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  object-position: center; /* Ensure the image doesn't exceed its container */
+}
 
-  .image {
-    width: 100%;
-    height: 100%;
-    margin:0;
-    object-fit:contain;
-    object-position: center;/* Ensure the image doesn't exceed its container */
-  }
-  
-  .divider {
-    border: 1px solid white;
-    width: 50%;
-    margin: 15px auto;
-    background-color: white;
-  
-  }
-  
-  .quote-container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:100vw;
-    height:100vh;
-    padding:10px;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.25); /* Black background with 0.5 opacity */
-    color: #f1f1f1; 
-    text-align: center
-  }
-  
-  .quote-text{
-    color:white;
-    font-size:13rem;
-    
-  }
-  .text-scroll-effect span{
-    color: hsl(0 0% 100%/0.2);
-    background-repeat: no-repeat;
-    background-clip: text;
+.divider {
+  border: 1px solid white;
+  width: 50%;
+  margin: 15px auto;
+  background-color: white;
+}
+
+.quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.25); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.quote-text {
+  color: white;
+  font-size: 13rem;
+}
+.text-scroll-effect span {
+  color: hsl(0 0% 100%/0.2);
+  background-repeat: no-repeat;
+  background-clip: text;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, white, white);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view(y);
+}
+.text-scroll-effect h2 span {
+  animation-range-start: contain 15vh;
+  animation-range-end: contain 35vh;
+  -webkit-animation-range-start: contain 15vh;
+  -webkit-animation-range-end: contain 35vh;
+}
+.text-scroll-effect p span {
+  animation-range-start: cover 25vh;
+  animation-range-end: contain 50vh;
+}
+@keyframes scroll-reveal {
+  from {
     background-size: 0% 100%;
-    background-image: linear-gradient(90deg, white,white);
-    animation: scroll-reveal linear forwards;
-    animation-timeline:view(y);
- 
-
   }
-  .text-scroll-effect h2 span {
-    animation-range-start: contain 15vh;
-    animation-range-end: contain 35vh;
-    -webkit-animation-range-start: contain 15vh;
-    -webkit-animation-range-end: contain 35vh;
+  to {
+    background-size: 100% 100%;
   }
-  .text-scroll-effect p span {
-    animation-range-start: cover 25vh;
-    animation-range-end: contain 50vh;
-    
-  }
-  @keyframes scroll-reveal {
-    from{
-      background-size: 0% 100%;
-    }
-    to{
-      background-size: 100% 100%;
-    }
-    
-  }
-  /* Responsive styles for mobile screens */
+}
+/* Responsive styles for mobile screens */
 @media (max-width: 768px) {
- 
-  .header{
-    font-size:4rem;
+  .header {
+    font-size: 4rem;
   }
 }
 /* Responsive styles for larger screens (desktop) */
@@ -152,74 +147,49 @@
     align-items: flex-start;
     text-align: left;
     padding: 50px 10px;
-    
   }
 
   .text {
     font-family: "Crimson Text", serif;
-    position:relative;
+    position: relative;
     /* font-size: 16px; Reset font size for larger screens */
     margin-left: 20px;
-    padding:auto;
-    color:black; /* Create space between image and text */
+    padding: auto;
+    color: black; /* Create space between image and text */
   }
 
   .divider {
     border: 1px solid white;
-    width:80%;
+    width: 80%;
     margin: 15px auto;
     color: white;
     background-color: white;
   }
-}  
-  
+}
 
-.meditation-section{
+.meditation-section {
   margin-left: auto !important;
   margin-right: auto !important;
   align-self: center;
-
 }
-.textcolor{
-  color:black;
+.textcolor {
+  color: black;
 }
-.imageresize{
-    object-fit: cover;
-     object-position: center;
-   
+.imageresize {
+  object-fit: cover;
+  object-position: center;
 }
-.mini-text{
+.mini-text {
   text-align: center;
   white-space: pre-wrap;
 }
-.ashram-content{
+.ashram-content {
   background-color: rgb(6, 48, 6);
 }
-.position-center{
+.position-center {
   position: absolute;
 }
-.oval-seperation{
+.oval-seperation {
   border-right: 1px solid blue;
-  border-radius:50px;
+  border-radius: 50px;
 }
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
