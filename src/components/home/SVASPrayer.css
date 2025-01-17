@@ -1,3 +1,8 @@
+.prayer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .glowing-container {
   position: relative;
   background: black;
@@ -7,9 +12,7 @@
   width: 100%;
   margin: 0px;
 }
-.prayer-container {
-  opacity: 0;
-}
+
 @keyframes move-div {
   from {
     opacity: 0;
@@ -18,17 +21,25 @@
     opacity: 0.5;
   }
 }
-.image-column {
+.prayer-image-column {
   position: relative;
+  display: block;
+  opacity: 0;
   left: 0;
   z-index: 2;
 }
+.diya {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .glowing-image {
   position: relative;
   left: 0px;
   width: 100%;
   height: auto;
-  object-fit: contain;
+
   opacity: 0;
   animation: display-image 4s linear; /*image should display after first line is displayed*/
   animation-delay: 2s;
@@ -83,11 +94,9 @@
 .line {
   display: block;
   margin: 5px 0;
+  text-align: center;
 }
-.line-font {
-  font-size: 4.5rem;
-  color: white;
-}
+
 .line-animate {
   opacity: 0;
   transform: scale(0); /* Initially scale horizontally to 0 */
@@ -152,8 +161,32 @@
     transform: translateX(0);
   }
 }
-@media (max-width: 1024px) {
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .diya {
+    width: 400px;
+    height: 450px;
+  }
+
+  .line-font {
+    font-size: 2.5rem;
+    color: white;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .diya {
+    width: 400px;
+    height: 450px;
+  }
+
   .line-font {
     font-size: 3.5rem;
+    color: white;
+  }
+}
+@media (min-width: 1024px) {
+  .line-font {
+    font-size: 4.5rem;
+    color: white;
   }
 }

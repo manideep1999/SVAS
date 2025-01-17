@@ -23,7 +23,7 @@ function SVASPrayer() {
         });
       },
       {
-        threshold: 0.5, // Trigger when 50% of the div is in the viewport
+        threshold: 0.3, // Trigger when 50% of the div is in the viewport
       }
     );
 
@@ -39,26 +39,25 @@ function SVASPrayer() {
   }, []);
 
   return (
-    <div className="container-fluid px-0" ref={domRef}>
+    <div className="container-fluid prayer-container px-0" ref={domRef}>
       <div
-        className={`row p-0 align-items-center glowing-container ${
+        className={`row  p-0 align-items-center glowing-container ${
           isVisible ? "animate" : ""
         }`}
       >
-        <div className="col-md-5 offset-md-1 image-column">
-          <img
-            src="img/home/diya-nobg.jpg"
-            className={`${isVisible ? "glowing-image" : ""}`}
-            alt="Candle"
-          />
+        <div
+          className={`col-md-5 offset-md-1 order-sm-2  order-2 order-md-1 prayer-image-column
+            ${isVisible ? "glowing-image" : ""}`}
+        >
+          <img src="img/home/diya-nobg.jpg" className="diya" alt="Candle" />
         </div>
-        <div className="col-md-5 offset-md-1 px-0">
+        <div className="col-md-5  order-sm-1 order-1 order-md-2 offset-md-1 px-0">
           <div className="line">
             {lines.map((line, index) => (
               <h2
                 key={index}
                 className={`line-font ${isVisible ? "line-animate" : ""}`}
-                style={{ animationDelay: `${index * 2}s` }}
+                style={{ animationDelay: `${index * 1}s` }}
               >
                 <span>{line}</span>
               </h2>
