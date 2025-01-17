@@ -58,7 +58,7 @@ function SVASPrayer() {
               <h2
                 key={index}
                 className={`line-font ${isVisible ? "line-animate" : ""}`}
-                style={{ animationDelay: `${index * 4}s` }}
+                style={{ animationDelay: `${index * 2}s` }}
               >
                 <span>{line}</span>
               </h2>

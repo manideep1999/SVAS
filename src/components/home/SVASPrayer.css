@@ -1,112 +1,159 @@
- .glowing-container {
-    position: relative;
-    background: black;
-    overflow: hidden;
-    padding: 20px;
-    color: white;
-    width:100%;
-    margin:0px;
-    
+.glowing-container {
+  position: relative;
+  background: black;
+  overflow: hidden;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  margin: 0px;
 }
-
-
+.prayer-container {
+  opacity: 0;
+}
 @keyframes move-div {
-    from{  opacity:0;}
-    to{  opacity:0.5;}
-    
-    
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
-.image-column{
-    position:relative;
-    left:0;
-    z-index:2;
+.image-column {
+  position: relative;
+  left: 0;
+  z-index: 2;
 }
 .glowing-image {
-    position:relative;
-    left:0px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    opacity:0;
-    animation: display-image 4s linear;/*image should display after first line is displayed*/
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-    animation-range: contain 30vh;
-
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  animation: display-image 4s linear; /*image should display after first line is displayed*/
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-range: contain 30vh;
 }
-
 
 .glow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 25% 75%, rgba(255, 165, 0, 0.8), rgba(255, 140, 0, 0.5) 40%, rgba(255, 69, 0, 0.2) 70%, rgba(250, 249, 249, 0.04) 100%);
-    animation: flicker 6s 1 forwards;
-    animation-delay: 7s;
-    animation-timing-function: view(y);
-    pointer-events: none;
-    opacity:0;
-    z-index: 1;
-    
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 25% 75%,
+    rgba(255, 165, 0, 0.8),
+    rgba(255, 140, 0, 0.5) 40%,
+    rgba(255, 69, 0, 0.2) 70%,
+    rgba(250, 249, 249, 0.04) 100%
+  );
+  animation: flicker 4s 1 forwards;
+  animation-delay: 3s;
+  animation-timing-function: view(y);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
 }
 
-@keyframes display-image{
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    100% {
-        opacity: 1;
-    }
+@keyframes display-image {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes flicker {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.15;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .line {
-    display: block;
-    margin: 5px 0;
-   
-  }
-  .line-font{
-    font-size: 4.5rem;
-    color:white;
-  }
-  .line-animate{
-    opacity:0;
-    animation: text-animate 2s ease-in-out forwards;
-    animation-timing-function: view(y);  
+  display: block;
+  margin: 5px 0;
+}
+.line-font {
+  font-size: 4.5rem;
+  color: white;
+}
+.line-animate {
+  opacity: 0;
+  transform: scale(0); /* Initially scale horizontally to 0 */
+  transform-origin: center; /* Scale from the center */
+  animation: text-animate 2s ease-in-out forwards;
+  animation-timing-function: view(y);
+}
 
+@keyframes text-animate {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
- 
-  @keyframes text-animate {
-    from{opacity:0;
-   }
-    to{opacity:1;
-        }
-    
+  10% {
+    transform: translateY(90%);
+    opacity: 0.1;
   }
-  @keyframes text-move {
-    from{
-        transform: translateX(-100px);}
-        to{
-            transform: translateX(0);}
-    
+  20% {
+    transform: translateY(80%);
+    opacity: 0.2;
   }
-  @media (max-width: 1024px) {
-    .line-font{
-        font-size: 3.5rem;
-    }
+  30% {
+    transform: translateY(70%);
+    opacity: 0.3;
   }
+  40% {
+    transform: translateY(60%);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: translateY(40%);
+    opacity: 0.6;
+  }
+  70% {
+    transform: translateY(30%);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(20%);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translateY(10%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes text-move {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1024px) {
+  .line-font {
+    font-size: 3.5rem;
+  }
+}
