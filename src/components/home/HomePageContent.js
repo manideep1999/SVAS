@@ -49,10 +49,10 @@ const HomePageContent = (props) => {
           </div>
         </div>
 
-        <div className="row d-flex  text-scroll-effect">
+        <div className="row g-0 d-flex  text-scroll-effect">
           <div col-12>
             {quote.map((line) => (
-              <div className=" quote-container ">
+              <div className="quote-container">
                 <h2 className="header quote-text">
                   <span>{line}</span>
                 </h2>
@@ -99,22 +99,22 @@ const HomePageContent = (props) => {
       {/*Meditation section */}
 
       {/* Sricky div and quote ends here */}
-      <article className="container-fluid row px-0 my-6 master-content">
+      <article className="container-fluid row p-0 my-0 master-content">
         {/* Sricky div and quote here */}
-        <div className="row sticky-div  p-0 m-0 ">
+        <div className="row sticky-div  row-background2 p-0 m-0 ">
           <div className="col-12">
             <div className="full-height">
               <picture>
                 <source
                   media="(max-width: 799px)"
-                  srcset="img/meditation/closed-eyes-360x640.jpg"
+                  srcset="img/home/closed-eyes.jpg"
                 />
                 <source
                   media="(min-width: 800px)"
-                  srcset="img/meditation/closed-eyes.jpg"
+                  srcset="img/home/meditation-eyes.jpg"
                 />
                 <img
-                  src="img/meditation/meditation-eyes.jpg"
+                  src="img/home/closed-eyes.jpg"
                   alt="meditaton-eyes"
                   className="image-fluid image"
                 />
@@ -122,7 +122,7 @@ const HomePageContent = (props) => {
             </div>
           </div>
         </div>
-        <div className="row d-flex quote-main-container text-scroll-effect">
+        <div className="row g-0 d-flex  text-scroll-effect">
           <div col-12>
             {meditationQuote.map((line) => (
               <div className="quote-container">
@@ -162,7 +162,7 @@ const HomePageContent = (props) => {
             <img
               src="img/meditation/whitelotus.png"
               alt="Your Image"
-              className="img-fit"
+              className="img-fit frame"
             />
           </div>
         </div>
