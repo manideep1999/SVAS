@@ -62,7 +62,7 @@ const HomePageContent = (props) => {
         </div>
 
         <div className="row row-background">
-          <div className="col-12 col-lg-6  align-items-center text-scroll-effect">
+          <div className="col-md-6  align-items-center text-scroll-effect">
             <h2 className="header gradient-text">
               <span>OUR GURU </span>
             </h2>
@@ -87,11 +87,11 @@ const HomePageContent = (props) => {
               ></Button>
             </div>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-md-6 ">
             <img
               src="img/masterpics/Master1-1360_x_1200.jpg"
               alt="Guru Image"
-              className="image-fluid img-fit frame"
+              className="frame designer-frame"
             />
           </div>
         </div>
@@ -99,7 +99,7 @@ const HomePageContent = (props) => {
       {/*Meditation section */}
 
       {/* Sricky div and quote ends here */}
-      <article className="container-fluid row p-0 my-0 master-content">
+      <article className="container-fluid m-0 p-0 master-content">
         {/* Sricky div and quote here */}
         <div className="row sticky-div  row-background2 p-0 m-0 ">
           <div className="col-12">
@@ -133,8 +133,8 @@ const HomePageContent = (props) => {
             ))}
           </div>
         </div>
-        <div className="row  row-background">
-          <div className="col-12 col-lg-6  align-items-center text-scroll-effect">
+        <div className="row  row-background-blue">
+          <div className="col-md-6  align-items-center text-scroll-effect">
             <h2 className="header gradient-text">
               <span>Meditation</span>
             </h2>
@@ -158,22 +158,25 @@ const HomePageContent = (props) => {
             </div>
           </div>
 
-          <div className="col-12 col-md-6 p-0">
+          <div className="col-md-6">
             <img
               src="img/meditation/whitelotus.png"
               alt="Your Image"
-              className="img-fit frame"
+              className="frame designer-frame"
             />
           </div>
         </div>
       </article>
-      <article className="content-wrapper">
-        <div className="row ashram-content py-0">
-          <div className="col-12 col-lg-6 px-0 oval-seperation">
-            <img src="img/meditationhall3.jpg" className="img-fit" />
+      <article className="container-fluid m-0 p-0">
+        <div className="row ashram-content">
+          <div className="col-md-6">
+            <img
+              src="img/meditationhall3.jpg"
+              className="frame designer-frame"
+            />
           </div>
 
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-6">
             <h3 className="header  text-center">Ashram</h3>
             <hr className="divider" />
             <p className="text  mini-text">
