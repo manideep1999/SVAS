@@ -16,6 +16,9 @@
   background-position: center;
   /*background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%); */
 }
+.row-background-green {
+  background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%);
+}
 .row-background2 {
   background-image: url("/public/img/home/radial-background.png");
   background-size: cover;
@@ -32,6 +35,14 @@
 .designer-frame {
   border-radius: 87px / 40px;
   border: 5px solid #ffea00;
+}
+.designer-leaf-frame {
+  border: 5px solid orange;
+  border-radius: 20%/50%;
+}
+.designer-frame-ellipse {
+  border: 5px solid orange;
+  border-radius: 50%/60%;
 }
 
 .image-container {

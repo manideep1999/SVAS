@@ -160,19 +160,19 @@ const HomePageContent = (props) => {
 
           <div className="col-md-6">
             <img
-              src="img/meditation/whitelotus.png"
+              src="img/home/meditating-boy.jpg"
               alt="Your Image"
-              className="frame designer-frame"
+              className="frame designer-leaf-frame"
             />
           </div>
         </div>
       </article>
       <article className="container-fluid m-0 p-0">
-        <div className="row ashram-content">
+        <div className="row row-background-green ashram-content">
           <div className="col-md-6">
             <img
               src="img/meditationhall3.jpg"
-              className="frame designer-frame"
+              className="frame designer-frame-ellipse"
             />
           </div>
 

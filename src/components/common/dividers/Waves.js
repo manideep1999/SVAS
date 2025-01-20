@@ -3,7 +3,7 @@ import "./Waves.css";
 
 function Waves() {
   return (
-    <div class="custom-shape-divider-bottom-1719567209">
+    <div className="custom-shape-divider-bottom-1719567209">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
