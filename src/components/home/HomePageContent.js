@@ -181,8 +181,9 @@ const HomePageContent = (props) => {
             <hr className="divider" />
             <p className="text  mini-text">
               Our Ashram is located in India - hyderabad. The Ashram is a
-              sanctum sacnctuary for the sadaks. This is a very powerful energy
-              space where the mind becomes still once we step into the Ashram…
+              sanctum sacnctuary for the sadaks. Every Sunday we meet in Ashram
+              for meditation. This is a very powerful energy space where the
+              mind becomes still once we step into the Ashram…
             </p>
             <div className="col align-items-center justify-content-center  d-flex  ">
               <Button

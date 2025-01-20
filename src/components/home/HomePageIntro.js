@@ -8,9 +8,9 @@ const HomePageIntro = (props) => {
       <picture>
         <source
           media="(min-width:960px)"
-          srcset="img/home-bg-2160.jpg"
+          srcSet="img/home-bg-2160.jpg"
         ></source>
-        <source media="(min-width:300px)" srcset="img/home-bg-480.jpg"></source>
+        <source media="(min-width:300px)" srcSet="img/home-bg-480.jpg"></source>
         <img
           className="card-img img-fluid"
           src="img/home-bg-2160.jpg"
