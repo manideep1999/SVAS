@@ -22,18 +22,13 @@ function NextPageLink() {
   // Determine the next page based on current route
 
   return (
-    <footer>
-      <div className="next-link-content">
-        <Link to={nextPage.path} className="next-page-link">
-          <h4>
-            NEXT:
-            <FaArrowRight className="iconStyle" />
-          </h4>
+    <div className="next-link-content">
+      <Link to={nextPage.path} className="next-page-link">
+        <h4>Next: {nextPage.name}</h4>
 
-          <button className="buttonStyle">{nextPage.name}</button>
-        </Link>
-      </div>
-    </footer>
+        <button className="buttonStyle">Go To {nextPage.name}</button>
+      </Link>
+    </div>
   );
 }
 
