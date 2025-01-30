@@ -1,5 +1,4 @@
 import React from "react";
-import { BsTelephone, BsGeoAlt, BsEnvelope } from "react-icons/bs";
 import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6";
 
 function ContactList() {
@@ -12,7 +11,7 @@ function ContactList() {
         reach out to us for any questions, guidance, or support regarding
         meditation.{" "}
       </p>
-      <ul class="list-unstyled">
+      <ul className="list-unstyled">
         <li>
           <div className="contact-info">
             <span className="contact-icon">

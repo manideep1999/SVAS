@@ -14,11 +14,11 @@ function HomePageSubContent({ contentProps }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcset={contentProps.portrait}
+                srcSet={contentProps.portrait}
               />
               <source
                 media="(min-width: 800px)"
-                srcset={contentProps.landscape}
+                srcSet={contentProps.landscape}
               />
               <img
                 src={contentProps.default}
@@ -30,7 +30,7 @@ function HomePageSubContent({ contentProps }) {
         </div>
       </div>
       <div className="row d-flex quote-main-container text-scroll-effect">
-        <div col-12>
+        <div className="col-12">
           {contentProps.quote.map((line) => (
             <div className="quote-container">
               <h2 className="header quote-text">

@@ -1,23 +1,21 @@
-import React from 'react';
-import './LivePage.css'
-
+import React from "react";
+import "./LivePage.css";
 
 const LivePage = (props) => {
-
   const style = {
-    position: 'relative',
-    width: '100%',
+    position: "relative",
+    width: "100%",
     height: 0,
-    paddingBottom: '56.25%'
-  }
+    paddingBottom: "56.25%",
+  };
 
   const iFrameStyle = {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
-    top: 0
-  }
+    top: 0,
+  };
 
-   const contents = (
+  const contents = (
     <div style={style}>
       <iframe
         title="Live"
@@ -29,25 +27,25 @@ const LivePage = (props) => {
         allowFullScreen
         frameborder="0"
         scrolling="no"
-        allow="autoplay">
-      </iframe>
+        allow="autoplay"
+      ></iframe>
     </div>
   );
 
   /*const contents = (
      <div>
        <br/>
-       <h3 class="text-center">Our services will not be broadcast live today. We are sorry for any inconvenience caused.</h3>
+       <h3 className="text-center">Our services will not be broadcast live today. We are sorry for any inconvenience caused.</h3>
      </div>
    );*/
 
   return (
     <div className="live-page">
       <h1>Watch Live</h1>
-      <hr/>
+      <hr />
       {contents}
     </div>
-  )
-}
+  );
+};
 
 export default LivePage;

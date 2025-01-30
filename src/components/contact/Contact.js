@@ -5,7 +5,7 @@ import ContactSection from "./ContactSection";
 
 function Contact(props) {
   return (
-    <div class="section">
+    <div className="section">
       <SectionHeader
         imageUrl="./img/contact/contact-banner1.png"
         headerText="Contact Us"

@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BASENAME } from "./components/common/constants/constants";
+import { createBrowserRouter, RouterProvider, Router } from "react-router-dom";
 import HomePage from "./components/home/HomePage";
 import About from "./components/about/About";
 import LivePage from "./components/live/LivePage";
@@ -12,27 +13,62 @@ import Contact from "./components/contact/Contact";
 import Section from "./components/common/section/Section";
 // import GivingPage from "./components/giving/GivingPage";
 import WordForTheWeekPage from "./components/word-for-the-week/WordForTheWeekPage";
+import ScrollToTop from "./components/common/scrollTop/ScrollToTop";
 
 function App() {
-  return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <SBC>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={About} />
-        <Route path="/ourMaster" component={OurMaster} />
+  /**
+   * Utility function to prepend `basename` to all route paths dynamically.
+   */
+  const withBase = (path) => `${BASENAME}${path === "/" ? "" : path}`;
 
-        <Route path="/programs" component={Programs} />
-        <Route path="/ashram" component={Ashram} />
-        <Route path="/meditation" component={Meditation} />
-        {/* <Route path="/sermons" exact component={SermonsPage} /> 
-         <Route path="/live" component={LivePage} />
-      <Route path="/sermons/series/:title" component={SermonSeriesPage} />
-<Route path="/sermon/:sermonId/:title" component={SermonPage} /> */}
-        <Route path="/contact" component={Contact} />
-        {/* <Route path="/giving" component={GivingPage} /> */}
-        <Route path="/word-for-the-way" component={WordForTheWeekPage} />
-      </SBC>
-    </Router>
+  const router = createBrowserRouter([
+    {
+      path: withBase("/"),
+      element: <SBC />,
+      children: [
+        {
+          path: withBase("/"),
+          element: <HomePage />,
+          scrollRestoration: "auto", // Optional: Enable scroll restoration
+        },
+        {
+          path: withBase("/about"),
+          element: <About />,
+        },
+        {
+          path: withBase("/ourMaster"),
+          element: <OurMaster />,
+        },
+        {
+          path: withBase("/programs"),
+          element: <Programs />,
+        },
+        {
+          path: withBase("/ashram"),
+          element: <Ashram />,
+        },
+        {
+          path: withBase("/meditation"),
+          element: <Meditation />,
+        },
+        {
+          path: withBase("/contact"),
+          element: <Contact />,
+        },
+        {
+          path: withBase("/word-for-the-way"),
+          element: <WordForTheWeekPage />,
+        },
+        // Add any additional routes here...
+      ],
+    },
+  ]);
+
+  return (
+    <RouterProvider router={router}>
+      {/* Enable scroll restoration */}
+      <ScrollToTop />
+    </RouterProvider>
   );
 }
 export default App;

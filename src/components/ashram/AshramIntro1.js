@@ -5,8 +5,8 @@ import "./AshramIntro.css";
 function AshramIntro1() {
   return (
     <>
-      <section class="card w-100">
-        <div class="banner-title banner-font">
+      <section className="card w-100">
+        <div className="banner-title banner-font">
           <span>
             <h1 className="banner-font">Meditation</h1>
           </span>

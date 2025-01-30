@@ -4,9 +4,9 @@ import Curve from "../dividers/Curve";
 
 function PageHeader(props) {
   return (
-    <div class="card custom-card card-height w-100 ">
+    <div className="card custom-card card-height w-100 ">
       <img
-        class="card-img card-height img-fluid"
+        className="card-img card-height img-fluid"
         src={props.imgUrl}
         alt={props.alt}
       />

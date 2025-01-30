@@ -20,7 +20,6 @@ function HomePage(props) {
       <SVASPrayer />
       <HomePageContent />
       <HomePageSlider />
-      <HomePageMeetingTimes />
     </div>
   );
 }

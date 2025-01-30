@@ -6,8 +6,8 @@ import Curve from "../common/dividers/Curve";
 
 function AshramIntro() {
   return (
-    <div class="banner">
-      <div class="banner-title banner-font">
+    <div className="banner">
+      <div className="banner-title banner-font">
         <span>
           <h1 className="banner-font threeD-text-shadow">ASRAMAM</h1>
         </span>

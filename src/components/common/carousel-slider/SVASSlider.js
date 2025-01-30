@@ -13,21 +13,21 @@ function SVASSlider() {
   };
   return (
     <article id="demo" className="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+      <div className="carousel-indicators">
         {images.map((_, index) => (
           <button
             key="index"
             type="button"
             data-bs-target="#demo"
             data-bs-slide-to={index}
-            class="active"
+            className="active"
             onClick={() => goToSlide(index)}
           ></button>
         ))}
       </div>
       {/*  The slideshow/carousel */}
 
-      <div class="carousel-inner">
+      <div className="carousel-inner">
         {images.map((image, index) => (
           <div
             key={index}
@@ -35,7 +35,7 @@ function SVASSlider() {
               index === currentIndex ? "active" : ""
             }`}
           >
-            <img src={image} alt="Los Angeles" class="d-block w-50" />
+            <img src={image} alt="Los Angeles" className="d-block w-50" />
           </div>
         ))}
       </div>

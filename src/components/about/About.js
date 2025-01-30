@@ -5,7 +5,7 @@ import AboutSection from "./AboutSection";
 
 function About() {
   return (
-    <section class="section">
+    <section className="section">
       <SectionHeader
         imageUrl="./img/about/about-banner1.png"
         headerText="About Us"

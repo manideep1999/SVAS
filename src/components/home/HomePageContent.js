@@ -34,11 +34,11 @@ const HomePageContent = (props) => {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcset="img/masterpics/lighthouse-portrait.jpg"
+                srcSet="img/masterpics/lighthouse-portrait.jpg"
               />
               <source
                 media="(min-width: 800px)"
-                srcset="img/masterpics/lighthouse-landscape.jpg"
+                srcSet="img/masterpics/lighthouse-landscape.jpg"
               />
               <img
                 src="img/masterpics/lighthouse-landscape.jpg"
@@ -49,10 +49,10 @@ const HomePageContent = (props) => {
           </div>
         </div>
 
-        <div className="row g-0 d-flex  text-scroll-effect">
-          <div col-12>
-            {quote.map((line) => (
-              <div className="quote-container">
+        <div className="row g-0 d-flex text-scroll-effect">
+          <div className="col-12">
+            {quote.map((line, index) => (
+              <div key={index} className="quote-container">
                 <h2 className="header quote-text">
                   <span>{line}</span>
                 </h2>
@@ -107,11 +107,11 @@ const HomePageContent = (props) => {
               <picture>
                 <source
                   media="(max-width: 799px)"
-                  srcset="img/home/closed-eyes.jpg"
+                  srcSet="img/home/closed-eyes.jpg"
                 />
                 <source
                   media="(min-width: 800px)"
-                  srcset="img/home/meditation-eyes.jpg"
+                  srcSet="img/home/meditation-eyes.jpg"
                 />
                 <img
                   src="img/home/closed-eyes.jpg"
@@ -123,9 +123,9 @@ const HomePageContent = (props) => {
           </div>
         </div>
         <div className="row g-0 d-flex  text-scroll-effect">
-          <div col-12>
-            {meditationQuote.map((line) => (
-              <div className="quote-container">
+          <div className="col-12">
+            {meditationQuote.map((line, index) => (
+              <div key={index} className="quote-container">
                 <h2 className="header quote-text">
                   <span>{line}</span>
                 </h2>

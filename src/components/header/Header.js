@@ -1,114 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Auth from "../auth/Auth.js";
 import "./Header.css";
+function Header({ basename }) {
+  const [collapsed, setCollapsed] = useState(true); // State for collapsing/expanding the nav
+  const auth = new Auth();
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapsed: true,
-    };
-    this.auth = new Auth();
-  }
-
-  navBarToggleClick = (event) => {
-    this.setState({
-      collapsed: this.state.collapsed ? false : true,
-    });
+  const navBarToggleClick = () => {
+    setCollapsed((prevState) => !prevState);
   };
 
-  navLinkClick = (event) => {
-    this.setState({
-      collapsed: true,
-    });
+  const navLinkClick = () => {
+    setCollapsed(true);
   };
 
-  login = (event) => {
-    this.auth.login();
+  const login = (event) => {
+    auth.login();
   };
 
-  render() {
-    let collapsedClass = "collapse";
+  const collapsedClass = collapsed ? "collapse" : "";
 
-    if (!this.state.collapsed) {
-      collapsedClass = "";
-    }
+  return (
+    <nav className="sbc-navbar navbar fixed-top navbar-expand-xl navbar-light">
+      <Link to="/" className="navbar-brand" onClick={navLinkClick}>
+        <img
+          className="sbc-navbar-logo"
+          src="./img/SvasLogoFinal-v2.jpeg"
+          alt="SVAS FOR EARTH"
+        />
+      </Link>
+      {/* Toggle button for mobile */}
+      <button
+        className="navbar-toggler"
+        type="button"
+        onClick={navBarToggleClick}
+        aria-controls="navbarNav"
+        aria-expanded={!collapsed}
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-    return (
-      <nav className="sbc-navbar navbar fixed-top navbar-expand-xl navbar-light">
-        <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
-          <img
-            className="sbc-navbar-logo"
-            src="./img/SvasLogoFinal-v2.jpeg"
-            alt="SVAS FOR EARTH"
-          />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={this.navBarToggleClick}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          className={collapsedClass + " navbar-collapse sbc-navbar-collapse"}
-          id="navbarSupportedContent"
-        >
-          <ul className="navbar-nav mr-auto"></ul>
-          <ul className="navbar-nav sbc-navbar-content">
-            <li className="nav-item">
-              <NavLink
-                to="/"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/ourMaster"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Our Master
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/meditation"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Meditation
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/ashram"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Ashram
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/programs"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Programs
-              </NavLink>
-            </li>
-            {/*<li className="nav-item">
+      <div
+        className={`navbar-collapse  ${collapsedClass}`}
+        id="navbarSupportedContent"
+      >
+        <ul className="navbar-nav mr-auto"></ul>
+        <ul className="navbar-nav sbc-navbar-content">
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/ourMaster`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Our Master
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/meditation`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Meditation
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/ashram`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Ashram
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/programs`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Programs
+            </NavLink>
+          </li>
+          {/*<li className="nav-item">
               <NavLink
                 to="/Sermons"
                 className="nav-link"
@@ -129,7 +123,7 @@ class Header extends React.Component {
               </NavLink>
             </li>*/}
 
-            {/* <li className="nav-item">
+          {/* <li className="nav-item">
               <NavLink
                 to="/giving"
                 className="nav-link"
@@ -139,7 +133,7 @@ class Header extends React.Component {
                 Giving
               </NavLink>
             </li> */}
-            {/* <li className="nav-item">
+          {/* <li className="nav-item">
               <NavLink
                 to="/word-for-the-way"
                 className="nav-link"
@@ -149,31 +143,32 @@ class Header extends React.Component {
                 Word for the way
               </NavLink>
             </li> */}
-            <li className="nav-item">
-              <NavLink
-                to="/about"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/contact"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/about`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              About
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={`${basename}/contact`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={navLinkClick}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
 
 export default Header;

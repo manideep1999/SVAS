@@ -16,11 +16,11 @@ function MeditationHeader() {
           <div className="col-md-6 image-column d-flex align-items-start justify-content-end">
             <source
               media="(min-width:768px)"
-              srcset="img/meditation/mediating-hands-landscape.png"
+              srcSet="img/meditation/mediating-hands-landscape.png"
             ></source>
             <source
               media="(max-width:768px)"
-              srcset="img/home-bg-480.jpg"
+              srcSet="img/home-bg-480.jpg"
             ></source>
             <img
               className="card-img img-fluid img-fit meditation-img-border"

@@ -40,10 +40,10 @@ function Flipbook() {
             <div className="image-section">
               <img src="img/ashram/hall2.jpeg" />
             </div>
-            <label for="next-page"></label>
+            <label htmlFor="next-page"></label>
           </div>
           <div className="backpage">
-            <label for="next-page"></label>
+            <label htmlFor="next-page"></label>
           </div>
         </div>
         <div className="page" id="page1">
@@ -52,14 +52,14 @@ function Flipbook() {
               ASHRAM<br></br> A Seperate Dimesnion for Sadana
             </p>
 
-            <label className="next" for="checkbox-page1">
+            <label className="next" htmlFor="checkbox-page1">
               <FaChevronRight></FaChevronRight>
             </label>
           </div>
           <div className="backpage">
             <img src="img/ashram/bojanasala2.jpeg" />
 
-            <label className="prev" for="checkbox-page1">
+            <label className="prev" htmlFor="checkbox-page1">
               <FaChevronLeft></FaChevronLeft>
             </label>
           </div>
@@ -70,13 +70,13 @@ function Flipbook() {
               When ever I enter the ashram I feel as if some jammer has been put
               on the mind.
             </p>
-            <label className="next" for="checkbox-page2">
+            <label className="next" htmlFor="checkbox-page2">
               <FaChevronRight></FaChevronRight>
             </label>
           </div>
           <div className="backpage">
             <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" for="checkbox-page2">
+            <label className="prev" htmlFor="checkbox-page2">
               <FaChevronLeft></FaChevronLeft>
             </label>
           </div>
@@ -84,13 +84,13 @@ function Flipbook() {
         <div className="page" id="page3">
           <div className="frontpage flex-center">
             <p className="page-text">It is a different world altogether.</p>
-            <label className="next" for="checkbox-page3">
+            <label className="next" htmlFor="checkbox-page3">
               <FaChevronRight></FaChevronRight>
             </label>
           </div>
           <div className="backpage">
             <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" for="checkbox-page3">
+            <label className="prev" htmlFor="checkbox-page3">
               <FaChevronLeft></FaChevronLeft>
             </label>
           </div>
@@ -102,13 +102,13 @@ function Flipbook() {
               I forget all worries and tensions and feel peaceful in teh ashram
               and it stays with me for the whole week
             </p>
-            <label className="next" for="checkbox-page4">
+            <label className="next" htmlFor="checkbox-page4">
               <FaChevronRight></FaChevronRight>
             </label>
           </div>
           <div className="backpage">
             <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" for="checkbox-page4">
+            <label className="prev" htmlFor="checkbox-page4">
               <FaChevronLeft></FaChevronLeft>
             </label>
           </div>
@@ -116,7 +116,7 @@ function Flipbook() {
         <div className="page" id="page5">
           <div className="frontpage flex-center">
             <p className="page-text">Thats few of the expereinces!!!</p>
-            <label className="next" for="checkbox-page5">
+            <label className="next" htmlFor="checkbox-page5">
               <FaChevronRight></FaChevronRight>
             </label>
           </div>

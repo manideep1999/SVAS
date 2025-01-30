@@ -8,10 +8,10 @@ function Section(props) {
         <div className="div-block">
           <picture className="content-block">
             {props.portraitSrc && (
-              <source media="(max-width:767px)" srcset={props.portraitSrc} />
+              <source media="(max-width:767px)" srcSet={props.portraitSrc} />
             )}
             {props.landscapeSrc && (
-              <source media="(min-width:768px)" srcset={props.landscapeSrc} />
+              <source media="(min-width:768px)" srcSet={props.landscapeSrc} />
             )}
             <img
               src={props.fallbackSrc}
@@ -26,10 +26,14 @@ function Section(props) {
           {props.sectionHeading}
         </h3>
         <p>{props.desc}</p>
-        <span class="mr-3 info-font">
+        <span className="mr-3 info-font">
           <b>{props.btnInfo} </b>
         </span>
-        <a class="btn  btn-outline-info button-style" role="button" href="#">
+        <a
+          className="btn  btn-outline-info button-style"
+          role="button"
+          href="#"
+        >
           {props.btnText}
         </a>
       </div>

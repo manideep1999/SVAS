@@ -6,7 +6,7 @@ function MasterIntro() {
     <div className="section">
       <div className="card w-100">
         <img
-          class="card-img img-fluid"
+          className="card-img img-fluid"
           src="img/Amma_banner.jpeg"
           alt="Card image"
         />
@@ -18,8 +18,8 @@ function MasterIntro() {
         </h3>
       </div>
       <article className="container border-black master-intro">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
+        <div className="row">
+          <div className="col-lg-8 offset-lg-2">
             <h2
               align="center"
               className="mt-5 mb-4  paintbrush-heading header textcolor"

@@ -15,10 +15,12 @@ class OurMaster extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="master-main-container">
         <MasterIntro></MasterIntro>
-        <Light></Light>
-        <Satsang></Satsang>
+        <div>
+          <Light></Light>
+          <Satsang></Satsang>
+        </div>
         <MahaChaitanyaKriya></MahaChaitanyaKriya>
       </div>
     );

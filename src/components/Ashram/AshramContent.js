@@ -30,7 +30,7 @@ function AshramContent() {
               <img
                 src="./img/ashram/gate.jpeg"
                 alt="Bottom Image"
-                class="img-fluid grid-img"
+                className="img-fluid grid-img"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ function AshramContent() {
                 <img
                   src="./img/ashram/goshala.jpeg"
                   alt="Top Image"
-                  class="img-fluid grid-img"
+                  className="img-fluid grid-img"
                 />
               </div>
             </div>

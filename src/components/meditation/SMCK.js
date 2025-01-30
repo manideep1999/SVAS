@@ -76,11 +76,11 @@ function SMCK() {
           Sri MahaChaitanya Kriya
         </h2>
         <div className="circular-image-container">
-          <div class="row justify-content-center">
+          <div className="row justify-content-center">
             {medblobs.map((medblob, index) => (
               <div
                 key={index}
-                class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
+                className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
               >
                 <BlobWithImage
                   imageurl={medblob.imageurl}

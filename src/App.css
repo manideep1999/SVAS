@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap");
-
+:root {
+  --font-cursive: "Brush Script MT", cursive;
+}
 .App {
   text-align: center;
 }
@@ -147,6 +149,9 @@ body {
 .color-white {
   background-color: white;
 }
+.light-blue-gradient {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
 
 .color-lavendar {
   background-color: #e6e6fa;
@@ -258,7 +263,16 @@ body {
     rgba(0, 0, 0) 100%
   );
 }
-
+.blue-gradient-background {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(55, 209, 255) 0%,
+    rgb(14, 31, 111) 100.2%
+  );
+}
+.blue-pink-gradient {
+  background-image: linear-gradient(to right, #ddbed4 0%, #5e7bb1 100%);
+}
 .blue-background {
   background: radial-gradient(
     circle at 10% 20%,
@@ -268,4 +282,9 @@ body {
 }
 .container-spacing {
   margin: 35px;
+}
+.content-center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

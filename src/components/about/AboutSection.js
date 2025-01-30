@@ -3,7 +3,7 @@ function AboutSection() {
   return (
     <div className="container about-container container-spacing ">
       <div className="row">
-        <div class="col-lg-8 offset-lg-2">
+        <div className="col-lg-8 offset-lg-2">
           <p className="highlight-first-letter data-text">
             We are <b>SVAS</b>- Sri Vani Amma Sansthan - a volunteer based non
             profitable spiritual society. Our beloved mother Sadguru Sri Sri Sri

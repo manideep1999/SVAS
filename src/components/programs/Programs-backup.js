@@ -5,7 +5,7 @@ import SectionHeader from "../common/section/SectionHeader";
 
 function Programsbackup() {
   return (
-    <div class="section">
+    <div className="section">
       <SectionHeader
         imageUrl="../img/subTitleBanner.jpg "
         headerText="Programs"
@@ -36,11 +36,11 @@ function Programsbackup() {
               space. The first day of the week is spent in the calm, serene and
               powerful energy space to receive the divine blessings of Amma.
             </p>
-            <span class="mr-3 info-font">
+            <span className="mr-3 info-font">
               <b>For more information:</b>
             </span>
             <a
-              class="btn  btn-outline-info button-style"
+              className="btn  btn-outline-info button-style"
               role="button"
               href="#"
             >
@@ -66,11 +66,11 @@ function Programsbackup() {
               satisfies hunger really makes the saying, “Service to Man is
               Service to God” true in its spirit.
             </p>
-            <span class="mr-3 info-font">
+            <span className="mr-3 info-font">
               <b> To volunteer for the program : </b>
             </span>
             <a
-              class="btn  btn-outline-info button-style"
+              className="btn  btn-outline-info button-style"
               role="button"
               href="#"
             >
@@ -122,13 +122,13 @@ function Programsbackup() {
               meditation. This is a blessing for all those who live far away and
               wish to connect in group.
             </p>
-            <span class="mr-3 info-font">
+            <span className="mr-3 info-font">
               <b>Timings: Every Thursday @ 7 PM IST on google meet</b>
               <br></br>
               <b> To participate : </b>
             </span>
             <a
-              class="btn  btn-outline-info button-style"
+              className="btn  btn-outline-info button-style"
               role="button"
               href="#"
             >
@@ -155,13 +155,13 @@ function Programsbackup() {
               whole week. Take part in this program to kick off your week in a
               positive way. <br></br>
             </p>
-            <span class="mr-3 info-font">
+            <span className="mr-3 info-font">
               <b> Timings: Every Sunday @ 10 AM CST on Zoom</b>
               <br></br>
               <b> To participate : </b>
             </span>
             <a
-              class="btn  btn-outline-info button-style"
+              className="btn  btn-outline-info button-style"
               role="button"
               href="#"
             >
