@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6";
+import {
+  FaPhoneVolume,
+  FaLocationDot,
+  FaEnvelope,
+  FaAnglesRight,
+} from "react-icons/fa6";
 import "./Footer.css";
 import ScrollToTop from "../common/scrollTop/ScrollTopButton";
 import NextPageLink from "./NextPageLink";
 import ScrollTopButton from "../common/scrollTop/ScrollTopButton";
+import { withBase } from "../utils/withBase";
 
 function Footer(props) {
   return (
@@ -18,19 +24,46 @@ function Footer(props) {
           </div>
           <div className="col-md-4 content-center-align">
             <div className="footer-links">
-              <p className="footer-heading">Links</p>
-              <ul>
+              <h4 className="footer-heading">Links</h4>
+              <ul className="use-links">
                 <li key="About">
-                  <Link to="/about">About</Link>
+                  <Link to={withBase("/about")}>
+                    <i>
+                      {" "}
+                      <FaAnglesRight />
+                    </i>
+                    About
+                  </Link>
                 </li>
                 <li key="Progarms">
-                  <Link to="/programs">Programs</Link>
+                  <Link to={withBase("/programs")}>
+                    {" "}
+                    <i>
+                      {" "}
+                      <FaAnglesRight />
+                    </i>
+                    Programs
+                  </Link>
                 </li>
                 <li key="Meditation">
-                  <Link to="/mediation">Meditation</Link>
+                  <Link to={withBase("/meditation")}>
+                    {" "}
+                    <i>
+                      {" "}
+                      <FaAnglesRight />
+                    </i>
+                    Meditation
+                  </Link>
                 </li>
                 <li key="Contact">
-                  <Link to="/contact">Contact</Link>
+                  <Link to={withBase("/contact")}>
+                    {" "}
+                    <i>
+                      {" "}
+                      <FaAnglesRight />
+                    </i>
+                    Contact
+                  </Link>
                 </li>
               </ul>
               <p className="footer-heading">Inquiries:</p>

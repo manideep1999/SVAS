@@ -1,5 +1,5 @@
 import "./App.css";
-import { BASENAME } from "./components/common/constants/constants";
+import { BASENAME } from "./components/utils/constants";
 import { createBrowserRouter, RouterProvider, Router } from "react-router-dom";
 import HomePage from "./components/home/HomePage";
 import About from "./components/about/About";

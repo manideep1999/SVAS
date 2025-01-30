@@ -6,6 +6,38 @@
   font-family: "Raleway", sans-serif;
 }
 
+.footer-link h4 {
+  padding-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.use-links {
+  list-style: none;
+  padding-left: 0;
+  line-height: 32px;
+  margin-top: 2rem;
+}
+.use-links li {
+  color: #36454f;
+  font-weight: 500;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.use-links li a {
+  color: #36454f;
+  font-weight: 500;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.use-links li:hover {
+  padding-left: 8px;
+  color: black;
+}
+.use-links li i {
+  font-size: 1.8rem;
+  padding-right: 8px;
+}
+
 @media (min-width: 992px) {
   .footer {
     padding: 50px 100px;
@@ -60,8 +92,8 @@
   color: #ff5a34;
 }
 .footer-heading {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
   font-weight: bolder;
   margin: 0;
   margin-bottom: 0 !important;

@@ -1,18 +1,32 @@
 .next-page-link {
   text-decoration: none;
-  color: #007bff;
+  color: black;
   font-size: 16px;
 }
 
-.next-page-link:hover {
-  text-decoration: underline;
-}
 .next-link-content {
   position: absolute;
   bottom: 50%;
   right: 0;
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8;
   margin-top: 20px;
+  color: black;
+}
+.buttonStyle {
+  background-color: "#4CAF50";
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.iconStyle {
+  margin-left: 8px;
+  font-size: 18px;
 }

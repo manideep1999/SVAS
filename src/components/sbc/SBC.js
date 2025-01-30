@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { BASENAME } from "../common/constants/constants";
+import { BASENAME } from "../utils/constants";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
