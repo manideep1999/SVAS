@@ -13,7 +13,7 @@ function AshramIntro() {
         </span>
       </div>
       <img
-        class="banner-image"
+        className="banner-image"
         src="img/ashram/ashram-meditation-hall.jpg"
         alt="Meditation hall "
       />
