@@ -10,7 +10,8 @@ function NextPageLink() {
     { name: "Home", path: withBase("/") },
     { name: "Our Master", path: withBase("/ourMaster") },
     { name: "Meditation", path: withBase("/meditation") },
-    { name: "Ashram", path: withBase("/about") },
+    { name: "Ashram", path: withBase("/ashram") },
+    { name: "Programs", path: withBase("/programs") },
     { name: "About", path: withBase("/about") },
     { name: "Contact Us", path: withBase("/contact") },
   ];
@@ -25,8 +26,13 @@ function NextPageLink() {
     <div className="next-link-content">
       <Link to={nextPage.path} className="next-page-link">
         <h4>Next: {nextPage.name}</h4>
-
-        <button className="buttonStyle">Go To {nextPage.name}</button>
+        {/* <div class="arrow-container">
+          <span class="arrow-text">Go To {nextPage.name}</span>
+        </div>*/}
+        <button className="buttonStyle">
+          {nextPage.name}
+          <FaArrowRight />
+        </button>
       </Link>
     </div>
   );

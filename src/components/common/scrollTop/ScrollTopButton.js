@@ -38,7 +38,7 @@ function ScrollTopButton() {
           fontWeight: "bold",
         }}
       >
-        Top
+        UP
       </div>
     </div>
   );

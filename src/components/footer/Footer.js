@@ -91,6 +91,7 @@ function Footer(props) {
                 (+1) 562.567.SVAS (7827)
               </a>
             </p>
+            <NextPageLink></NextPageLink>
           </div>
         </div>
 
@@ -132,7 +133,6 @@ function Footer(props) {
             Reserved
           </p>
           <ScrollTopButton></ScrollTopButton>
-          <NextPageLink></NextPageLink>
         </div>
       </div>
     </div>
