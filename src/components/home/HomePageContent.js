@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HomePageContent.css";
 import Button from "../common/button/Button";
+import { withBase } from "../utils/withBase";
 
 const HomePageContent = (props) => {
   const goToMasterPage = (goToMasterPage) => {
-    window.location.href = "/ourMaster";
+    window.location.href = withBase("/ourMaster");
   };
   const goToMeditationPage = (goToMeditationPage) => {
-    window.location.href = "/meditation";
+    window.location.href = withBase("/meditation");
   };
   const goToAshramPage = (goToAshramPage) => {
-    window.location.href = "/ashram";
+    window.location.href = withBase("/ashram");
   };
   const quote = [
     "Following the Path",
