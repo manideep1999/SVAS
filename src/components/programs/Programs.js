@@ -8,7 +8,7 @@ import SectionSubHeader from "../common/section/SectionSubHeader";
 
 function Programs() {
   return (
-    <div class="section">
+    <div className="section">
       <SectionHeader
         imageUrl="./img/subTitleBanner.jpg"
         headerText="Programs"

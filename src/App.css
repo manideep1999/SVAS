@@ -2,6 +2,24 @@
 :root {
   --font-cursive: "Brush Script MT", cursive;
 }
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 389px) {
+  html {
+    font-size: 2.5641vw;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  html {
+    font-size: clamp(10px, 0.7142857vw, 12px);
+  }
+}
 .App {
   text-align: center;
 }
@@ -20,10 +38,10 @@
 .svas-font {
   font-size: 1.6rem;
   font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05rem;
   font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "palt" on;
 }
@@ -65,25 +83,6 @@ h2 {
 @media screen and (max-width: 810px) {
   .section h1 {
     font-size: 5vh;
-  }
-}
-
-html {
-  font-size: 62.5%;
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-@media screen and (max-width: 389px) {
-  html {
-    font-size: 2.5641vw;
-  }
-}
-
-@media screen and (min-width: 1340px) {
-  html {
-    font-size: clamp(10px, 0.7142857vw, 12px);
   }
 }
 
@@ -287,4 +286,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 769px) {
+  .space-text {
+    padding-right: 3em;
+  }
+  .space-item {
+    margin: 3em 0 3em 0;
+    padding: 3em;
+  }
+}
+@media (max-width: 769px) {
+  .space-item {
+    margin: 2em;
+    padding: 2em;
+  }
+  .space-text {
+    padding-right: 3em;
+  }
 }
