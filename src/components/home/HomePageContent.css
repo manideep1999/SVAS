@@ -89,12 +89,13 @@
 .text {
   /* font-size: 16px;
     margin-top: 10px; */
+  /*font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;*/
   font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 6%;
   text-align: left;
   justify-content: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
   font-feature-settings: "palt" on;
   line-height: 1.8;
 }
@@ -180,7 +181,7 @@
   }
 
   .text {
-    font-family: "Crimson Text", serif;
+    font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
     position: relative;
     /* font-size: 16px; Reset font size for larger screens */
     margin-left: 20px;

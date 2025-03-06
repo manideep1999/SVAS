@@ -1,11 +1,11 @@
 import React from "react";
+import "./Satsang.css";
 
 function Satsang() {
   return (
     <section className="satsang-container">
       <article className="container">
-        <div className="row"></div>
-
+        {/* Heading */}
         <div className="row">
           <h3 align="center" className="header paintbrush-heading">
             Amma & The Satsang
@@ -13,17 +13,26 @@ function Satsang() {
           <h3 align="center" className="header paintbrush-heading">
             Oneness in Manyness
           </h3>
-          <div className="col-md-6">
-            <div className="col-12 m-5">
+        </div>
+
+        <div className="row content-center-align ">
+          <div className="col-lg-6">
+            <div className="col">
               <img
-                src="img/masterpics/satsang2.jpg"
-                alt="satsang 1"
-                className="img-fit-contain fixed-image"
+                src="img/masterpics/satsang4.jpg"
+                alt="disciples praying "
+                className="img-fit-contain "
+              ></img>
+            </div>
+            <div className="col">
+              <img
+                src="img/masterpics/satsang6.jpg"
+                alt="disciples praying "
+                className="img-fit-contain"
               ></img>
             </div>
           </div>
-
-          <div className="col-md-5 offset-md-1 text-start">
+          <div className="col-lg-5 offset-lg-1">
             <p className="data-text space-text textcolor highlight-first-letter">
               Sri Sai Vani Satsang is a spiritual seva ashram that was
               established by Amma in the year 1999 to bring the common people
@@ -46,6 +55,34 @@ function Satsang() {
               together is the Love of Amma.
             </p>
           </div>
+        </div>
+
+        {/* image grid */}
+        <div className="row">
+          <div className="col">
+            <img
+              src="img/masterpics/satsang1.jpg"
+              alt="disciples praying "
+              className="img-fit-contain"
+            ></img>
+          </div>
+          <div className="col">
+            <img
+              src="img/masterpics/satsang3.jpg"
+              alt="Amma blessing"
+              className="img-fit-contain"
+            ></img>
+          </div>
+          <div className="col">
+            <img
+              src="img/masterpics/satsang2.jpg"
+              alt="Amma blessing"
+              className="img-fit-contain"
+            ></img>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-5 offset-md-1 text-start"></div>
         </div>
       </article>
     </section>

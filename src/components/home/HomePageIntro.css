@@ -1,8 +1,6 @@
 .home-page-intro {
   display: flex;
   flex-direction: row;
-
-  
 }
 
 .top-left {
@@ -10,30 +8,18 @@
   top: 8px;
   left: 16px;
 }
- .home-page-intro img{
-  
+.home-page-intro img {
   object-fit: contain;
   object-position: top center;
 }
- 
-.image-blend{
- /* background-image: linear-gradient(-95deg,#54606c,#5a646d,#56626e,#5a646d,#55616f,#5a646d,#54606c); */
+
+.image-blend {
+  /* background-image: linear-gradient(-95deg,#54606c,#5a646d,#56626e,#5a646d,#55616f,#5a646d,#54606c); */
   background-image: url(/public/img/quotebg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  
-}
- .text {
-  color:white;
- 
-  font-family: 'Times New Roman', Times, serif;
-  
-  
-}
-.header-container{
-  position:relative;
 }
 
-
-
-
+.header-container {
+  position: relative;
+}
