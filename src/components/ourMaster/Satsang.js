@@ -59,21 +59,21 @@ function Satsang() {
 
         {/* image grid */}
         <div className="row">
-          <div className="col">
+          <div className="col-lg-4">
             <img
               src="img/masterpics/satsang1.jpg"
               alt="disciples praying "
               className="img-fit-contain"
             ></img>
           </div>
-          <div className="col">
+          <div className="col-lg-4">
             <img
               src="img/masterpics/welcome.jpg"
               alt="Amma blessing"
               className="img-fit-contain"
             ></img>
           </div>
-          <div className="col">
+          <div className="col-lg-4">
             <img
               src="img/masterpics/with-disciple.jpg"
               alt="Amma blessing"
