@@ -26,8 +26,8 @@ function Satsang() {
             </div>
             <div className="col">
               <img
-                src="img/masterpics/satsang6.jpg"
-                alt="disciples praying "
+                src="img/masterpics/disciples.jpg"
+                alt="Amma looking at disciples"
                 className="img-fit-contain"
               ></img>
             </div>
@@ -68,14 +68,14 @@ function Satsang() {
           </div>
           <div className="col">
             <img
-              src="img/masterpics/satsang3.jpg"
+              src="img/masterpics/welcome.jpg"
               alt="Amma blessing"
               className="img-fit-contain"
             ></img>
           </div>
           <div className="col">
             <img
-              src="img/masterpics/satsang2.jpg"
+              src="img/masterpics/with-disciple.jpg"
               alt="Amma blessing"
               className="img-fit-contain"
             ></img>
