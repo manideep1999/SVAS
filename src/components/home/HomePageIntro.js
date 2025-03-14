@@ -4,7 +4,29 @@ import Waves from "../common/dividers/Waves";
 
 const HomePageIntro = (props) => {
   return (
-    <header className="header-container">
+    <div className="hero-image header-container container-fluid">
+      <div className="container-fluid">
+        <div className="row p-0">
+          <div className="col-lg-6">
+            <h1 className="header-font">
+              The moment the thought of exploring yourself arises,
+            </h1>
+            <h1 className="header-font">
+              it marks the first step towards your spiritual journey.
+            </h1>
+            <h1 className="header-font align-right">~AMMA</h1>
+          </div>
+        </div>
+      </div>
+      <Waves></Waves>
+    </div>
+  );
+};
+
+export default HomePageIntro;
+{
+  /*
+  <header className="header-container">
       <picture>
         <source
           media="(min-width:960px)"
@@ -18,8 +40,5 @@ const HomePageIntro = (props) => {
         ></img>
       </picture>
       <Waves></Waves>
-    </header>
-  );
-};
-
-export default HomePageIntro;
+    </header> */
+}

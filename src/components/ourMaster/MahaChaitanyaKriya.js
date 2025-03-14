@@ -11,6 +11,13 @@ function MahaChaitanyaKriya() {
         </h4>
         <div className="row content-center-align">
           <div className="col-12 col-md-6">
+            <img
+              src="img/masterpics/blessing1.jpg"
+              alt="Amma blessing"
+              className="img-fit-contain"
+            ></img>
+          </div>
+          <div className="col-12 col-md-6">
             <p className="text textcolor highlight-first-letter">
               We are on the verge of a time of great changes to happen in time.
               There is a constant shift in the mindset of the people where
@@ -30,13 +37,6 @@ function MahaChaitanyaKriya() {
               observe oneself and to accept others, to excel in their personal
               life and to progress in the spiritual path.
             </p>
-          </div>
-          <div className="col-12 col-md-6">
-            <img
-              src="img/masterpics/blessing1.jpg"
-              alt="Amma blessing"
-              className="img-fit-contain"
-            ></img>
           </div>
         </div>
       </article>

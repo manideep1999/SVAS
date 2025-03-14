@@ -15,16 +15,16 @@ function Satsang() {
           </h3>
         </div>
 
-        <div className="row content-center-align ">
+        <div className="row content-center-align custom-spacing">
           <div className="col-lg-6">
-            <div className="col">
+            <div className="col custom-spacing">
               <img
                 src="img/masterpics/satsang4.jpg"
                 alt="disciples praying "
                 className="img-fit-contain "
               ></img>
             </div>
-            <div className="col">
+            <div className="col custom-spacing">
               <img
                 src="img/masterpics/disciples.jpg"
                 alt="Amma looking at disciples"
@@ -58,22 +58,22 @@ function Satsang() {
         </div>
 
         {/* image grid */}
-        <div className="row">
-          <div className="col-lg-4">
+        <div className="row ">
+          <div className="col-lg-4 custom-spacing">
             <img
               src="img/masterpics/satsang1.jpg"
               alt="disciples praying "
               className="img-fit-contain"
             ></img>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 custom-spacing">
             <img
               src="img/masterpics/welcome.jpg"
               alt="Amma blessing"
               className="img-fit-contain"
             ></img>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 custom-spacing">
             <img
               src="img/masterpics/with-disciple.jpg"
               alt="Amma blessing"
