@@ -33,9 +33,6 @@ function ContactForm() {
     if (!message || message.length < 10) {
       newErrors.message = "Message must be at least 10 characters.";
     }
-    console.log(
-      "-------------validating--------------" + Object.keys(newErrors)
-    );
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -45,19 +42,13 @@ function ContactForm() {
     e.preventDefault();
 
     if (!validateForm()) return;
-    console.log("-------------validating complete--------------");
 
     //call to emai lfunction
-    const mailtoLink = `mailto:prerana.za@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
-    )}`;
-    console.log("called mailto link");
+
     // Opening the email client with the mailto link
     window.location.href = mailtoLink;
   };
-  const mailtoLink = `mailto:svasformeditation@gmail.com?subject=${encodeURIComponent(
+  const mailtoLink = `mailto:prerana.za@gmail.com?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(
     `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
