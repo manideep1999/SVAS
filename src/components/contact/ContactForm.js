@@ -2,52 +2,42 @@ import React, { useState } from "react";
 
 import "./ContactForm.css";
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  // Handle form field changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  // Regular expression to check if the email ends with @gmail.com
+  const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
   const validateForm = () => {
-    const newErrors = {};
+    let newErrors = {};
 
-    if (!formData.name || formData.name.length < 3) {
+    if (!name || name.length < 3) {
       newErrors.name = "Name must be at least 3 characters.";
     }
 
-    if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Enter a valid email address.";
+    if (!email || !gmailPattern.test(email)) {
+      newErrors.email = "Enter a valid gmail address.";
     }
 
-    if (!formData.subject || formData.subject.length < 5) {
+    if (!subject || subject.length < 5) {
       newErrors.subject = "Subject must be at least 5 characters.";
     }
 
-    if (!formData.phone || !/^\d{10,15}$/.test(formData.phone)) {
+    if (!phone || !/^\d{10,15}$/.test(phone)) {
       newErrors.phone = "Enter a valid phone number (10-15 digits).";
     }
 
-    if (!formData.message || formData.message.length < 10) {
+    if (!message || message.length < 10) {
       newErrors.message = "Message must be at least 10 characters.";
     }
-
+    console.log(
+      "-------------validating--------------" + Object.keys(newErrors)
+    );
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
   };
 
   // Handle form submission
@@ -55,9 +45,23 @@ function ContactForm() {
     e.preventDefault();
 
     if (!validateForm()) return;
+    console.log("-------------validating complete--------------");
 
     //call to emai lfunction
+    const mailtoLink = `mailto:prerana.za@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
+    )}`;
+    console.log("called mailto link");
+    // Opening the email client with the mailto link
+    window.location.href = mailtoLink;
   };
+  const mailtoLink = `mailto:svasformeditation@gmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(
+    `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
+  )}`;
 
   return (
     <section className="container contact-form-container contact-page">
@@ -72,8 +76,8 @@ function ContactForm() {
           type="text"
           name="name"
           placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           required
         />
         {errors.name && <p className="error">{errors.name}</p>}
@@ -81,9 +85,9 @@ function ContactForm() {
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
+          placeholder="Your Gmail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         {errors.email && <p className="error">{errors.email}</p>}
@@ -91,8 +95,8 @@ function ContactForm() {
           type="text"
           name="subject"
           placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
           required
         />
         {errors.subject && <p className="error">{errors.subject}</p>}
@@ -100,22 +104,25 @@ function ContactForm() {
           type="text"
           name="phone"
           placeholder="Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           required
         />
         {errors.phone && <p className="error">{errors.phone}</p>}
         <textarea
           name="message"
           placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           required
         />
+        {errors.message && <p className="error">{errors.message}</p>}
 
-        <button type="submit" className="btn btn-width btn-warning">
-          Send Your Message
-        </button>
+        <a href={mailtoLink}>
+          <button type="submit" className="btn btn-width btn-warning">
+            Send Your Message
+          </button>
+        </a>
       </form>
     </section>
   );
