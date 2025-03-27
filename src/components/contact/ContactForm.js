@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import "./ContactForm.css";
 function ContactForm() {
@@ -8,6 +9,7 @@ function ContactForm() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [recaptchaToken, setRecaptchaToken] = useState(""); // Store reCAPTCHA token
   // Regular expression to check if the email ends with @gmail.com
   const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
@@ -33,10 +35,16 @@ function ContactForm() {
     if (!message || message.length < 10) {
       newErrors.message = "Message must be at least 10 characters.";
     }
+    // reCAPTCHA validation: required
+    if (!recaptchaToken) {
+      newErrors.recaptcha = "Please verify that you are a human.";
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaToken(value); // Store the reCAPTCHA token when the user completes it
+  };
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,15 +52,21 @@ function ContactForm() {
     if (!validateForm()) return;
 
     //call to emai lfunction
-
+    const mailtoLink = `mailto:prerana.za@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
+    )}`;
     // Opening the email client with the mailto link
     window.location.href = mailtoLink;
+    // Reset form after submission
+    setName("");
+    setEmail("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
+    setRecaptchaToken(""); // Reset reCAPTCHA token
   };
-  const mailtoLink = `mailto:prerana.za@gmail.com?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(
-    `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nSubject: ${subject}`
-  )}`;
 
   return (
     <section className="container contact-form-container contact-page">
@@ -108,12 +122,16 @@ function ContactForm() {
           required
         />
         {errors.message && <p className="error">{errors.message}</p>}
+        {/* Google reCAPTCHA Widget */}
+        <ReCAPTCHA
+          sitekey="6Le7rQErAAAAACVK0b5CojjKWxkCbA9rEA_PnW9S" // Replace with your site key
+          onChange={handleRecaptchaChange}
+        />
+        {errors.recaptcha && <p className="error">{errors.recaptcha}</p>}
 
-        <a href={mailtoLink}>
-          <button type="submit" className="btn btn-width btn-warning">
-            Send Your Message
-          </button>
-        </a>
+        <button type="submit" className="btn btn-width btn-warning">
+          Send Your Message
+        </button>
       </form>
     </section>
   );
