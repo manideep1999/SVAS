@@ -23,7 +23,7 @@ const slides = [
   {
     image: "./img/flipcard/tree.jpg",
     text: "To attain the ultimate state in the journey of spiritual life one must do Sadhana. Sadhana means to conquer your mind and win over yourself. The first Sadhana you need to do is to coordinate your Manas(mind), Buddhi(intellect) Indriyas and Gnanendriyas(5 senses of perception). When your sadana takes you from this state of harmony between Manas, Buddhi, Indriyas and Gnanendriyas to the state of oneness , from the state of oneness to the state of divinity and then it becomes complete. To achieve that state, one has to work hard with self discipline (internal & external) in their spiritual practice.",
-    heading: "Sadana",
+    heading: "Sadhana",
   },
 ];
 
@@ -65,6 +65,7 @@ function FlipElement() {
   return (
     <div className="gallery-container">
       <div className="carousel-container">
+        <h1 className="carousel-header">The Four Pillars of Human Life</h1>
         <div
           className="carousel"
           style={{

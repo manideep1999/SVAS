@@ -30,6 +30,7 @@ function HomePagePrimer() {
     <>
       <article className="container-fluid article-container">
         <div className="row no-gutters">
+          <h1 className="card-header">The Four Pillars Of Human Life</h1>
           {primerInfo.map((info) => (
             <div className="col-12 col-md-6 col-lg-3 px-5 ">
               <FlipCircle {...info}></FlipCircle>
