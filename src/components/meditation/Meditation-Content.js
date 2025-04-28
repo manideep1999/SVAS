@@ -31,7 +31,7 @@ function MeditationContent() {
       <div className="meditation-container">
         <section className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 ">
               <h2 className="heading-text move-down">
                 What does Meditation do?
               </h2>

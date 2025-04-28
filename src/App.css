@@ -110,6 +110,9 @@ h1 {
     letter-spacing: 0.08em;
     line-height: 1.306;
   }
+  .data-text {
+    font-size: 1.2rem;
+  }
 }
 
 .img-fit {
@@ -284,11 +287,11 @@ h1 {
 }
 @media (max-width: 769px) {
   .space-item {
-    margin: 2em;
-    padding: 2em;
+    margin: 1em;
+    padding: 1em;
   }
   .space-text {
-    padding-right: 3em;
+    padding-right: 0.25em;
   }
 }
 

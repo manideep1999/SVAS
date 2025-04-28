@@ -1,59 +1,63 @@
-
-.circle{
-    border:1px solid black;
-    border-radius:50%;
+.circle {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.blue-gradient-background {
+  background: linear-gradient(to bottom, #f6f8f5, #1c8dba, #f6f8f5);
 }
 .circular-image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top:5rem;
-    
-    
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
 
-  .circular-image {
-    width: 800px; /* Set the desired width */
-    height: 800px; /* Set the desired height */
-    border-radius: 50%; /* Makes the image circular */
-   /* object-fit: cover; /* Ensures the image covers the area */
-    /*border: 2px solid #ccc; /* Optional: adds a border */
-  }
-  
-  .image-text {
-    margin-top: 10px; /* Space between image and text */
-    text-align: center; /* Center the text */
-    font-size:2.5rem;
-    z-index:3;
-  }
+.circular-image {
+  width: 800px; /* Set the desired width */
+  height: 800px; /* Set the desired height */
+  border-radius: 50%; /* Makes the image circular */
+  /* object-fit: cover; /* Ensures the image covers the area */
+  /*border: 2px solid #ccc; /* Optional: adds a border */
+}
+
+.image-text {
+  margin-top: 10px; /* Space between image and text */
+  text-align: center; /* Center the text */
+  font-size: 2.5rem;
+  z-index: 3;
+}
+.blob-shape {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 40% 60% 50% 70% / 50% 40% 60% 30%; /* Creating a blob-like shape */
+  background: black;
+  /* background: linear-gradient(145deg, #ff5f6d, #ffc371);*/
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .blob-shape {
     width: 300px;
     height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    color: #fff;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    position: relative;
-    border-radius: 40% 60% 50% 70% / 50% 40% 60% 30%; /* Creating a blob-like shape */
-    background:black;
-    /* background: linear-gradient(145deg, #ff5f6d, #ffc371);*/
+    font-size: 1em;
   }
-   /* Responsive adjustments */
-   @media (max-width: 768px) {
-    .blob-shape {
-      width: 300px;
-      height: 300px;
-      font-size: 1em;
-    }
-  }
+}
 
-  @media (max-width: 480px) {
-    .blob-shape {
-      width: 300px;
-      height: 300px;
-      font-size: 0.9em;
-    }
+@media (max-width: 480px) {
+  .blob-shape {
+    width: 300px;
+    height: 300px;
+    font-size: 0.9em;
   }
+}
+.highlight-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}

@@ -28,47 +28,26 @@ function SMCK() {
 
   return (
     <div>
-      <div className="container-fluid d-flex  align-items-center justify-content-center full-height-cotainer">
+      <div className="container-fluid blue-gradient-background">
         <div className="row">
           <div className="col pt-10 d-flex  align-items-center justify-content-center">
             <AutoPlayVideo videoSrc="video/lotus-bloom.mp4" />
           </div>
         </div>
-      </div>
-
-      <div className="meditation-container">
-        <section className="container">
-          <div className="row">
-            <div className="col-md-7">
-              <img
-                src="img/meditation/bird.jpg"
-                className="img-fit image-border"
-                alt="bird"
-              ></img>
-            </div>
-            <div className="col-md-4 offset-md-1 ">
-              <img
-                src="img/meditation/white-flower-square.jpg"
-                className="img-fit image-border curved-frame"
-                alt="white flower"
-              ></img>
-            </div>
+        <div className="row  justify-content-center">
+          <div className="col-lg-8">
+            <p className="highlight-text space-text">
+              To experience that completeness and wholeness of Meditation and to
+              lead a fulfilled life Amma devised a unique powerful Dyaana Sadana
+              - Sri MahaChaitanya Kriya. In this modern and most advanced age of
+              technology and AI we humans are in a way knowingly or unknowingly
+              diminishing or limiting our otherwise limitless intelligence. Sri
+              MahaChaitanya Kriya is a one of a kind yogic practice(yoga
+              sadhana) to awaken those inner faculties and expand them to their
+              inherit universalness...
+            </p>
           </div>
-
-          <div className="row ">
-            <div className="col space-item">
-              <p className="data-text space-text">
-                To experience that completeness and wholeness of Meditation and
-                to lead a fulfilled life Amma devised a unique powerful Dyaana
-                Sadana - SMCK. In this modern and most advanced age of
-                technology and AI we humans are in a way knowingly or
-                unknowingly diminishing or limiting our otherwise limitless
-                intelligence. SMCK is a supreme tool to awaken those inner
-                faculties that and expand them to their universalness...
-              </p>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
 
       <section className="container">
