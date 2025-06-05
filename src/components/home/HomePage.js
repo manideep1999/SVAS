@@ -11,6 +11,7 @@ import FlipCircle from "../common/flipElement/FlipCircle";
 import FlipElement from "../common/flipElement/FlipElement";
 import CarouselWithImage from "../common/carousel-slider/carousel-with-image/CarouselWithImage";
 import SVASPrayer from "./SVASPrayer";
+import AshramContent from "./AshramContent";
 
 function HomePage(props) {
   return (
@@ -21,7 +22,10 @@ function HomePage(props) {
       <SVASPrayer />
 
       <HomePageContent />
+
       <HomePageSlider />
+
+      <AshramContent />
     </div>
   );
 }
