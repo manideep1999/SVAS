@@ -34,7 +34,7 @@ function FlipElement() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 8000); // Change slide every 3 seconds
+    }, 30000); // Change slide every 3 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [currentIndex]);
