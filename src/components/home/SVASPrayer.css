@@ -92,9 +92,12 @@
   }
 }
 .line {
+  opacity: 0;
   display: block;
   margin: 5px 0;
   text-align: center;
+  animation: text-animate 2s ease-in-out forwards;
+  animation-timing-function: view(y);
 }
 
 .line-animate {
