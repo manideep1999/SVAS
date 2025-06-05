@@ -79,7 +79,6 @@ function FlipElement() {
                 index === currentIndex ? "active" : ""
               }`}
               style={{
-                backgroundImage: `url(${slide.image})`,
                 transform: `rotateY(${index * 90}deg) translateZ(400px)`,
               }}
             >
