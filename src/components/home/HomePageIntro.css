@@ -22,35 +22,41 @@
 
 .header-container {
   position: relative;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-image {
   background-image: url(/public/img/home/home-bg-1280-720.jpg); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
 }
 .header-font {
-  font-size: 5rem;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
-    /* Bottom right shadow */ -2px -2px 4px rgba(0, 0, 0, 0.7),
-    /* Top left shadow */ 2px -2px 4px rgba(0, 0, 0, 0.7),
-    /* Bottom left shadow */ -2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #f8f9fa;
+  font-size: clamp(
+    0.5rem,
+    5vw,
+    3rem
+  ); /* Responsive size between 1.8rem and 3rem */
+  max-width: 90%;
 }
+
 .align-right {
   text-align: right;
 }
 @media (orientation: portrait) {
   .hero-image {
-    background-image: url("/public/img/home/home-bg-800-1200.jpg"); /* Portrait image */
+    background-image: url("/public/img/home/home-bg-720-1280.jpg"); /* Portrait image */
   }
-  .header-font {
-    font-size: 3rem;
+  .hero-text-bg {
+    background-color: rgba(0, 0, 0, 0.35); /* slightly darker for mobile */
+    margin-top: 2rem;
   }
 }
 .hero-text {

@@ -11,9 +11,6 @@ function MeditationHeader() {
               <h1 className="card-title header-text threeD-text-shadow">
                 MEDITATION
               </h1>
-              <h1 className="card-title header-text threeD-text-shadow">
-                (Dhyaanam)
-              </h1>
             </div>
           </div>
           <div className="col-md-6 image-column d-flex align-items-start justify-content-end">

@@ -32,13 +32,18 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-@media screen and (max-width: 389px) {
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* make everything a bit smaller on tablets */
+  }
+}
+@media screen and (max-width: 480px) {
   html {
     font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    font-size: 2.5641vw;
+    font-size: 10px;
   }
 }
 

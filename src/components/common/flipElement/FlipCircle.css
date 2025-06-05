@@ -17,6 +17,7 @@
   position: relative;
   text-align: center;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 .overlay {
   position: absolute;
@@ -65,16 +66,19 @@
   opacity: 0;
   transition: opacity 1s linear;
   transition-delay: 2s;
-
   /* Indent the first line of each paragraph */
   margin: 1%; /* Set top and bottom margin for paragraphs */
   line-height: 1.6; /* Set line height for better readability */
 }
 .square-content-img {
+  position: sticky;
+  top: 0;
+  z-index: 0;
   opacity: 0.3;
   opacity: 1;
   translate: transform 1s ease-in-out, opacity 1s ease-in-out;
   transition-delay: 2s;
+  object-fit: cover;
 }
 
 /* circle active */

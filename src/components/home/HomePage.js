@@ -16,9 +16,8 @@ function HomePage(props) {
   return (
     <div className="home-page">
       <HomePageIntro />
-      <div className="sticky-div">
-        <FlipElement />
-      </div>
+      <FlipElement />
+
       <SVASPrayer />
 
       <HomePageContent />
