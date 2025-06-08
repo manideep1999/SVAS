@@ -56,3 +56,13 @@ html {
     font-size: clamp(10px, 0.7142857vw, 12px);
   }
 }
+p {
+  font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  padding: 6%;
+  text-align: left;
+  justify-content: center;
+  letter-spacing: 0.03rem;
+  font-feature-settings: "palt" on;
+  line-height: 1.8;
+}

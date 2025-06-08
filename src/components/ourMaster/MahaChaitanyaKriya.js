@@ -18,7 +18,7 @@ function MahaChaitanyaKriya() {
             ></img>
           </div>
           <div className="col-12 col-md-6">
-            <p className="text textcolor highlight-first-letter">
+            <p className="highlight-first-letter">
               We are on the verge of a time of great changes to happen in time.
               There is a constant shift in the mindset of the people where
               everyone is working hard for success which is measured relative to

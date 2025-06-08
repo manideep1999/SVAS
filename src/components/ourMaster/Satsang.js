@@ -33,7 +33,7 @@ function Satsang() {
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
-            <p className="data-text space-text textcolor highlight-first-letter">
+            <p className="highlight-first-letter">
               Sri Sai Vani Satsang is a spiritual seva ashram that was
               established by Amma in the year 1999 to bring the common people
               who are solely immersed in worldly life to walk on the forgotten

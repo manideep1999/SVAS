@@ -23,10 +23,7 @@ function Light() {
 
           <div className="col-lg-5 offset-lg-1">
             <div>
-              <p
-                className="data-text space-text highlight-first-letter "
-                align="left"
-              >
+              <p className="highlight-first-letter " align="left">
                 {" "}
                 Amma’s teachings are very distinguished owing to their
                 simplicity, yet unique and very powerful. These invaluable
@@ -51,7 +48,7 @@ function Light() {
         </div>
         <div className="row mx-auto content-center-align">
           <div className="col-lg-5 offset-md-1">
-            <p className="data-text space-text">
+            <p>
               This is the renewed direction in spirituality that Amma guides us.
               Amma gives complete freedom to the disciples at the same time
               instills how to sensibly use the freedom, upholding the
