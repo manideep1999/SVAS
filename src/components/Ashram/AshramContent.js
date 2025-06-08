@@ -29,7 +29,7 @@ function AshramContent() {
             <div className="image-frame ">
               <img
                 src="./img/ashram/gate.jpeg"
-                alt="Bottom Image"
+                alt="Ahsram Gate resembling hands welcoming everyone with namaste"
                 className="img-fluid grid-img"
               />
             </div>
@@ -39,7 +39,7 @@ function AshramContent() {
               <div className="col-12">
                 <img
                   src="./img/ashram/goshala.jpeg"
-                  alt="Top Image"
+                  alt="Goshala image"
                   className="img-fluid grid-img"
                 />
               </div>
