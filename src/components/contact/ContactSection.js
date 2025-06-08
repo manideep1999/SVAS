@@ -3,8 +3,8 @@ import ContactList from "./ContactList";
 import ContactForm from "./ContactForm";
 function ContactSection() {
   return (
-    <section className="container contact-page-container contact-page">
-      <div className="row section-row">
+    <section className="container contact-page-container">
+      <div className="row">
         <div className="col-md-6 ">
           <ContactList></ContactList>
         </div>

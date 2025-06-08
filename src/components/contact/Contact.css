@@ -1,18 +1,10 @@
-.contact-page {
-  font-family: "Raleway", sans-serif;
-  margin-bottom: 30px;
-  background-color: whitesmoke;
-  padding: 15px;
-}
 .contact-page-container {
+  background-color: whitesmoke;
   margin-top: 45px;
+  padding: 15px;
+  font-weight: 400;
 }
-.contact-page-container h2 {
-  font-size: 3vw;
-}
-.contact-page-container p {
-  font-size: medium;
-}
+
 .contact-icon {
   display: inline-block;
   background-color: #ffa500; /* Orange background */
@@ -57,7 +49,7 @@ ul.list-unstyled {
   font-weight: 600;
   text-decoration: none;
   position: relative;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding-bottom: 4px;
   transition: all 0.3s ease;
   cursor: pointer; /* Change mouse pointer to a hand when hovering */

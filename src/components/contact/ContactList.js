@@ -3,8 +3,8 @@ import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6";
 
 function ContactList() {
   return (
-    <section className="container contact-page">
-      <h2>GET IN TOUCH</h2>
+    <section className="container">
+      <h2 className="display-2 fw-normal">GET IN TOUCH</h2>
       <p>
         {" "}
         We are here to guide you on your journey of inner peace. Feel free to
