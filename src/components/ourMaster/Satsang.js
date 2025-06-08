@@ -7,10 +7,10 @@ function Satsang() {
       <article className="container">
         {/* Heading */}
         <div className="row">
-          <h3 align="center" className="header paintbrush-heading">
+          <h3 align="center" className="paintbrush-heading">
             Amma & The Satsang
           </h3>
-          <h3 align="center" className="header paintbrush-heading">
+          <h3 align="center" className="paintbrush-heading">
             Oneness in Manyness
           </h3>
         </div>

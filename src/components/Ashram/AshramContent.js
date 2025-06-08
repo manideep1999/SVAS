@@ -7,7 +7,7 @@ function AshramContent() {
       <article className="container-fluid ashram-container">
         <div className="row d-flex align-items-center justify-content-center">
           <div className="col-lg-6 ">
-            <p className="text textcolor highlight-first-letter kolam-underline ">
+            <p className="highlight-first-letter kolam-underline ">
               Our Ashram is situated near hyderabad,India,nestled away from the
               busy urban life in the midst of serene village surroundings. The
               Ashram is a sanctum sanctuary for the sadaks. This is a very
@@ -47,7 +47,7 @@ function AshramContent() {
 
             <div className="row">
               <div className="col-12">
-                <p className="text textcolor">
+                <p>
                   Every Sunday the sadaks meet in the ashram to meditate and be
                   in silence and receive the divine energy and a peaceful mind
                   and try to carry forward that for the whole week. The

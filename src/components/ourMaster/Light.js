@@ -6,10 +6,8 @@ function Light() {
       {/** Heading */}
       <article className="container ">
         <div className="row mx-auto master-section-row">
-          <h3 className="header  paintbrush-heading">Amma</h3>
-          <h3 className="header  paintbrush-heading">
-            The Light of a New Beginning
-          </h3>
+          <h3 className="paintbrush-heading">Amma</h3>
+          <h3 className="paintbrush-heading">The Light of a New Beginning</h3>
         </div>
         {/** down sectino with image and text */}
         <div className="row mx-auto content-center-align master-section-row">

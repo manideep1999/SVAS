@@ -27,15 +27,23 @@ function Section(props) {
         </h3>
         <p>{props.desc}</p>
         <span className="mr-3 info-font">
-          <b>{props.btnInfo} </b>
+          <b>{props.timingInfo}</b>
         </span>
-        <a
-          className="btn  btn-outline-info button-style"
-          role="button"
-          href="#"
+        <div
+          className="mr-3 info-font"
+          style={{ display: "flex", alignItems: "center", gap: "1rem" }}
         >
-          {props.btnText}
-        </a>
+          <b>
+            <div dangerouslySetInnerHTML={{ __html: props.btnInfo }} />
+          </b>
+          <a
+            className="btn  btn-outline-success button-style"
+            role="button"
+            href="#"
+          >
+            {props.btnText}
+          </a>
+        </div>
       </div>
     </section>
   );

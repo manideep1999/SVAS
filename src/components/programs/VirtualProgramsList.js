@@ -17,11 +17,8 @@ function VirtualProgramsList() {
         " separate meditation session is conducted virtually for group" +
         " meditation. This is a blessing for all those who live far away and" +
         " wish to connect in group.",
-      btnInfo:
-        "Timings: Every Thursday @ 7 PM IST on google meet" +
-        "\n" +
-        "<br></br>" +
-        "<b> To participate : </b>",
+      timingInfo: "Timings: Every Thursday @ 7 PM IST on google meet",
+      btnInfo: "To participate :",
       btnText: " Register",
     },
     {
@@ -40,10 +37,8 @@ function VirtualProgramsList() {
         " energy to face the life situations and challenges ahead for the" +
         " whole week. Take part in this program to kick off your week in a" +
         " positive way.",
-      btnInfo:
-        "Timings: Every Sunday @ 10 AM CST on Zoom" +
-        "'<br></br>'" +
-        "'<b> To participate : </b>'",
+      timingInfo: "Timings: Every Sunday @ 10 AM CST on Zoom",
+      btnInfo: "To participate :",
       btnText: " Register",
     },
   ];

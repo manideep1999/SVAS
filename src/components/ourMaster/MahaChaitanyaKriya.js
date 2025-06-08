@@ -3,10 +3,10 @@ function MahaChaitanyaKriya() {
   return (
     <section className="dyaanam-container">
       <article className="container">
-        <h3 align="center" className="header paintbrush-heading">
+        <h3 align="center" className="paintbrush-heading">
           <u> Amma & Dyaanam </u>
         </h3>
-        <h4 align="center" className="header paintbrush-heading">
+        <h4 align="center" className="paintbrush-heading">
           Beacon for the New Age
         </h4>
         <div className="row content-center-align">

@@ -9,7 +9,7 @@ function MeditationContent() {
         <div className="row">
           <div className="col-md-6">
             <img
-              src="img/meditation/painting.jpg"
+              src="img/meditation/butterfly-painting.jpg"
               className="img-fit"
               alt="masked painting"
             ></img>
@@ -63,8 +63,8 @@ function MeditationContent() {
 
       <div className="main-container">
         <section className="container">
-          <div className="row mx-auto">
-            <div className="col-md-6 ">
+          <div className="row m-auto">
+            <div className="col-lg-6">
               <img
                 src="img/meditation/sky.jpeg"
                 className="img-fit"

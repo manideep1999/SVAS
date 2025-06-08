@@ -1,6 +1,4 @@
 import React from "react";
-import Page from "../page/Page";
-import PageBanner from "../page/PageBanner";
 import "./OurMaster.css";
 import MasterIntro from "./MasterIntro";
 import Light from "./Light";

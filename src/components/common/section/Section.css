@@ -1,10 +1,9 @@
-
 .section-row {
-  display:flex;
+  display: flex;
   font-size: 1.6rem;
   font-weight: 400;
-  letter-spacing: .03em;
-  font-family: "skolar-sans-pe","Helvetica Neue",sans-serif;
+  letter-spacing: 0.03em;
+  font-family: "skolar-sans-pe", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -21,31 +20,30 @@
 
 @media screen and (max-width: 599px) {
   .section-data {
-      padding:0 2rem
+    padding: 0 2rem;
   }
 }
 
-.div-block{
+.div-block {
   border: 2px black;
   align-content: center;
   align-self: center;
-  
+
   display: block;
   box-sizing: border-box;
   background-color: black;
-  
 }
-.content-block{
+.content-block {
   display: block;
   padding: 0.2rem;
   height: auto;
   max-width: 100%;
   overflow: hidden;
-  background-color: white; 
+  background-color: white;
   border: 1px solid black;
   border-radius: 0.8rem;
 }
-.content-block img{
+.content-block img {
   padding: 0.1rem;
 }
 /*data heading*/
@@ -53,24 +51,25 @@
   width: 48.1481%;
   width: auto;
   margin: 0 0 4rem;
-  padding-top: .24em
+  padding-top: 0.24em;
 }
 @media screen and (max-width: 959px) {
   .data-heading {
-      width:100%;
+    width: 100%;
   }
 }
 
-.button-style{
+.button-style {
   font-size: 1.5rem;
+  border: 2px solid green !important;
 }
-.info-font{
-  font-family:  "Papyrus", Fantasy;
+.info-font {
+  font-family: "Papyrus", Fantasy;
 }
 /*heading text*/
 .heading-text {
   font-size: 5.5rem;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   line-height: 1.306;
   text-align: center;
   font-family: ivyora-display, Didot, "Times New Roman", serif;
@@ -79,10 +78,9 @@
 
 @media screen and (max-width: 599px) {
   .heading-text {
-      margin:0;
-      font-size:3.5rem;
-      letter-spacing: .08em;
-      line-height: 1.306
+    margin: 0;
+    font-size: 3.5rem;
+    letter-spacing: 0.08em;
+    line-height: 1.306;
   }
 }
-

@@ -31,16 +31,14 @@ function MeditationHeader() {
         </div>
       </section>
       <section className="container meditation-intro-div">
-        <span>
-          <p className="header paintbrush-heading meditation-intro-text">
+        <span className="paintbrush-heading meditation-intro-text">
+          <h3 className="display-1">
             “It is meditation that opens your inner doors and introduces you to
-            your true self within.“
-          </p>
-          <span className="float-right">
-            <p className="header paintbrush-heading meditation-intro-text">
+            your true self within.“ <br></br>
+            <span className="paintbrush-heading display-1 float-right">
               ~Amma
-            </p>
-          </span>
+            </span>
+          </h3>
         </span>
       </section>
     </>
