@@ -22,8 +22,7 @@ function Footer(props) {
               Come, <br></br>Let Us Meditate.
             </h3>
           </div>
-        </div>
-        <div className="row">
+
           <div className="col-md-4 content-center-align">
             <div className="footer-links">
               <h4 className="display-1 footer-heading">Links</h4>
@@ -68,7 +67,7 @@ function Footer(props) {
                   </Link>
                 </li>
               </ul>
-              <p className="footer-heading">Inquiries:</p>
+              <h4 className="footer-heading ">Inquiries:</h4>
               <p className="footer-text">svasformeditation@gmail.com</p>
             </div>
           </div>
@@ -128,9 +127,9 @@ function Footer(props) {
         </div>
       </div>*/}
       </div>
-      <div className="row">
-        <div className="col-sm content-center-align footer-text">
-          <p>
+      <div className="row p-0">
+        <div className="col-sm content-center-align ">
+          <p className="footer-text">
             SVAS,Hyderabad <br></br>Copyright&copy; SVAS 2024 | All Rights
             Reserved
           </p>
