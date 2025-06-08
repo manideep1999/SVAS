@@ -17,14 +17,16 @@ function Footer(props) {
     <div className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-md-4 content-center-align footer-theme-text">
-            <p>
+          <div className="col-md-4  ">
+            <h3 className="footer-theme-text content-center-align">
               Come, <br></br>Let Us Meditate.
-            </p>
+            </h3>
           </div>
+        </div>
+        <div className="row">
           <div className="col-md-4 content-center-align">
             <div className="footer-links">
-              <h4 className="footer-heading">Links</h4>
+              <h4 className="display-1 footer-heading">Links</h4>
               <ul className="use-links">
                 <li key="About">
                   <Link to={withBase("/about")}>
