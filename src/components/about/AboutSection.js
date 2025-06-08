@@ -4,7 +4,7 @@ function AboutSection() {
     <div className="container about-container container-spacing ">
       <div className="row">
         <div className="col-lg-8 offset-lg-2">
-          <p className="highlight-first-letter data-text">
+          <p className="highlight-first-letter">
             We are <b>SVAS</b>- Sri Vani Amma Sansthan - a volunteer based non
             profitable spiritual society. Our beloved mother Sadguru Sri Sri Sri
             Vani Matha is the focal point of our SVAS whom we dearly call Amma.
@@ -24,7 +24,7 @@ function AboutSection() {
 
       <div className="row">
         <div className="col-lg-8 offset-lg-2 data-text">
-          <h2>Our Principles And Aims</h2>
+          <h2 className="display-4">Our Principles And Aims</h2>
           <ul>
             <li>
               The prime objective of SVAS is to keep the chain of awareness
