@@ -1,7 +1,10 @@
 import React from "react";
 import "./Section.css";
+import { Link } from "react-router-dom";
+import { withBase } from "../../utils/withBase";
 
 function Section(props) {
+  const isExternalLink = props.btnLink?.startsWith("http");
   return (
     <section className="row section-row">
       <div className="col-md-6">
@@ -36,13 +39,24 @@ function Section(props) {
           <b>
             <div dangerouslySetInnerHTML={{ __html: props.btnInfo }} />
           </b>
-          <a
-            className="btn  btn-outline-success button-style"
-            role="button"
-            href="#"
-          >
-            {props.btnText}
-          </a>
+          {isExternalLink ? (
+            <a
+              className="btn  btn-outline-success button-style"
+              role="button"
+              href={props.btnLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {props.btnText}
+            </a>
+          ) : (
+            <Link
+              to={withBase(props.btnLink)}
+              className="btn btn-outline-success button-style"
+            >
+              {props.btnText}
+            </Link>
+          )}
         </div>
       </div>
     </section>

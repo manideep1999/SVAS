@@ -10,7 +10,7 @@ const HomePageContent = (props) => {
     navigate(withBase("/ourMaster"));
   };
   const goToMeditationPage = (goToMeditationPage) => {
-    window.location.href = withBase("/meditation");
+    navigate(withBase("/meditation"));
   };
 
   const quote = [

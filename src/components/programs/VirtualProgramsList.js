@@ -20,6 +20,7 @@ function VirtualProgramsList() {
       timingInfo: "Timings: Every Thursday @ 7 PM IST on google meet",
       btnInfo: "To participate :",
       btnText: " Register",
+      btnLink: "https://forms.gle/UfvqyXE1v8XpituC7",
     },
     {
       fallbackSrc: "./img/programs/me-into-me-default.jpg",
@@ -40,6 +41,7 @@ function VirtualProgramsList() {
       timingInfo: "Timings: Every Sunday @ 10 AM CST on Zoom",
       btnInfo: "To participate :",
       btnText: " Register",
+      btnLink: "https://SVASSundays.eventbrite.sg",
     },
   ];
 

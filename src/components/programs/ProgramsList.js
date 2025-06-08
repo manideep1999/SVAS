@@ -14,6 +14,7 @@ function ProgramsList() {
       sectionHeading: "Ashram Satsang",
       btnInfo: "For more information:",
       btnText: "Contact Us",
+      btnLink: "/contact",
     },
     {
       fallbackSrc: "./img/programs/seva-children.jpeg",
@@ -31,6 +32,7 @@ function ProgramsList() {
       btnInfo: "For more information:",
       btnText: "Contact Us",
       alt: "children packing food for madhavaseva",
+      btnLink: "/contact",
     },
   ];
 
