@@ -14,25 +14,26 @@ function ProgramsList() {
       sectionHeading: "Ashram Satsang",
       btnInfo: "For more information:",
       btnText: "Contact Us",
-      btnLink: "/contact",
+      btnLink: "/contact#contactForm",
     },
     {
       fallbackSrc: "./img/programs/seva-children.jpeg",
       sectionHeading: "Madhava Seva",
       desc:
         "Madhavaseva is the food donation program organized under the" +
-        "With a heartful of love and AMMA’s blessings on every Sunday SSVF foundation - Sri Sai Vani Foundation. <br></br>" +
-        "volunteers cook food and pack it themselves and distribute to the" +
+        "With a heartful of love and AMMA’s blessings on every Sunday SSVF foundation - Sri Sai Vani Foundation." +
+        "Volunteers cook food and pack it themselves and distribute to the" +
         "needy people in Govt. hospitals where very poor people come from" +
         "long distances. SSVF volunteers distribute food packets to them" +
         "directly. Thus in this way he who loves others selflessly and" +
-        "satisfies hunger really makes the saying, “Service to Man is" +
-        "Service to God” true in its spirit." +
-        'sectionHeading: "Madhava Seva",',
+        "satisfies hunger really makes the saying, “Service to Man is " +
+        "Service to God” true in its spirit.",
+
       btnInfo: "For more information:",
       btnText: "Contact Us",
       alt: "children packing food for madhavaseva",
-      btnLink: "/contact",
+      btnLink: "/contact#contactForm",
+      backgroundCol: "blue-gradient",
     },
   ];
 

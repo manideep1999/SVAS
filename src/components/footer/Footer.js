@@ -10,7 +10,6 @@ import "./Footer.css";
 import ScrollToTop from "../common/scrollTop/ScrollTopButton";
 import NextPageLink from "./NextPageLink";
 import ScrollTopButton from "../common/scrollTop/ScrollTopButton";
-import { withBase } from "../utils/withBase";
 
 function Footer(props) {
   return (
@@ -28,7 +27,7 @@ function Footer(props) {
               <h4 className="display-1 footer-heading">Links</h4>
               <ul className="use-links">
                 <li key="About">
-                  <Link to={withBase("/about")}>
+                  <Link to="about">
                     <i>
                       {" "}
                       <FaAnglesRight />
@@ -37,7 +36,7 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li key="Progarms">
-                  <Link to={withBase("/programs")}>
+                  <Link to="programs">
                     {" "}
                     <i>
                       {" "}
@@ -47,7 +46,7 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li key="Meditation">
-                  <Link to={withBase("/meditation")}>
+                  <Link to="meditation">
                     {" "}
                     <i>
                       {" "}
@@ -57,7 +56,7 @@ function Footer(props) {
                   </Link>
                 </li>
                 <li key="Contact">
-                  <Link to={withBase("/contact")}>
+                  <Link to="contact">
                     {" "}
                     <i>
                       {" "}

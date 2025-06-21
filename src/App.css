@@ -135,6 +135,15 @@ h1 {
 .light-blue-gradient {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
+.blue-gradient {
+  background: linear-gradient(
+    to top,
+    #f6f8f5 0%,
+    #fff1eb 20%,
+    #ace0f9 80%,
+    #f6f8f5 100%
+  );
+}
 
 .color-lavendar {
   background-color: #e6e6fa;

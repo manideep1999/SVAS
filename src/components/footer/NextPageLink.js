@@ -2,22 +2,28 @@ import React from "react";
 import { BASENAME } from "../utils/constants";
 import { FaArrowRight } from "react-icons/fa";
 import { useLocation, Link } from "react-router-dom";
-import { withBase } from "../utils/withBase";
 import "./NextPageLink.css";
 function NextPageLink() {
   const location = useLocation();
   const pages = [
-    { name: "Home", path: withBase("/") },
-    { name: "Our Master", path: withBase("/ourMaster") },
-    { name: "Meditation", path: withBase("/meditation") },
-    { name: "Ashram", path: withBase("/ashram") },
-    { name: "Programs", path: withBase("/programs") },
-    { name: "About", path: withBase("/about") },
-    { name: "Contact Us", path: withBase("/contact") },
+    { name: "Home", path: "/" },
+    { name: "Our Master", path: "ourMaster" },
+    { name: "Meditation", path: "meditation" },
+    { name: "Ashram", path: "ashram" },
+    { name: "Programs", path: "programs" },
+    { name: "About", path: "about" },
+    { name: "Contact Us", path: "contact" },
   ];
-  const currentPageIndex = pages.findIndex(
-    (page) => page.path === location.pathname
-  );
+  const currentPath = location.pathname.replace(/^\//, "");
+  const currentPageIndex = pages.findIndex((page) => {
+    console.log(
+      "page.path---",
+      page.path + "- location.pathna------" + location.pathname
+    );
+    return page.path === currentPath;
+  });
+
+  console.log("----------currentPageIndex-----------" + currentPageIndex);
   const nextPageIndex = (currentPageIndex + 1) % pages.length;
   const nextPage = pages[nextPageIndex];
   // Determine the next page based on current route

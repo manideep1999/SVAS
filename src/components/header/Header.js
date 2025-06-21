@@ -49,7 +49,7 @@ function Header({ basename }) {
         <ul className="navbar-nav sbc-navbar-content">
           <li className="nav-item">
             <NavLink
-              to={`${basename}/`}
+              to="/"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -60,7 +60,7 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to={`${basename}/ourMaster`}
+              to="ourMaster"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -71,7 +71,7 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to={`${basename}/meditation`}
+              to="meditation"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -82,7 +82,7 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to={`${basename}/ashram`}
+              to="ashram"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -93,7 +93,7 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to={`${basename}/programs`}
+              to="programs"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -145,7 +145,7 @@ function Header({ basename }) {
             </li> */}
           <li className="nav-item">
             <NavLink
-              to={`${basename}/about`}
+              to="about"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
@@ -156,7 +156,7 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to={`${basename}/contact`}
+              to="contact"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }

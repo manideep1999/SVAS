@@ -1,13 +1,17 @@
 import React from "react";
 import "./Section.css";
 import { Link } from "react-router-dom";
-import { withBase } from "../../utils/withBase";
 
 function Section(props) {
   const isExternalLink = props.btnLink?.startsWith("http");
+
   return (
-    <section className="row section-row">
-      <div className="col-md-6">
+    <section
+      className={`row section-row ${
+        props.backgroundCol ? `${props.backgroundCol}` : ""
+      }`}
+    >
+      <div className="col-md-6 content-center-align">
         <div className="div-block">
           <picture className="content-block">
             {props.portraitSrc && (
@@ -29,9 +33,12 @@ function Section(props) {
           {props.sectionHeading}
         </h3>
         <p>{props.desc}</p>
-        <span className="mr-3 info-font">
-          <b>{props.timingInfo}</b>
-        </span>
+        {props.timingInfo && (
+          <span className="mr-3 info-font">
+            <b>{props.timingInfo}</b>
+          </span>
+        )}
+
         <div
           className="mr-3 info-font"
           style={{ display: "flex", alignItems: "center", gap: "1rem" }}
@@ -51,7 +58,7 @@ function Section(props) {
             </a>
           ) : (
             <Link
-              to={withBase(props.btnLink)}
+              to={props.btnLink}
               className="btn btn-outline-success button-style"
             >
               {props.btnText}

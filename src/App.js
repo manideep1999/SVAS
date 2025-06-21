@@ -21,48 +21,53 @@ function App() {
    */
   const withBase = (path) => `${BASENAME}${path === "/" ? "" : path}`;
 
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <SBC />,
+        children: [
+          {
+            index: true,
+            element: <HomePage />,
+            scrollRestoration: "auto", // Optional: Enable scroll restoration
+          },
+          {
+            path: "about",
+            element: <About />,
+          },
+          {
+            path: "ourMaster",
+            element: <OurMaster />,
+          },
+          {
+            path: "programs",
+            element: <Programs />,
+          },
+          {
+            path: "ashram",
+            element: <Ashram />,
+          },
+          {
+            path: "meditation",
+            element: <Meditation />,
+          },
+          {
+            path: "contact",
+            element: <Contact />,
+          },
+          {
+            path: "word-for-the-way",
+            element: <WordForTheWeekPage />,
+          },
+          // Add any additional routes here...
+        ],
+      },
+    ],
     {
-      path: withBase("/"),
-      element: <SBC />,
-      children: [
-        {
-          path: withBase("/"),
-          element: <HomePage />,
-          scrollRestoration: "auto", // Optional: Enable scroll restoration
-        },
-        {
-          path: withBase("/about"),
-          element: <About />,
-        },
-        {
-          path: withBase("/ourMaster"),
-          element: <OurMaster />,
-        },
-        {
-          path: withBase("/programs"),
-          element: <Programs />,
-        },
-        {
-          path: withBase("/ashram"),
-          element: <Ashram />,
-        },
-        {
-          path: withBase("/meditation"),
-          element: <Meditation />,
-        },
-        {
-          path: withBase("/contact"),
-          element: <Contact />,
-        },
-        {
-          path: withBase("/word-for-the-way"),
-          element: <WordForTheWeekPage />,
-        },
-        // Add any additional routes here...
-      ],
-    },
-  ]);
+      basename: BASENAME,
+    }
+  );
 
   return (
     <RouterProvider router={router}>

@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../common/button/Button";
-import { withBase } from "../utils/withBase";
 import "./AshramContent.css";
 function AshramContent(props) {
   const navigate = useNavigate();
 
   const goToAshramPage = (goToAshramPage) => {
-    navigate(withBase("/ashram"));
+    navigate("ashram");
   };
   return (
     <article className="container-fluid m-0 p-0">

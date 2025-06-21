@@ -42,6 +42,7 @@ function VirtualProgramsList() {
       btnInfo: "To participate :",
       btnText: " Register",
       btnLink: "https://SVASSundays.eventbrite.sg",
+      backgroundCol: "blue-gradient",
     },
   ];
 

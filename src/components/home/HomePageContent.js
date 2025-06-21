@@ -2,15 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomePageContent.css";
 import Button from "../common/button/Button";
-import { withBase } from "../utils/withBase";
 
 const HomePageContent = (props) => {
   const navigate = useNavigate();
   const goToMasterPage = (goToMasterPage) => {
-    navigate(withBase("/ourMaster"));
+    navigate("ourMaster");
   };
   const goToMeditationPage = (goToMeditationPage) => {
-    navigate(withBase("/meditation"));
+    navigate("meditation");
   };
 
   const quote = [
