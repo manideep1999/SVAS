@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SVAS/static/css/main.d82e5d54.css",
-    "main.js": "/SVAS/static/js/main.4855e1c6.js",
+    "main.css": "/SVAS/static/css/main.c907f02e.css",
+    "main.js": "/SVAS/static/js/main.ee58deea.js",
     "static/media/space.jpg": "/SVAS/static/media/space.b2afd0d5716ba734ef2a.jpg",
     "static/media/green-background.jpg": "/SVAS/static/media/green-background.43e92e9cebc3a1739811.jpg",
     "static/media/7.svg": "/SVAS/static/media/7.e7a807e2d6d0d45dd782.svg",
@@ -15,11 +15,11 @@
     "static/media/slick.ttf": "/SVAS/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/SVAS/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/SVAS/index.html",
-    "main.d82e5d54.css.map": "/SVAS/static/css/main.d82e5d54.css.map",
-    "main.4855e1c6.js.map": "/SVAS/static/js/main.4855e1c6.js.map"
+    "main.c907f02e.css.map": "/SVAS/static/css/main.c907f02e.css.map",
+    "main.ee58deea.js.map": "/SVAS/static/js/main.ee58deea.js.map"
   },
   "entrypoints": [
-    "static/css/main.d82e5d54.css",
-    "static/js/main.4855e1c6.js"
+    "static/css/main.c907f02e.css",
+    "static/js/main.ee58deea.js"
   ]
 }
