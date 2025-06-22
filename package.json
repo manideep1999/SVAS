@@ -2,7 +2,7 @@
   "name": "svas-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://manideep1999.github.io/SVAS/",
+  "homepage": "http://manideep1999.github.io/SVAS",
   "dependencies": {
     "auth0-js": "^9.10.1",
     "axios": "^0.18.0",
