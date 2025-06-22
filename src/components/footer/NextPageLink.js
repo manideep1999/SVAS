@@ -6,7 +6,7 @@ import "./NextPageLink.css";
 function NextPageLink() {
   const location = useLocation();
   const pages = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "" },
     { name: "Our Master", path: "ourMaster" },
     { name: "Meditation", path: "meditation" },
     { name: "Ashram", path: "ashram" },
@@ -18,7 +18,11 @@ function NextPageLink() {
   const currentPageIndex = pages.findIndex((page) => {
     console.log(
       "page.path---",
-      page.path + "- location.pathna------" + location.pathname
+      page.path +
+        "- location.pathna------" +
+        location.pathname +
+        "0000curent path----" +
+        currentPath
     );
     return page.path === currentPath;
   });
@@ -26,6 +30,12 @@ function NextPageLink() {
   console.log("----------currentPageIndex-----------" + currentPageIndex);
   const nextPageIndex = (currentPageIndex + 1) % pages.length;
   const nextPage = pages[nextPageIndex];
+  console.log(
+    "----------nextpage-----------" +
+      nextPage.path +
+      "nextPageIndex-----" +
+      nextPageIndex
+  );
   // Determine the next page based on current route
 
   return (
