@@ -39,7 +39,7 @@ function MeditationContent() {
             <div className="col-md-5 offset-lg-1 ">
               <div className="space-item">
                 <h3 className="sub-header">An Excerpt from the discourse</h3>
-                <p className="data-text space-text">
+                <p>
                   “Meditation gives you peace. It gives you tranquility, gives
                   you energy, gives you happiness, enhances your thinking, gives
                   clarity to your thoughts. Brings integrity into your life.
@@ -74,7 +74,7 @@ function MeditationContent() {
             <div className="col-lg-5 offset-lg-1 d-flex align-items-center">
               <div className="space-item">
                 <h3 className="sub-header">Not Just This,</h3>
-                <p className="data-text space-text">
+                <p>
                   “The mediation process expands beyond human nature to the
                   ​divine universal consciousness. It is the flow of such a
                   ​magnificent energy. In order to understand and experience
@@ -82,7 +82,7 @@ function MeditationContent() {
                   Only when you meditate, will you be able to understand the
                   ​depth of it. Only then you will be able to understand its
                   ​power. Only then will you be able to understand its
-                  ​greatness.”"
+                  ​greatness.”
                 </p>
               </div>
             </div>

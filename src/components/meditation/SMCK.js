@@ -36,7 +36,7 @@ function SMCK() {
         </div>
         <div className="row  justify-content-center">
           <div className="col-lg-8">
-            <p className="highlight-text space-text">
+            <p>
               To experience that completeness and wholeness of Meditation and to
               lead a fulfilled life Amma devised a unique powerful Dyaana Sadana
               - Sri MahaChaitanya Kriya. In this modern and most advanced age of
