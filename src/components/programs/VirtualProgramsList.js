@@ -5,6 +5,7 @@ import Section from "../common/section/Section";
 function VirtualProgramsList() {
   const articles = [
     {
+      id: 3,
       fallbackSrc: "./img/programs/butterfly.jpg",
       sectionHeading: "Thursday Satsang",
       desc:
@@ -23,6 +24,7 @@ function VirtualProgramsList() {
       btnLink: "https://forms.gle/UfvqyXE1v8XpituC7",
     },
     {
+      id: 4,
       fallbackSrc: "./img/programs/me-into-me-default.jpg",
       sectionHeading: "Me into Me",
       desc:
@@ -50,7 +52,7 @@ function VirtualProgramsList() {
     console.log(article.btnText);
     return (
       <>
-        <Section {...article}></Section>
+        <Section key={article.id} {...article}></Section>
       </>
     );
   });
