@@ -6,6 +6,7 @@ import Section from "../common/section/Section";
 function ProgramsList() {
   const articles = [
     {
+      id: 1,
       fallbackSrc: "./img/meditationhall.jpg",
       portraitSrc: "./img/programs/ashram-hall-900_1200.jpg",
       landscapeSrc: "./img/programs/ashram-hall-1200_900.jpeg",
@@ -17,6 +18,7 @@ function ProgramsList() {
       btnLink: "/contact#contactForm",
     },
     {
+      id: 2,
       fallbackSrc: "./img/programs/seva-children.jpeg",
       sectionHeading: "Madhava Seva",
       desc:
@@ -41,7 +43,7 @@ function ProgramsList() {
     console.log(article.btnText);
     return (
       <>
-        <Section {...article}></Section>
+        <Section key={article.id} {...article}></Section>
       </>
     );
   });
