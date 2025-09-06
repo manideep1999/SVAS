@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import $ from "jquery";
 import HomePageSlide from "./HomePageSlide";
+import { Link } from "react-router-dom";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./HomePageSlider.css";
@@ -11,41 +12,8 @@ class HomePageSlider extends React.Component {
     super(props);
     this.state = {
       padding: this.getPadding(),
+      currentSlide: 0,
       slides: [
-        //   {
-        //     type: "CHILDRENS & YOUTH WORK",
-        //     title: "What's On",
-        //     subtitle: "Term-time activities for tots, tweens and teens",
-        //     url: "/about/whats-on",
-        //     imageUrl: "img/slides/events.jpg",
-        //     internalLink: true,
-        //     buttonText: "FIND OUT MORE",
-        //   },
-        //   {
-        //     type: "SUNDAY SERIES",
-        //     title: "SHIPS OF SCRIPTURE",
-        //     imageUrl: "img/slides/ships.jpg",
-        //     internalLink: true,
-        //     url: "/Sermons/series/The%20Ships%20of%20Scripture",
-        //     backgroundPosition: "center",
-        //   },
-        //   {
-        //     type: "SUNDAY NIGHT SERIES",
-        //     title: "WHAT IS A SPIRITUALITY?",
-        //     imageUrl: "img/slides/christ-in-all-the-scriptures.jpg",
-        //     internalLink: true,
-        //     url: "/Sermons/series/What%20is%20a%20Christian%3F",
-        //     backgroundPosition: "center",
-        //   },
-        //   {
-        //     type: "GEETHA STUDY SERIES",
-        //     title: "UNSEARCHABLE RICHES",
-        //     subtitle: "Studies in search of truth",
-        //     url: "/Sermons/series/Unsearchable%20Riches",
-        //     imageUrl: "img/slides/riches.jpg",
-        //     internalLink: true,
-        //   },
-
         {
           type: "SERVICE TO ONE ANOTHER",
           title: "MADHAVASEVA",
@@ -76,7 +44,6 @@ class HomePageSlider extends React.Component {
         {
           type: "GALLERY",
           title: "GLIMPSE OF ASHRAM",
-          // subtitle: "Term-time activities for tots, tweens and teens",
           url: "/about/whats-on",
           imageUrl: "img/slides/rose.jpg",
           internalLink: true,
@@ -125,17 +92,46 @@ class HomePageSlider extends React.Component {
       arrows: false,
       autoplaySpeed: 5000,
       dots: true,
+      beforeChange: (current, next) => this.setState({ currentSlide: next }),
     };
 
     const slides = this.state.slides.map((slide, index) => {
       return (
         <div key={index}>
-          <HomePageSlide {...slide} />
+          <HomePageSlide {...slide} showButton={false} />
         </div>
       );
     });
 
-    return <Slider {...settings}>{slides}</Slider>;
+    const currentSlideData = this.state.slides[this.state.currentSlide];
+    const showButton =
+      currentSlideData && (currentSlideData.url || currentSlideData.buttonText);
+
+    return (
+      <div className="slider-container">
+        <Slider {...settings}>{slides}</Slider>
+        {showButton && (
+          <div className="slider-button-container">
+            {currentSlideData.internalLink ? (
+              <Link
+                to={currentSlideData.url}
+                className="btn btn-outline-primary slider-external-button"
+              >
+                {currentSlideData.buttonText || "LISTEN AGAIN"}
+              </Link>
+            ) : (
+              <a
+                href={currentSlideData.url}
+                target={currentSlideData.target || "_self"}
+                className="btn btn-outline-primary slider-external-button"
+              >
+                {currentSlideData.buttonText || "LISTEN AGAIN"}
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    );
   }
 }
 
