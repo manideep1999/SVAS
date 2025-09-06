@@ -16,6 +16,7 @@ const HomePageSlide = ({
   fullHeightLink = false,
   backgroundPosition = "left",
   backgroundColor,
+  showButton = true,
 }) => {
   let slideStyle = {
     backgroundImage: "url(" + imageUrl + ")",
@@ -51,7 +52,7 @@ const HomePageSlide = ({
 
   let lowerSection;
 
-  if (url && internalLink && !fullHeightLink) {
+  if (showButton && url && internalLink && !fullHeightLink) {
     lowerSection = (
       <div style={buttonWrapperStyle}>
         <Link
@@ -63,7 +64,7 @@ const HomePageSlide = ({
         </Link>
       </div>
     );
-  } else if (url && !fullHeightLink) {
+  } else if (showButton && url && !fullHeightLink) {
     lowerSection = (
       <div style={buttonWrapperStyle}>
         <a
@@ -76,7 +77,7 @@ const HomePageSlide = ({
         </a>
       </div>
     );
-  } else {
+  } else if (!showButton && subsubtitle) {
     lowerSection = (
       <div>
         <hr style={hrStyle} />

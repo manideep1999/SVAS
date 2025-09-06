@@ -1,11 +1,38 @@
 .image-slide {
   min-height: 500px !important;
+  max-height: 500px !important;
   background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add dark overlay for better text readability */
+.image-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .image-slide-content {
   text-decoration: none !important;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .image-slide-content p {
@@ -18,79 +45,112 @@
 
 @media (min-width: 992px) {
   .image-slide {
-    min-height: 400px !important;
-    background-size: contain !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    background-size: cover !important;
   }
 }
 
 .image-slide hr {
   border: 1px solid white;
   width: 10%;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .image-slide-type {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt !important;
+  font-size: 10pt !important;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
   color: white;
   word-wrap: break-word;
   text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 992px) {
   .image-slide-type {
     font-weight: 200;
+    font-size: 11pt !important;
+    margin-top: 25px;
+    margin-bottom: 10px;
   }
 }
 
 .image-slide-title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 34pt !important;
+  font-size: 22pt !important;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   color: white;
   word-wrap: break-word;
-  line-height: 33pt;
+  line-height: 24pt;
   text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 992px) {
+  .image-slide-title {
+    font-size: 28pt !important;
+    line-height: 30pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .image-slide-sub-title {
   font-family: "Crimson Text", serif;
-  font-size: 22pt !important;
+  font-size: 14pt !important;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -45px;
+  margin-bottom: 8px;
   color: white;
   font-weight: 200;
   word-wrap: break-word;
   font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 992px) {
+  .image-slide-sub-title {
+    font-size: 18pt !important;
+    margin-top: -45px;
+    margin-bottom: 20px;
+  }
 }
 
 .image-slide-sub-subtitle {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt !important;
+  font-size: 10pt !important;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   color: white;
   word-wrap: break-word;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 992px) {
   .image-slide-sub-subtitle {
     font-weight: 200;
+    font-size: 11pt !important;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
 
 .image-slide-button {
   color: white;
-  margin: 0 auto;
+  margin: 10px auto 20px auto;
   border-color: white;
-  margin-bottom: 30px;
   box-shadow: none;
+  font-size: 12px;
+  padding: 8px 16px;
 }
 
 .image-slide-button:hover {
@@ -108,20 +168,25 @@
 }
 
 .image-slide-fullheight-row {
-  height: 100%;
-  overflow: hidden;
+  height: 500px !important;
   min-height: 500px !important;
+  max-height: 500px !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 992px) {
   .image-slide-fullheight-row {
-    object-fit: cover;
-    min-height: 400px !important;
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
   }
 }
 
 @media (min-width: 992px) {
   .image-slide-content {
-    padding: 30px;
+    padding: 25px;
   }
 }
