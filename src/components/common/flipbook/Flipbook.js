@@ -1,129 +1,268 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Flipbook.css";
 
-import { Fas, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 function Flipbook() {
+  const [currentPage, setCurrentPage] = useState(0); // 0 = cover, 1-5 = pages
+  const [flippedPages, setFlippedPages] = useState(new Set());
+  const [flippingBackPages, setFlippingBackPages] = useState(new Set()); // Track pages flipping backward
+
+  const totalPages = 5;
+
+  const handleNext = () => {
+    // Clear any flipping-back states since we're going forward
+    setFlippingBackPages(new Set());
+
+    if (currentPage === 0) {
+      // From cover to page 1
+      setCurrentPage(1);
+      setFlippedPages((prev) => new Set([...prev, "cover"]));
+    } else if (currentPage < totalPages) {
+      // Move to next page
+      setCurrentPage(currentPage + 1);
+      setFlippedPages((prev) => new Set([...prev, currentPage]));
+    } else if (currentPage === totalPages) {
+      // Reset from last page to beginning
+      setCurrentPage(0);
+      setFlippedPages(new Set());
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 0) {
+      const newFlipped = new Set(flippedPages);
+      const newFlippingBack = new Set(flippingBackPages);
+
+      if (currentPage === 1) {
+        // Going back to cover
+        newFlipped.delete("cover");
+        newFlippingBack.add("cover"); // Mark cover as flipping back
+        setCurrentPage(0);
+        setFlippedPages(newFlipped);
+        setFlippingBackPages(newFlippingBack);
+
+        // Remove flipping-back class after animation completes
+        setTimeout(() => {
+          setFlippingBackPages((prev) => {
+            const updated = new Set(prev);
+            updated.delete("cover");
+            return updated;
+          });
+        }, 1500);
+      } else {
+        // Going back to previous page
+        const pageToFlipBack = currentPage - 1;
+        newFlipped.delete(pageToFlipBack);
+        newFlippingBack.add(pageToFlipBack); // Mark page as flipping back
+        setCurrentPage(currentPage - 1);
+        setFlippedPages(newFlipped);
+        setFlippingBackPages(newFlippingBack);
+
+        // Remove flipping-back class after animation completes
+        setTimeout(() => {
+          setFlippingBackPages((prev) => {
+            const updated = new Set(prev);
+            updated.delete(pageToFlipBack);
+            return updated;
+          });
+        }, 1500);
+      }
+    }
+  };
+
+  const getPageClassName = (pageId) => {
+    let baseClass = "page";
+    if (flippedPages.has(pageId)) {
+      baseClass += " flipped";
+    }
+    if (flippingBackPages.has(pageId)) {
+      baseClass += " flipping-back";
+    }
+    return baseClass;
+  };
+
+  const getCoverClassName = () => {
+    let baseClass = "cover";
+    if (flippedPages.has("cover")) {
+      baseClass += " flipped";
+    }
+    if (flippingBackPages.has("cover")) {
+      baseClass += " flipping-back";
+    }
+    return baseClass;
+  };
+
+  // Calculate z-index for pages based on their state
+  const getPageZIndex = (pageId) => {
+    if (flippedPages.has(pageId)) {
+      // Flipped pages should stack from lowest to highest on the left
+      // Later pages get higher z-index so they're on top
+      return 10 + pageId;
+    } else {
+      // Unflipped pages stack from lowest to highest on the right
+      return 6 - pageId; // Original stacking order
+    }
+  };
+
+  const getCoverZIndex = () => {
+    // Cover should always be at the bottom when flipped
+    // And higher than all pages when not flipped (to be visible on top initially)
+    return flippedPages.has("cover") ? 1 : 10; // Higher z-index when not flipped
+  };
+
   return (
     <section className="container book-container d-flex align-items-center justify-content-center">
-      <input type="checkbox" className="page-button" id="next-page"></input>
-      <input
-        type="checkbox"
-        className="page-button"
-        id="checkbox-page1"
-      ></input>
-      <input
-        type="checkbox"
-        className="page-button"
-        id="checkbox-page2"
-      ></input>
-      <input
-        type="checkbox"
-        className="page-button"
-        id="checkbox-page3"
-      ></input>
-      <input
-        type="checkbox"
-        className="page-button"
-        id="checkbox-page4"
-      ></input>
-      <input
-        type="checkbox"
-        className="page-button"
-        id="checkbox-page5"
-      ></input>
-      <div className="book">
-        <div className="cover">
+      <div className={`book ${currentPage > 0 ? "opened" : ""}`}>
+        <div
+          className={getCoverClassName()}
+          style={{ zIndex: getCoverZIndex() }}
+        >
           <div className="frontpage cover-page">
             <div className="text-section">
               <h2 className="booktitle">ASRAMAM EXPERIENCES</h2>
             </div>
             <div className="image-section">
-              <img src="img/ashram/hall2.jpeg" />
+              <img src="img/ashram/Hall2.jpeg" alt="Ashram Hall" />
             </div>
-            <label htmlFor="next-page"></label>
+            {currentPage === 0 && (
+              <div className="navigation-overlay" onClick={handleNext}>
+                <FaChevronRight className="cover-next-icon" />
+              </div>
+            )}
           </div>
-          <div className="backpage">
-            <label htmlFor="next-page"></label>
-          </div>
+          <div className="backpage"></div>
         </div>
-        <div className="page" id="page1">
+
+        <div
+          className={getPageClassName(1)}
+          id="page1"
+          style={{ zIndex: getPageZIndex(1) }}
+        >
           <div className="frontpage flex-center">
             <p className="book-heading">
-              ASHRAM<br></br> A Seperate Dimesnion for Sadana
+              ASHRAM
+              <br /> A Separate Dimension for Sadhana
             </p>
-
-            <label className="next" htmlFor="checkbox-page1">
-              <FaChevronRight></FaChevronRight>
-            </label>
+            {currentPage === 1 && (
+              <>
+                <button className="nav-btn next" onClick={handleNext}>
+                  <FaChevronRight />
+                </button>
+                <button className="nav-btn prev" onClick={handlePrev}>
+                  <FaChevronLeft />
+                </button>
+              </>
+            )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/bojanasala2.jpeg" />
-
-            <label className="prev" htmlFor="checkbox-page1">
-              <FaChevronLeft></FaChevronLeft>
-            </label>
+            <img src="img/ashram/bojanasala2.jpeg" alt="Bojanasala" />
           </div>
         </div>
-        <div className="page" id="page2">
+
+        <div
+          className={getPageClassName(2)}
+          id="page2"
+          style={{ zIndex: getPageZIndex(2) }}
+        >
           <div className="frontpage flex-center">
             <p className="page-text">
-              When ever I enter the ashram I feel as if some jammer has been put
+              Whenever I enter the ashram I feel as if some jammer has been put
               on the mind.
             </p>
-            <label className="next" htmlFor="checkbox-page2">
-              <FaChevronRight></FaChevronRight>
-            </label>
+            {currentPage === 2 && (
+              <>
+                <button className="nav-btn next" onClick={handleNext}>
+                  <FaChevronRight />
+                </button>
+                <button className="nav-btn prev" onClick={handlePrev}>
+                  <FaChevronLeft />
+                </button>
+              </>
+            )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" htmlFor="checkbox-page2">
-              <FaChevronLeft></FaChevronLeft>
-            </label>
-          </div>
-        </div>
-        <div className="page" id="page3">
-          <div className="frontpage flex-center">
-            <p className="page-text">It is a different world altogether.</p>
-            <label className="next" htmlFor="checkbox-page3">
-              <FaChevronRight></FaChevronRight>
-            </label>
-          </div>
-          <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" htmlFor="checkbox-page3">
-              <FaChevronLeft></FaChevronLeft>
-            </label>
+            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
 
-        <div className="page" id="page4">
+        <div
+          className={getPageClassName(3)}
+          id="page3"
+          style={{ zIndex: getPageZIndex(3) }}
+        >
           <div className="frontpage flex-center">
-            <p className="page-text">
-              I forget all worries and tensions and feel peaceful in teh ashram
-              and it stays with me for the whole week
-            </p>
-            <label className="next" htmlFor="checkbox-page4">
-              <FaChevronRight></FaChevronRight>
-            </label>
+            <p className="page-text">It is a different world altogether.</p>
+            {currentPage === 3 && (
+              <>
+                <button className="nav-btn next" onClick={handleNext}>
+                  <FaChevronRight />
+                </button>
+                <button className="nav-btn prev" onClick={handlePrev}>
+                  <FaChevronLeft />
+                </button>
+              </>
+            )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" />
-            <label className="prev" htmlFor="checkbox-page4">
-              <FaChevronLeft></FaChevronLeft>
-            </label>
+            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
-        <div className="page" id="page5">
+
+        <div
+          className={getPageClassName(4)}
+          id="page4"
+          style={{ zIndex: getPageZIndex(4) }}
+        >
           <div className="frontpage flex-center">
-            <p className="page-text">Thats few of the expereinces!!!</p>
-            <label className="next" htmlFor="checkbox-page5">
-              <FaChevronRight></FaChevronRight>
-            </label>
+            <p className="page-text">
+              I forget all worries and tensions and feel peaceful in the ashram
+              and it stays with me for the whole week.
+            </p>
+            {currentPage === 4 && (
+              <>
+                <button className="nav-btn next" onClick={handleNext}>
+                  <FaChevronRight />
+                </button>
+                <button className="nav-btn prev" onClick={handlePrev}>
+                  <FaChevronLeft />
+                </button>
+              </>
+            )}
+          </div>
+          <div className="backpage">
+            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
+
+        <div
+          className={getPageClassName(5)}
+          id="page5"
+          style={{ zIndex: getPageZIndex(5) }}
+        >
+          <div className="frontpage flex-center">
+            <p className="page-text">Those are a few of the experiences!!!</p>
+            {currentPage === 5 && (
+              <>
+                <button
+                  className="nav-btn next reset"
+                  onClick={handleNext}
+                  title="Back to beginning"
+                >
+                  <FaChevronRight />
+                </button>
+                <button className="nav-btn prev" onClick={handlePrev}>
+                  <FaChevronLeft />
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+
         <div className="back-cover"></div>
       </div>
     </section>
   );
 }
+
 export default Flipbook;
