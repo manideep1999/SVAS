@@ -7,7 +7,7 @@ import LivePage from "./components/live/LivePage";
 import SBC from "./components/sbc/SBC";
 import OurMaster from "./components/ourMaster/OurMaster";
 import Programs from "./components/programs/Programs";
-import Ashram from "./components/Ashram/Ashram";
+import Ashram from "./components/ashram/Ashram";
 import Meditation from "./components/meditation/Meditation";
 import Contact from "./components/contact/Contact";
 import Section from "./components/common/section/Section";
