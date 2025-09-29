@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomePageContent.css";
 import Button from "../common/button/Button";
+import ScrollDownIcon from "../common/scrolldown-icon/ScrolldownIcon";
 
 const HomePageContent = (props) => {
   const navigate = useNavigate();
@@ -46,6 +47,9 @@ const HomePageContent = (props) => {
                 className="image-fluid image"
               />
             </picture>
+          </div>
+          <div className="col col-12">
+            <ScrollDownIcon />
           </div>
         </div>
 
@@ -120,6 +124,9 @@ const HomePageContent = (props) => {
                 />
               </picture>
             </div>
+          </div>
+          <div className="col col-12">
+            <ScrollDownIcon />
           </div>
         </div>
         <div className="row g-0 d-flex  text-scroll-effect">
