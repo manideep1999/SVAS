@@ -163,8 +163,14 @@ h1 {
 .sticky-div {
   position: sticky;
   position: -webkit-sticky;
-  top: 3rem;
+  top: 9rem;
   z-index: -1;
+}
+/* Laptops / desktops */
+@media (min-width: 1025px) {
+  .sticky-div {
+    top: 3rem; /* Vertically centered */
+  }
 }
 
 .sticky-scrolling-div {
