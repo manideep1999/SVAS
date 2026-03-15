@@ -1,12 +1,12 @@
-import React from "react";
-import "./Section.css";
 import { Link } from "react-router-dom";
+import "./Section.css";
 
 function Section(props) {
   const isExternalLink = props.btnLink?.startsWith("http");
 
   return (
     <section
+      id={props.id}
       className={`row section-row ${
         props.backgroundCol ? `${props.backgroundCol}` : ""
       }`}

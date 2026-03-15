@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Programs.css";
 import "./ProgramsList.css";
 import Section from "../common/section/Section";
 
 function ProgramsList() {
+  const location = useLocation();
+
+  // Scroll to the section when page loads or URL changes
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        const yOffset = -50; // height of fixed header
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const articles = [
     {
-      id: 1,
+      id: "ashramSatsang",
       fallbackSrc: "./img/meditationhall.jpg",
       portraitSrc: "./img/programs/ashram-hall-900_1200.jpg",
       landscapeSrc: "./img/programs/ashram-hall-1200_900.jpeg",
@@ -18,7 +33,7 @@ function ProgramsList() {
       btnLink: "/contact#contactForm",
     },
     {
-      id: 2,
+      id: "madhavaseva",
       fallbackSrc: "./img/programs/seva-children.jpeg",
       sectionHeading: "Madhava Seva",
       desc:
@@ -43,7 +58,7 @@ function ProgramsList() {
     console.log(article.btnText);
     return (
       <>
-        <Section key={article.id} {...article}></Section>
+        <Section id={article.id} key={article.id} {...article}></Section>
       </>
     );
   });

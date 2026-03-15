@@ -1,0 +1,121 @@
+.book {
+  position: relative;
+  width: 90vw;
+  max-width: 420px;
+  height: 500px;
+  perspective: 1500px;
+  margin: 50px auto;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* enables proper 3D flip */
+  transform-origin: left;
+  transition: transform 0.7s ease;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page.reverseFlip {
+  transform: rotateY(-180deg) scaleX(0.95);
+  transition: transform 0.7s ease-in;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.page.hidden {
+  visibility: hidden; /* hide pages below current */
+}
+
+/* Front and back faces */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /* prevents letter bleed */
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.face.front {
+  background-color: white; /* first page can override */
+}
+
+.face.back {
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+/* First page special styling */
+.page:first-child .front {
+  background-color: #71dc9a;
+  z-index: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}
+
+/* Content inside front face */
+.content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content p {
+  margin-top: 12px;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Folded corner */
+.corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, transparent 50%, #e6e6e6 50%);
+  cursor: pointer;
+  z-index: 1000;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.corner:hover {
+  background: linear-gradient(135deg, transparent 50%, #c1c1c1 50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .book {
+    height: 420px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .corner {
+    width: 50px;
+    height: 50px;
+  }
+}

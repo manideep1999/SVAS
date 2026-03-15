@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Programs.css";
 import Section from "../common/section/Section";
 
 function VirtualProgramsList() {
+  const location = useLocation();
+
+  // Scroll to the section when page loads or URL changes
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        const yOffset = -50; // height of fixed header
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const articles = [
     {
-      id: 3,
+      id: "thursdaySatsang",
       fallbackSrc: "./img/programs/butterfly.jpg",
       sectionHeading: "Thursday Satsang",
       desc:
@@ -24,7 +39,7 @@ function VirtualProgramsList() {
       btnLink: "https://forms.gle/UfvqyXE1v8XpituC7",
     },
     {
-      id: 4,
+      id: "meIntoMe",
       fallbackSrc: "./img/programs/me-into-me-default.jpg",
       sectionHeading: "Me into Me",
       desc:
@@ -52,7 +67,7 @@ function VirtualProgramsList() {
     console.log(article.btnText);
     return (
       <>
-        <Section key={article.id} {...article}></Section>
+        <Section key={article.id} id={article.id} {...article}></Section>
       </>
     );
   });

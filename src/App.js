@@ -14,6 +14,7 @@ import Section from "./components/common/section/Section";
 // import GivingPage from "./components/giving/GivingPage";
 import WordForTheWeekPage from "./components/word-for-the-week/WordForTheWeekPage";
 import ScrollToTop from "./components/common/scrollTop/ScrollToTop";
+import ScrollRestoration from "./components/common/scrollTop/ScrollRestoration";
 
 function App() {
   /**
@@ -30,7 +31,6 @@ function App() {
           {
             index: true,
             element: <HomePage />,
-            scrollRestoration: "auto", // Optional: Enable scroll restoration
           },
           {
             path: "about",
@@ -72,7 +72,7 @@ function App() {
   return (
     <RouterProvider router={router}>
       {/* Enable scroll restoration */}
-      <ScrollToTop />
+      <ScrollRestoration />
     </RouterProvider>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { BASENAME } from "../utils/constants";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
@@ -13,12 +13,12 @@ import ScrollToTop from "../common/scrollTop/ScrollToTop";
 function SBC(props) {
   return (
     <div>
-      <ScrollToTop />
       <Header basename={BASENAME} />
       <main>
         <Outlet />
       </main>
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
