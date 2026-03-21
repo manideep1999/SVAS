@@ -15,13 +15,15 @@
   height: 100%;
   transform-style: preserve-3d; /* enables proper 3D flip */
   transform-origin: left;
-  transition: transform 0.7s ease;
+  transition: transform 1s ease;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .page.flipped {
   transform: rotateY(-180deg);
+  transform-origin: left;
+  transition: transform 1s ease;
 }
 
 .page.reverseFlip {
@@ -53,15 +55,22 @@
 
 .face.back {
   transform: rotateY(180deg);
-  background-color: white;
+  background-color: whitesmoke;
 }
 
-/* First page special styling */
+/* First page book front page and back page special styling */
 .page:first-child .front {
   background-color: #71dc9a;
   z-index: 0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border: 1px solid #ddd;
+}
+.face.back {
+  background-color: #71dc9a !important;
+}
+
+.page:not(:first-child) .front {
+  background: linear-gradient(135deg, #fefcbf, #fceabb);
 }
 
 /* Content inside front face */

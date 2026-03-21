@@ -35,7 +35,7 @@ export default function FlipPages({ pages = [] }) {
   return (
     <div className="book">
       {pages.map((page, index) => {
-        const flipped = index < currentPage;
+        const flipped = index < currentPage || currentPage === pages.length;
         const isVisible = index === 0 || index >= currentPage;
 
         return (
