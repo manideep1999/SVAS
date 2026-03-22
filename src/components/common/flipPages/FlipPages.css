@@ -136,7 +136,7 @@
   right: 0;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, transparent 50%, #e6e6e6 50%);
+  background: linear-gradient(135deg, white 50%, #fefcbf 50%);
   cursor: pointer;
   z-index: 1000;
   border-bottom-right-radius: 10px;
