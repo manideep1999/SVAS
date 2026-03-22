@@ -49,8 +49,12 @@ export default function FlipPages({ pages = [] }) {
             {/* Front face */}
             <div className="face front">
               <div className="content">
-                <img src={page.image} alt="" />
-                <p>{page.comment}</p>
+                {page.image && <img src={page.image} alt="" />}
+
+                <div className="text-content">
+                  {page.title && <h1>{page.title}</h1>}
+                  {page.desc && <p>{page.desc}</p>}
+                </div>
               </div>
             </div>
 
