@@ -123,7 +123,7 @@ function Flipbook() {
               <h2 className="booktitle">ASRAMAM EXPERIENCES</h2>
             </div>
             <div className="image-section">
-              <img src="img/ashram/Hall2.jpeg" alt="Ashram Hall" />
+              <img src="./img/ashram/Hall2.jpeg" alt="Ashram Hall" />
             </div>
             {currentPage === 0 && (
               <div className="navigation-overlay" onClick={handleNext}>
@@ -156,7 +156,7 @@ function Flipbook() {
             )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/bojanasala2.jpeg" alt="Bojanasala" />
+            <img src="./img/ashram/bojanasala2.jpeg" alt="Bojanasala" />
           </div>
         </div>
 
@@ -182,7 +182,7 @@ function Flipbook() {
             )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
+            <img src="./img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
 
@@ -205,7 +205,7 @@ function Flipbook() {
             )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
+            <img src="./img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
 
@@ -231,7 +231,7 @@ function Flipbook() {
             )}
           </div>
           <div className="backpage">
-            <img src="img/ashram/gurustan.jpeg" alt="Gurustan" />
+            <img src="./img/ashram/gurustan.jpeg" alt="Gurustan" />
           </div>
         </div>
 

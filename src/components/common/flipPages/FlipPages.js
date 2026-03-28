@@ -36,15 +36,16 @@ export default function FlipPages({ pages = [] }) {
     <div className="book">
       {pages.map((page, index) => {
         const flipped = index < currentPage || currentPage === pages.length;
-        const isVisible = index === 0 || index >= currentPage;
 
         return (
           <div
             key={index}
             className={`page ${flipped ? "flipped" : ""} ${
               isFlippingBack ? "reverseFlip" : ""
-            } ${!isVisible ? "hidden" : ""}`}
-            style={{ zIndex: pages.length - index }}
+            }`}
+            style={{
+              zIndex: flipped ? index : pages.length - index,
+            }}
           >
             {/* Front face */}
             <div className="face front">
