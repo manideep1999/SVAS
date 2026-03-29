@@ -10,25 +10,23 @@ export default function FlipPages({ pages = [] }) {
 
     const lastIndex = pages.length - 1;
 
-    // Click last page → flip whole book back
+    // Flip to end and reset
     if (pageIndex === lastIndex) {
       setIsFlippingBack(true);
-      setCurrentPage(pages.length); // all flipped
+      setCurrentPage(pages.length);
 
       setTimeout(() => {
-        setCurrentPage(0); // reset to first page
+        setCurrentPage(0);
         setIsFlippingBack(false);
-      }, 700); // total reverse flip time
+      }, 700);
       return;
     }
 
-    // Click previous page → flip back immediately
     if (pageIndex < currentPage) {
       setCurrentPage(pageIndex);
       return;
     }
 
-    // Forward flip → increment by 1
     setCurrentPage((prev) => Math.min(prev + 1, pages.length));
   };
 
@@ -44,25 +42,21 @@ export default function FlipPages({ pages = [] }) {
               isFlippingBack ? "reverseFlip" : ""
             }`}
             style={{
-              zIndex: flipped ? index : pages.length - index,
+              zIndex: flipped ? index : pages.length - index, // higher pages appear on top
+              top: index * 2 + "px", // tiny vertical offset for stacked look
+              left: index * 2 + "px", // tiny horizontal offset
             }}
           >
-            {/* Front face */}
             <div className="face front">
               <div className="content">
                 {page.image && <img src={page.image} alt="" />}
-
                 <div className="text-content">
                   {page.title && <h1>{page.title}</h1>}
                   {page.desc && <p>{page.desc}</p>}
                 </div>
               </div>
             </div>
-
-            {/* Back face */}
             <div className="face back"></div>
-
-            {/* Folded corner */}
             <div className="corner" onClick={() => handleFlip(index)}></div>
           </div>
         );
