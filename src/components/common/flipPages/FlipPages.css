@@ -119,10 +119,6 @@
   animation: floatCorner 2s linear infinite;
 }
 
-.corner:hover {
-  background: linear-gradient(135deg, transparent 50%, #c1c1c1 50%);
-}
-
 @keyframes floatCorner {
   0%,
   100% {
