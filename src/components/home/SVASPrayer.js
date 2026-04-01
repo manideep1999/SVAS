@@ -24,7 +24,7 @@ function SVASPrayer() {
       },
       {
         threshold: 0.3, // Trigger when 50% of the div is in the viewport
-      }
+      },
     );
 
     if (domRef.current) {
@@ -53,15 +53,16 @@ function SVASPrayer() {
         </div>
         <div className="col-md-5  order-sm-1 order-1 order-md-2 offset-md-1 px-0">
           <div className="line">
-            {lines.map((line, index) => (
-              <h2
-                key={index}
-                className={`line-font ${isVisible ? "line-animate" : ""}`}
-                style={{ animationDelay: `${index * 1}s` }}
-              >
-                <span>{line}</span>
-              </h2>
-            ))}
+            {isVisible &&
+              lines.map((line, index) => (
+                <h2
+                  key={index}
+                  className={`line-font ${isVisible ? "line-animate" : ""}`}
+                  style={{ animationDelay: `${index * 1}s` }}
+                >
+                  <span>{line}</span>
+                </h2>
+              ))}
           </div>
         </div>
         <div className={`${isVisible ? "glow" : ""}`}></div>
