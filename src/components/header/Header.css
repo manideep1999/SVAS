@@ -1,61 +1,146 @@
+/* Navbar */
 .sbc-navbar {
-  background-color: white !important;
-  padding-left: 45px !important;
-  padding-right: 45px !important;
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px 45px;
   border-top: 4px solid orange;
+  z-index: 1000;
 }
 
 @media (min-width: 992px) {
   .sbc-navbar {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding: 20px 100px;
   }
 }
 
+/* Logo */
 .sbc-navbar-logo {
-  width: auto;
-  height: 40px;
-}
-
-@media (min-width: 330px) {
-  .sbc-navbar-logo {
-    width: auto;
-    height: 45px;
-  }
+  height: 45px;
 }
 
 @media (min-width: 992px) {
   .sbc-navbar-logo {
-    width: auto;
     height: 60px;
   }
 }
 
-.sbc-navbar-collapse {
-  align-self: flex-end;
-}
-
+/* Nav items */
 .nav-item {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1.5rem;
-}
-
-.nav-link.active {
-  border-bottom: 1px solid #ff5a34;
+  padding: 0 10px;
 }
 
 .nav-link {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  font-size: 1.4rem;
+  color: #000;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
+.nav-link {
+  display: inline-block;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  border: 2px solid #1c4102;
+  border-radius: 999px; /* makes it oval */
+  background: transparent;
+
+  transform: scale(1.1) translateZ(10px); /* bigger + forward */
+}
+
+.nav-link.active {
+  color: #000;
+  border: 2px solid #1c4102;
+  border-radius: 999px;
+  transform: scale(1.1);
+  border-bottom-color: #1c4102;
+}
+
+/* Login button */
 .login-btn {
   font-family: "Raleway", sans-serif;
-  font-weight: 500 !important;
-  border-style: none !important;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* MOBILE FULLSCREEN MENU */
+/* ========================= */
+
+@media (max-width: 1199px) {
+  .sbc-navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f6f8f5, #1c8dba, #f6f8f5);
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all 0.4s ease;
+  }
+
+  .mobile-hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+
+  .mobile-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .sbc-navbar-content {
+    text-align: center;
+  }
+
+  .sbc-navbar-collapse .nav-link {
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+}
+
+/* ========================= */
+/* DESKTOP NAVBAR */
+/* ========================= */
+
+@media (min-width: 1200px) {
+  .sbc-navbar-collapse {
+    position: static;
+    height: auto;
+    background: transparent;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .sbc-navbar-content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Toggle button */
+.navbar-toggler {
+  border: 2px solid #1c4102;
+  font-size: 1.8rem;
+  z-index: 10000;
 }

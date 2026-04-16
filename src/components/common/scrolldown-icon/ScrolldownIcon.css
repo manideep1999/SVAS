@@ -1,6 +1,6 @@
 .scroll-wrapper {
   position: absolute;
-  bottom: 15%; /* align with top of container */
+  top: 5%; /* align with top of container */
   right: 2%; /* align to the right edge */
   display: flex;
   flex-direction: column;

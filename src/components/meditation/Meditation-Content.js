@@ -19,10 +19,10 @@ function MeditationContent() {
               <h2 className="heading-text">MEDITATION...</h2>
             </div>
             <div className="space-item">
-              <p className="data-text small-header">
+              <h3 className="data-text sub-header">
                 What does it do? What this Magnificient tool does is much beyond
                 our usually limited thinking.
-              </p>
+              </h3>
             </div>
           </div>
         </div>

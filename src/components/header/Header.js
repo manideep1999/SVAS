@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Auth from "../auth/Auth.js";
 import "./Header.css";
-function Header({ basename }) {
-  const [collapsed, setCollapsed] = useState(true); // State for collapsing/expanding the nav
-  const auth = new Auth();
+
+function Header() {
+  const [collapsed, setCollapsed] = useState(true);
+  const [auth] = useState(() => new Auth());
 
   const navBarToggleClick = () => {
     setCollapsed((prevState) => !prevState);
@@ -14,14 +15,18 @@ function Header({ basename }) {
     setCollapsed(true);
   };
 
-  const login = (event) => {
+  const login = () => {
     auth.login();
   };
 
-  const collapsedClass = collapsed ? "collapse" : "";
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = collapsed ? "auto" : "hidden";
+  }, [collapsed]);
 
   return (
     <nav className="sbc-navbar navbar fixed-top navbar-expand-xl navbar-light">
+      {/* Logo */}
       <Link to="/" className="navbar-brand" onClick={navLinkClick}>
         <img
           className="sbc-navbar-logo"
@@ -29,41 +34,34 @@ function Header({ basename }) {
           alt="SVAS FOR EARTH"
         />
       </Link>
-      {/* Toggle button for mobile */}
+
+      {/* Toggle button */}
       <button
         className="navbar-toggler"
         type="button"
         onClick={navBarToggleClick}
-        aria-controls="navbarNav"
-        aria-expanded={!collapsed}
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        {collapsed ? "☰" : "✕"}
       </button>
 
+      {/* SINGLE MENU (used for both mobile + desktop) */}
       <div
-        className={`navbar-collapse  ${collapsedClass}`}
+        className={`navbar-collapse sbc-navbar-collapse ${
+          collapsed ? "mobile-hide" : "mobile-show"
+        }`}
         id="navbarSupportedContent"
       >
-        <ul className="navbar-nav mr-auto"></ul>
         <ul className="navbar-nav sbc-navbar-content">
           <li className="nav-item">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={navLinkClick}
-            >
+            <NavLink to="/" className="nav-link" onClick={navLinkClick}>
               Home
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink
-              to="ourMaster"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
+              to="/ourMaster"
+              className="nav-link"
               onClick={navLinkClick}
             >
               Our Master
@@ -71,100 +69,40 @@ function Header({ basename }) {
           </li>
           <li className="nav-item">
             <NavLink
-              to="meditation"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
+              to="/meditation"
+              className="nav-link"
               onClick={navLinkClick}
             >
               Meditation
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink
-              to="ashram"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={navLinkClick}
-            >
+            <NavLink to="/ashram" className="nav-link" onClick={navLinkClick}>
               Ashram
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink
-              to="programs"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={navLinkClick}
-            >
+            <NavLink to="/programs" className="nav-link" onClick={navLinkClick}>
               Programs
             </NavLink>
           </li>
-          {/*<li className="nav-item">
-              <NavLink
-                to="/Sermons"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Teachings
-              </NavLink>
-    </li> 
-            <li className="nav-item">
-              <NavLink
-                to="/live"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Watch Live
-              </NavLink>
-            </li>*/}
-
-          {/* <li className="nav-item">
-              <NavLink
-                to="/giving"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Giving
-              </NavLink>
-            </li> */}
-          {/* <li className="nav-item">
-              <NavLink
-                to="/word-for-the-way"
-                className="nav-link"
-                activeClassName="active"
-                onClick={this.navLinkClick}
-              >
-                Word for the way
-              </NavLink>
-            </li> */}
           <li className="nav-item">
-            <NavLink
-              to="about"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={navLinkClick}
-            >
+            <NavLink to="/about" className="nav-link" onClick={navLinkClick}>
               About
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink
-              to="contact"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={navLinkClick}
-            >
+            <NavLink to="/contact" className="nav-link" onClick={navLinkClick}>
               Contact
             </NavLink>
           </li>
+
+          {/* Optional login 
+          <li className="nav-item">
+            <button className="login-btn" onClick={login}>
+              Login
+            </button>
+          </li>*/}
         </ul>
       </div>
     </nav>
