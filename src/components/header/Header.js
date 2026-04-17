@@ -30,7 +30,7 @@ function Header() {
       <Link to="/" className="navbar-brand" onClick={navLinkClick}>
         <img
           className="sbc-navbar-logo"
-          src="./img/SvasLogoFinal-v2.jpeg"
+          src="./img/svas-logo-no-bg.png"
           alt="SVAS FOR EARTH"
         />
       </Link>

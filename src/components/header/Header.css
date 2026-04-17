@@ -12,15 +12,20 @@
     padding: 20px 100px;
   }
 }
-
-/* Logo */
+.navbar-brand {
+  position: relative;
+}
+/* Logo --> put it relative to navbar brand and out of hte flow*/
 .sbc-navbar-logo {
-  height: 45px;
+  position: absolute;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (min-width: 992px) {
   .sbc-navbar-logo {
-    height: 60px;
+    height: 80px;
   }
 }
 
