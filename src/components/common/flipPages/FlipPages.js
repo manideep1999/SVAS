@@ -15,7 +15,7 @@ export default function FlipPages({ pages = [] }) {
     const diff = startX - x;
 
     // sensitivity threshold
-    if (Math.abs(diff) < 50) return;
+    if (Math.abs(diff) < 30) return;
 
     if (diff > 0) {
       // swipe left → next page
