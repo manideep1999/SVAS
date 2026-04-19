@@ -4,8 +4,31 @@ import "./FlipPages.css";
 export default function FlipPages({ pages = [] }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isFlippingBack, setIsFlippingBack] = useState(false);
+  const [startX, setStartX] = useState(null);
+  const handleStart = (x) => {
+    setStartX(x);
+  };
 
+  const handleEnd = (x) => {
+    if (startX === null) return;
+
+    const diff = startX - x;
+
+    // sensitivity threshold
+    if (Math.abs(diff) < 50) return;
+
+    if (diff > 0) {
+      // swipe left → next page
+      handleFlip(currentPage);
+    } else {
+      // swipe right → previous page
+      handleFlip(currentPage - 1);
+    }
+
+    setStartX(null);
+  };
   const handleFlip = (pageIndex) => {
+    if (pageIndex < 0) return;
     if (isFlippingBack) return;
 
     const lastIndex = pages.length - 1;
@@ -31,7 +54,13 @@ export default function FlipPages({ pages = [] }) {
   };
 
   return (
-    <div className="book">
+    <div
+      className="book"
+      onTouchStart={(e) => handleStart(e.touches[0].clientX)}
+      onTouchEnd={(e) => handleEnd(e.changedTouches[0].clientX)}
+      onMouseDown={(e) => handleStart(e.clientX)}
+      onMouseUp={(e) => handleEnd(e.clientX)}
+    >
       {pages.map((page, index) => {
         const flipped = index < currentPage || currentPage === pages.length;
 
