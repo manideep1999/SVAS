@@ -18,6 +18,10 @@ body {
   padding-top: 70px;
   background-color: #f6f8f5;
 }
+body.menu-open main {
+  filter: blur(12px);
+  transition: filter 0.3s ease;
+}
 
 @media (min-width: 992px) {
   body {

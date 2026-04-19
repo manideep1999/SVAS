@@ -18,6 +18,15 @@ function Header() {
   const login = () => {
     auth.login();
   };
+  useEffect(() => {
+    document.body.style.overflow = collapsed ? "auto" : "hidden";
+
+    if (!collapsed) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [collapsed]);
 
   // Prevent background scroll when menu is open
   useEffect(() => {
@@ -31,17 +40,18 @@ function Header() {
         <img
           className="sbc-navbar-logo"
           src="./img/svas-logo-no-bg.png"
-          alt="SVAS FOR EARTH"
+          alt="SVAS ICON"
         />
       </Link>
 
       {/* Toggle button */}
       <button
-        className="navbar-toggler"
+        className="navbar-toggler menu-toggler"
         type="button"
         onClick={navBarToggleClick}
         aria-label="Toggle navigation"
       >
+        <span className="menu-text">MENU</span>
         {collapsed ? "☰" : "✕"}
       </button>
 
