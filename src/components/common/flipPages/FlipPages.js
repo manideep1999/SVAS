@@ -86,7 +86,9 @@ export default function FlipPages({ pages = [] }) {
               </div>
             </div>
             <div className="face back"></div>
-            <div className="corner" onClick={() => handleFlip(index)}></div>
+            <div className="corner" onClick={() => handleFlip(index)}>
+              <span className="corner-icon">↻</span>
+            </div>
           </div>
         );
       })}

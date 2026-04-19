@@ -78,8 +78,8 @@ const HomePageContent = (props) => {
                 lives in communion with that absolute truth- the eternal
                 divinity, such that they themselves become the truth, they
                 become that divinity, and then comes to show us the path to the
-                truth. The real marvel is when that divinity taks on the form of
-                a mother to guide us on this highest path of truth and that
+                truth. The real marvel is when that divinity takes on the form
+                of a mother to guide us on this highest path of truth and that
                 marvel is Sadguru Sri Sri Sri Vani Matha whom we dearly call as
                 Amma - The Divine Mother.
               </span>
